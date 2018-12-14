@@ -28,6 +28,8 @@
 		2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */; };
 		2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */; };
 		2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */; };
+		2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */; };
+		2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1A7ADB21C3D6EE002FD5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneListHeaderTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		2B15BE3D21C449D4006426BB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2BD0ED2621C45B5000EC9CFF /* DoneListHeader */,
 				2B15BE4721C44DE0006426BB /* DoneItemCard */,
 				2B15BE3E21C44A0B006426BB /* DailyOverviewCard */,
 			);
@@ -168,6 +173,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2BD0ED2621C45B5000EC9CFF /* DoneListHeader */ = {
+			isa = PBXGroup;
+			children = (
+				2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */,
+				2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */,
+			);
+			path = DoneListHeader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +244,7 @@
 				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
 				2B15BE3A21C4498E006426BB /* Welcome.storyboard in Resources */,
 				2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */,
+				2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */,
 				2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */,
 				2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +271,7 @@
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
 				2B15BE3721C42500006426BB /* User+CoreDataProperties.swift in Sources */,
+				2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */,
 				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

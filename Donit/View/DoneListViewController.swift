@@ -24,7 +24,9 @@ class DoneListViewController: UIViewController {
         doneListTableView.delegate = self
         doneListTableView.dataSource = self
         
-        self.navigationController?.navigationBar.setTransparentBackground()
+        self.navigationController?.navigationBar.barTintColor = UIColor.paleGrey
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        doneListTableView.backgroundColor = UIColor.paleGrey
         
         do {
             
@@ -120,7 +122,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : doneList.count
+        return section == 0 ? 1 : doneList.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -139,6 +141,19 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
             
         case 1:
             
+            if indexPath.row == 0 {
+                
+                var header = doneListTableView.dequeueReusableCell(withIdentifier: "DoneListHeaderTableViewCell") as? DoneListHeaderTableViewCell
+                
+                if header == nil {
+                    doneListTableView.register(UINib(nibName: "DoneListHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "DoneListHeaderTableViewCell")
+                    header = doneListTableView.dequeueReusableCell(withIdentifier: "DoneListHeaderTableViewCell") as? DoneListHeaderTableViewCell
+                }
+                
+                return header ?? UITableViewCell()
+                
+            }
+            
             var cell = doneListTableView.dequeueReusableCell(withIdentifier: "DoneItemCardTableViewCell") as? DoneItemCardTableViewCell
             
             if cell == nil {
@@ -146,7 +161,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
                 cell = doneListTableView.dequeueReusableCell(withIdentifier: "DoneItemCardTableViewCell") as? DoneItemCardTableViewCell
             }
             
-            cell?.nameLabel.text = doneList[indexPath.row].name
+            cell?.nameLabel.text = doneList[indexPath.row - 1].name
             
             return cell ?? UITableViewCell()
             
@@ -157,7 +172,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 126 : 72
+        return indexPath.section == 0 ? 126 : indexPath.row == 0 ? 92 : 72
 
     }
         

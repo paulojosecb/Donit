@@ -49,6 +49,7 @@ Keep it up! 🎉🎉</string>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="DOB-kB-B1h" secondAttribute="bottom" constant="6" id="1I8-ST-NQ9"/>
                     <constraint firstItem="DOB-kB-B1h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="amb-JB-lic"/>
@@ -56,6 +57,7 @@ Keep it up! 🎉🎉</string>
                     <constraint firstAttribute="trailing" secondItem="DOB-kB-B1h" secondAttribute="trailing" constant="16" id="vmD-kL-9tw"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardView" destination="DOB-kB-B1h" id="VYJ-Iv-e4M"/>

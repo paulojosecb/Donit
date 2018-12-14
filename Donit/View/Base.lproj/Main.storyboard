@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="greenyBlue"/>
                         <constraints>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0A1-Ej-CPD"/>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3aH-0j-tDF"/>
@@ -55,6 +56,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="cJy-oY-KEM">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="paleGrey"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -66,4 +68,12 @@
             <point key="canvasLocation" x="56.799999999999997" y="792.95352323838085"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="greenyBlue">
+            <color red="0.24300000071525574" green="0.63899999856948853" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleGrey">
+            <color red="0.98799997568130493" green="0.98000001907348633" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

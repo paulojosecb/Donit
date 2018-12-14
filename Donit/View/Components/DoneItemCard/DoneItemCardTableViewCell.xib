@@ -48,6 +48,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="NLu-CH-Ph3" secondAttribute="trailing" constant="16" id="JKo-zf-2G7"/>
                     <constraint firstItem="NLu-CH-Ph3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OdJ-jH-wL8"/>
@@ -55,6 +56,7 @@
                     <constraint firstItem="NLu-CH-Ph3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="zOj-nT-ZlZ"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardView" destination="NLu-CH-Ph3" id="7vu-3v-3EG"/>
