@@ -32,7 +32,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hello, Paulo" id="EQC-us-QET"/>
+                    <navigationItem key="navigationItem" title="Hello, Paulo" id="EQC-us-QET">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oOH-rf-A7M">
+                            <connections>
+                                <action selector="addDidPress:" destination="BYZ-38-t0r" id="gam-gf-JBh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="doneListTableView" destination="VO2-rz-7As" id="qoc-Mj-hoc"/>
                     </connections>
