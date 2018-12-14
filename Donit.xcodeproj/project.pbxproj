@@ -95,6 +95,7 @@
 		2B15BE3D21C449D4006426BB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2BD0ED2B21C461F900EC9CFF /* Buttons */,
 				2BD0ED2621C45B5000EC9CFF /* DoneListHeader */,
 				2B15BE4721C44DE0006426BB /* DoneItemCard */,
 				2B15BE3E21C44A0B006426BB /* DailyOverviewCard */,
@@ -180,6 +181,21 @@
 				2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */,
 			);
 			path = DoneListHeader;
+			sourceTree = "<group>";
+		};
+		2BD0ED2B21C461F900EC9CFF /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2BD0ED2C21C4620600EC9CFF /* FloatButton */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		2BD0ED2C21C4620600EC9CFF /* FloatButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FloatButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

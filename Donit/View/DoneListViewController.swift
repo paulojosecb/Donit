@@ -99,6 +99,7 @@ class DoneListViewController: UIViewController {
         do {
             try managedContext.save()
             updateDataSource()
+            doneListTableView.insertRows(at: [IndexPath(row: 1, section: 1)], with: .automatic)
         } catch _ as NSError {
             print("Nao foi possivel salvar")
         }
@@ -107,8 +108,6 @@ class DoneListViewController: UIViewController {
     func updateDataSource() {
         do {
             doneList = try managedContext.fetch(DoneItem.fetchRequest())
-            doneListTableView.insertRows(at: [IndexPath(row: 0, section: 1)], with: .automatic)
-            
         } catch _ as NSError {
             print("Deu ruim no fetch")
         }
@@ -123,6 +122,38 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return section == 0 ? 1 : doneList.count + 1
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            guard let itemToRemove = doneList[indexPath.row - 1] as? DoneItem else {return}
+            
+            print(itemToRemove.name)
+            
+            managedContext.delete(itemToRemove)
+            
+            do {
+                try managedContext.save()
+                updateDataSource()
+                doneListTableView.deleteRows(at: [indexPath], with: .automatic)
+            } catch _ as NSError {
+                print("Problema ao deletar")
+            }
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var cell = doneListTableView.cellForRow(at: indexPath)
+        cell?.selectionStyle = .none
+        
+        print("HUEEE \(indexPath.row)")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -173,7 +204,6 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.section == 0 ? 126 : indexPath.row == 0 ? 92 : 72
-
     }
         
 }
