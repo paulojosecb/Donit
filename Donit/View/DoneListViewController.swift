@@ -105,7 +105,7 @@ class DoneListViewController: UIViewController {
     func updateDataSource() {
         do {
             doneList = try managedContext.fetch(DoneItem.fetchRequest())
-            doneListTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+            doneListTableView.insertRows(at: [IndexPath(row: 0, section: 1)], with: .automatic)
             
         } catch _ as NSError {
             print("Deu ruim no fetch")
@@ -116,19 +116,50 @@ class DoneListViewController: UIViewController {
 extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return section == 0 ? 1 : doneList.count
-        return doneList.count
+        return section == 0 ? 1 : doneList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = doneList[indexPath.row].name
-        return cell
+        
+        switch indexPath.section {
+        case 0:
+            
+            var cell = doneListTableView.dequeueReusableCell(withIdentifier: "DailyOverviewCardTableViewCell") as? DailyOverviewCardTableViewCell
+            
+            if cell == nil {
+                doneListTableView.register(UINib(nibName: "DailyOverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "DailyOverviewCardTableViewCell")
+                cell = doneListTableView.dequeueReusableCell(withIdentifier: "DailyOverviewCardTableViewCell") as? DailyOverviewCardTableViewCell
+            }
+            
+            return cell ?? UITableViewCell()
+            
+        case 1:
+            
+            var cell = doneListTableView.dequeueReusableCell(withIdentifier: "DoneItemCardTableViewCell") as? DoneItemCardTableViewCell
+            
+            if cell == nil {
+                doneListTableView.register(UINib(nibName: "DoneItemCardTableViewCell", bundle: nil), forCellReuseIdentifier: "DoneItemCardTableViewCell")
+                cell = doneListTableView.dequeueReusableCell(withIdentifier: "DoneItemCardTableViewCell") as? DoneItemCardTableViewCell
+            }
+            
+            cell?.nameLabel.text = doneList[indexPath.row].name
+            
+            return cell ?? UITableViewCell()
+            
+        default:
+            return UITableViewCell()
+        }
+        
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 126 : 72
+
+    }
+        
 }
 

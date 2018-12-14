@@ -14,6 +14,14 @@
 		2B15BE3521C42500006426BB /* DoneItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3121C42500006426BB /* DoneItem+CoreDataProperties.swift */; };
 		2B15BE3621C42500006426BB /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3221C42500006426BB /* User+CoreDataClass.swift */; };
 		2B15BE3721C42500006426BB /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3321C42500006426BB /* User+CoreDataProperties.swift */; };
+		2B15BE3A21C4498E006426BB /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B15BE3921C4498E006426BB /* Welcome.storyboard */; };
+		2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3B21C449A0006426BB /* WelcomeViewController.swift */; };
+		2B15BE4121C44A30006426BB /* DailyOverviewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3F21C44A30006426BB /* DailyOverviewCardTableViewCell.swift */; };
+		2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B15BE4021C44A30006426BB /* DailyOverviewCardTableViewCell.xib */; };
+		2B15BE4421C44C40006426BB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE4321C44C40006426BB /* UIView.swift */; };
+		2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE4521C44D9E006426BB /* UIColor.swift */; };
+		2B15BE4A21C44DF5006426BB /* DoneItemCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE4821C44DF5006426BB /* DoneItemCardTableViewCell.swift */; };
+		2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B15BE4921C44DF5006426BB /* DoneItemCardTableViewCell.xib */; };
 		2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */; };
 		2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */; };
 		2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */; };
@@ -30,6 +38,14 @@
 		2B15BE3121C42500006426BB /* DoneItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2B15BE3221C42500006426BB /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2B15BE3321C42500006426BB /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2B15BE3921C4498E006426BB /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		2B15BE3B21C449A0006426BB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2B15BE3F21C44A30006426BB /* DailyOverviewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyOverviewCardTableViewCell.swift; sourceTree = "<group>"; };
+		2B15BE4021C44A30006426BB /* DailyOverviewCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyOverviewCardTableViewCell.xib; sourceTree = "<group>"; };
+		2B15BE4321C44C40006426BB /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2B15BE4521C44D9E006426BB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		2B15BE4821C44DF5006426BB /* DoneItemCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemCardTableViewCell.swift; sourceTree = "<group>"; };
+		2B15BE4921C44DF5006426BB /* DoneItemCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneItemCardTableViewCell.xib; sourceTree = "<group>"; };
 		2B1A7ACB21C3D6ED002FD5E1 /* Donit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +73,46 @@
 				2B15BE2621C3DA99006426BB /* UIImage.swift */,
 				2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */,
 				2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */,
+				2B15BE4321C44C40006426BB /* UIView.swift */,
+				2B15BE4521C44D9E006426BB /* UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B15BE3821C4497D006426BB /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				2B15BE3921C4498E006426BB /* Welcome.storyboard */,
+				2B15BE3B21C449A0006426BB /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		2B15BE3D21C449D4006426BB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2B15BE4721C44DE0006426BB /* DoneItemCard */,
+				2B15BE3E21C44A0B006426BB /* DailyOverviewCard */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2B15BE3E21C44A0B006426BB /* DailyOverviewCard */ = {
+			isa = PBXGroup;
+			children = (
+				2B15BE3F21C44A30006426BB /* DailyOverviewCardTableViewCell.swift */,
+				2B15BE4021C44A30006426BB /* DailyOverviewCardTableViewCell.xib */,
+			);
+			path = DailyOverviewCard;
+			sourceTree = "<group>";
+		};
+		2B15BE4721C44DE0006426BB /* DoneItemCard */ = {
+			isa = PBXGroup;
+			children = (
+				2B15BE4821C44DF5006426BB /* DoneItemCardTableViewCell.swift */,
+				2B15BE4921C44DF5006426BB /* DoneItemCardTableViewCell.xib */,
+			);
+			path = DoneItemCard;
 			sourceTree = "<group>";
 		};
 		2B1A7AC221C3D6ED002FD5E1 = {
@@ -106,6 +160,8 @@
 		2B1A7AEC21C3D880002FD5E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B15BE3D21C449D4006426BB /* Components */,
+				2B15BE3821C4497D006426BB /* Welcome */,
 				2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */,
 				2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */,
 			);
@@ -171,7 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
+				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
+				2B15BE3A21C4498E006426BB /* Welcome.storyboard in Resources */,
 				2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */,
+				2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */,
 				2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,11 +242,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B15BE4421C44C40006426BB /* UIView.swift in Sources */,
+				2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */,
 				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
+				2B15BE4A21C44DF5006426BB /* DoneItemCardTableViewCell.swift in Sources */,
 				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
+				2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */,
 				2B15BE3421C42500006426BB /* DoneItem+CoreDataClass.swift in Sources */,
 				2B15BE2921C3DAB0006426BB /* CAGradientLayer.swift in Sources */,
 				2B15BE3521C42500006426BB /* DoneItem+CoreDataProperties.swift in Sources */,
+				2B15BE4121C44A30006426BB /* DailyOverviewCardTableViewCell.swift in Sources */,
 				2B15BE3621C42500006426BB /* User+CoreDataClass.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
