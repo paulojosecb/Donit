@@ -22,6 +22,24 @@ class DoneListViewController: UIViewController {
         doneListTableView.delegate = self
         doneListTableView.dataSource = self
         
+        self.navigationController?.navigationBar.setTransparentBackground()
+        
+        do {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            
+            let request : NSFetchRequest<DoneItem> = DoneItem.fetchRequest()
+            
+            print(dateFormatter.string(from: Date()))
+            
+            request.predicate = NSPredicate(format: "%K = %@", argumentArray: [#keyPath(DoneItem.createdOn), Date()])
+            
+            doneList = try managedContext.fetch(request)
+            
+        } catch let error as NSError{
+            print(error.localizedDescription)
+        }
+        
     }
 
 }

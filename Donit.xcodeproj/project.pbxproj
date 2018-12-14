@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2621C3DA99006426BB /* UIImage.swift */; };
+		2B15BE2921C3DAB0006426BB /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */; };
+		2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */; };
 		2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */; };
 		2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */; };
 		2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B15BE2621C3DA99006426BB /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
+		2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		2B1A7ACB21C3D6ED002FD5E1 /* Donit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B15BE2521C3DA7E006426BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B15BE2621C3DA99006426BB /* UIImage.swift */,
+				2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */,
+				2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2B1A7AC221C3D6ED002FD5E1 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +80,7 @@
 		2B1A7ACD21C3D6ED002FD5E1 /* Donit */ = {
 			isa = PBXGroup;
 			children = (
+				2B15BE2521C3DA7E006426BB /* Extensions */,
 				2B1A7AEC21C3D880002FD5E1 /* View */,
 				2B1A7AEB21C3D86D002FD5E1 /* Model */,
 				2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */,
@@ -167,12 +184,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B1A7AE721C3D84F002FD5E1 /* DoneItem+CoreDataClass.swift in Sources */,
+				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
 				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
+				2B15BE2921C3DAB0006426BB /* CAGradientLayer.swift in Sources */,
 				2B1A7AE921C3D84F002FD5E1 /* User+CoreDataClass.swift in Sources */,
 				2B1A7AEA21C3D84F002FD5E1 /* User+CoreDataProperties.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
 				2B1A7AE821C3D84F002FD5E1 /* DoneItem+CoreDataProperties.swift in Sources */,
+				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
