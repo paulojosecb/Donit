@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */; };
-		2B1A7AD121C3D6ED002FD5E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD021C3D6ED002FD5E1 /* ViewController.swift */; };
+		2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */; };
 		2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */; };
 		2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */; };
 		2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */; };
 		2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */; };
+		2B1A7AE721C3D84F002FD5E1 /* DoneItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AE321C3D84F002FD5E1 /* DoneItem+CoreDataClass.swift */; };
+		2B1A7AE821C3D84F002FD5E1 /* DoneItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AE421C3D84F002FD5E1 /* DoneItem+CoreDataProperties.swift */; };
+		2B1A7AE921C3D84F002FD5E1 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AE521C3D84F002FD5E1 /* User+CoreDataClass.swift */; };
+		2B1A7AEA21C3D84F002FD5E1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AE621C3D84F002FD5E1 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B1A7ACB21C3D6ED002FD5E1 /* Donit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B1A7AD021C3D6ED002FD5E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
 		2B1A7AD321C3D6ED002FD5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B1A7AD621C3D6ED002FD5E1 /* Donit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Donit.xcdatamodel; sourceTree = "<group>"; };
 		2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1A7ADB21C3D6EE002FD5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B1A7AE321C3D84F002FD5E1 /* DoneItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2B1A7AE421C3D84F002FD5E1 /* DoneItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2B1A7AE521C3D84F002FD5E1 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2B1A7AE621C3D84F002FD5E1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,35 @@
 		2B1A7ACD21C3D6ED002FD5E1 /* Donit */ = {
 			isa = PBXGroup;
 			children = (
+				2B1A7AEC21C3D880002FD5E1 /* View */,
+				2B1A7AEB21C3D86D002FD5E1 /* Model */,
 				2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */,
-				2B1A7AD021C3D6ED002FD5E1 /* ViewController.swift */,
-				2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */,
 				2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */,
 				2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */,
 				2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */,
 				2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */,
 			);
 			path = Donit;
+			sourceTree = "<group>";
+		};
+		2B1A7AEB21C3D86D002FD5E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A7AE321C3D84F002FD5E1 /* DoneItem+CoreDataClass.swift */,
+				2B1A7AE421C3D84F002FD5E1 /* DoneItem+CoreDataProperties.swift */,
+				2B1A7AE521C3D84F002FD5E1 /* User+CoreDataClass.swift */,
+				2B1A7AE621C3D84F002FD5E1 /* User+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B1A7AEC21C3D880002FD5E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */,
+				2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B1A7AD121C3D6ED002FD5E1 /* ViewController.swift in Sources */,
+				2B1A7AE721C3D84F002FD5E1 /* DoneItem+CoreDataClass.swift in Sources */,
+				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
+				2B1A7AE921C3D84F002FD5E1 /* User+CoreDataClass.swift in Sources */,
+				2B1A7AEA21C3D84F002FD5E1 /* User+CoreDataProperties.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
+				2B1A7AE821C3D84F002FD5E1 /* DoneItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
