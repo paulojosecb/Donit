@@ -16,11 +16,11 @@ enum FillMode {
 
 extension UIView {
     
-    func addRoundedBorder(in mode: FillMode, colors: [UIColor]) {
+    func addRoundedBorder(in mode: FillMode, colors: [UIColor], radius: CGFloat = 10, shadowOppacity: CGFloat = 0.2, shadowRadius: CGFloat = 3) {
         let shadowLayer = CAShapeLayer()
         shadowLayer.masksToBounds = false
         
-        shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 10).cgPath
+        shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: radius).cgPath
         
         switch mode {
         case .opaque:
@@ -31,7 +31,7 @@ extension UIView {
         
         shadowLayer.shadowColor = UIColor.black.cgColor
         shadowLayer.shadowPath = shadowLayer.path
-        shadowLayer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        shadowLayer.shadowOffset = CGSize(width: 0.0, height: 4.0)
         shadowLayer.shadowOpacity = 0.2
         shadowLayer.shadowRadius = 3
         

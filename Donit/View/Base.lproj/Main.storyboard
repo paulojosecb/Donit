@@ -23,25 +23,41 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWZ-I8-dgl">
+                                <rect key="frame" x="295" y="587" width="64" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="TvH-5B-pKC">
+                                        <rect key="frame" x="20" y="20" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="8uS-uN-4tw"/>
+                                            <constraint firstAttribute="height" constant="24" id="dpa-AT-csn"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TvH-5B-pKC" firstAttribute="centerX" secondItem="pWZ-I8-dgl" secondAttribute="centerX" id="Loz-nd-D28"/>
+                                    <constraint firstItem="TvH-5B-pKC" firstAttribute="centerY" secondItem="pWZ-I8-dgl" secondAttribute="centerY" id="nNS-Kd-S2M"/>
+                                    <constraint firstAttribute="height" constant="64" id="oZc-Zn-6oQ"/>
+                                    <constraint firstAttribute="width" constant="64" id="oaG-6r-Ady"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="greenyBlue"/>
                         <constraints>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0A1-Ej-CPD"/>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3aH-0j-tDF"/>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jwr-C2-wrU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pWZ-I8-dgl" secondAttribute="bottom" constant="16" id="OIe-FC-XSl"/>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cFO-wJ-S8l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pWZ-I8-dgl" secondAttribute="trailing" constant="16" id="yOt-4C-qIV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hello, Paulo" id="EQC-us-QET">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oOH-rf-A7M">
-                            <connections>
-                                <action selector="addDidPress:" destination="BYZ-38-t0r" id="gam-gf-JBh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Hello, Paulo" id="EQC-us-QET"/>
                     <connections>
                         <outlet property="doneListTableView" destination="VO2-rz-7As" id="qoc-Mj-hoc"/>
+                        <outlet property="floatButton" destination="pWZ-I8-dgl" id="0r1-cT-zbq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,6 +85,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Plus" width="22" height="22"/>
         <namedColor name="greenyBlue">
             <color red="0.24300000071525574" green="0.63899999856948853" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

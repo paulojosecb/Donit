@@ -10,12 +10,11 @@ import UIKit
 import CoreData
 
 class DoneListViewController: UIViewController {
-    
     var user: User!
     var doneList : [DoneItem]!
     var managedContext : NSManagedObjectContext!
 
-
+    @IBOutlet weak var floatButton: UIView!
     @IBOutlet weak var doneListTableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,6 +22,10 @@ class DoneListViewController: UIViewController {
        
         doneListTableView.delegate = self
         doneListTableView.dataSource = self
+        
+        floatButton.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue], radius: floatButton.layer.frame.width/2, shadowOppacity: 0.5, shadowRadius: 10)
+        
+        floatButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.addDidPress(_:))))
         
         self.navigationController?.navigationBar.barTintColor = UIColor.paleGrey
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -57,19 +60,7 @@ class DoneListViewController: UIViewController {
             print(error.localizedDescription)
         }
         
-        do {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd/MM/yyyy"
-            
-            let request : NSFetchRequest<DoneItem> = DoneItem.fetchRequest()
-            
-//            request.predicate = NSPredicate(format: "%K = %@", argumentArray: [#keyPath(DoneItem.createdOn), Date()])
-            
-            doneList = try managedContext.fetch(request)
-            
-        } catch let error as NSError{
-            print(error.localizedDescription)
-        }
+        updateDataSource()
     
     }
 
@@ -100,6 +91,7 @@ class DoneListViewController: UIViewController {
             try managedContext.save()
             updateDataSource()
             doneListTableView.insertRows(at: [IndexPath(row: 1, section: 1)], with: .automatic)
+            doneListTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
         } catch _ as NSError {
             print("Nao foi possivel salvar")
         }
@@ -107,7 +99,11 @@ class DoneListViewController: UIViewController {
     
     func updateDataSource() {
         do {
-            doneList = try managedContext.fetch(DoneItem.fetchRequest())
+            let request : NSFetchRequest<DoneItem> = DoneItem.fetchRequest()
+            let sort = NSSortDescriptor(key: #keyPath(DoneItem.createdOn), ascending: false)
+            request.sortDescriptors = [sort]
+            doneList = try managedContext.fetch(request)
+            
         } catch _ as NSError {
             print("Deu ruim no fetch")
         }
@@ -141,6 +137,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
                 try managedContext.save()
                 updateDataSource()
                 doneListTableView.deleteRows(at: [indexPath], with: .automatic)
+                doneListTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
             } catch _ as NSError {
                 print("Problema ao deletar")
             }
@@ -168,6 +165,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
                 cell = doneListTableView.dequeueReusableCell(withIdentifier: "DailyOverviewCardTableViewCell") as? DailyOverviewCardTableViewCell
             }
             
+            cell?.numberLabel.text = "\(doneList.count)"
             return cell ?? UITableViewCell()
             
         case 1:
