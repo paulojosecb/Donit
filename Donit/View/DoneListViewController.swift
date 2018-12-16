@@ -33,9 +33,11 @@ class DoneListViewController: UIViewController {
         
         do {
             
-            user = try managedContext.fetch(User.fetchRequest()).first
+            let users : [User] = try managedContext.fetch(User.fetchRequest())
             
-            if user.name == nil {
+            if users.count == 0 {
+                
+                let newUser = User(context: managedContext)
                 
                 let alert = UIAlertController(title: "Qual seu nome", message: "Digite seu nome", preferredStyle: .alert)
                 
@@ -44,17 +46,23 @@ class DoneListViewController: UIViewController {
                 }
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    self.user.name = alert.textFields?.first?.text ?? "Joaquim"
+                    newUser.name = alert.textFields?.first?.text ?? "Joaquim"
+                    self.navigationController?.navigationBar.topItem?.title = "Hello, \(String(describing: newUser.name!))"
                 }))
                 
-                present(alert, animated: true) {
-                    
-                }
+                present(alert, animated: true, completion: nil)
+                
+                user = newUser
+                try managedContext.save()
+        
+            } else {
+            
+                user = users[0]
+//                self.navigationController?.navigationBar.topItem?.title = "Hello, \(String(describing: users[0].name!))"
                 
             }
             
-            try managedContext.save()
-            self.navigationController?.navigationBar.topItem?.title = "Hello, \(String(describing: user.name!))"
+            
             
         } catch let error as NSError {
             print(error.localizedDescription)

@@ -17,6 +17,15 @@ enum FillMode {
 extension UIView {
     
     func addRoundedBorder(in mode: FillMode, colors: [UIColor], radius: CGFloat = 10, shadowOppacity: CGFloat = 0.2, shadowRadius: CGFloat = 3) {
+        
+//        guard let layer = self.layer.sublayers?[0] as? CAShapeLayer else {
+//            return
+//        }
+        
+        if let layer = self.layer.sublayers?[0] as? CAShapeLayer {
+            layer.removeFromSuperlayer()
+        }
+        
         let shadowLayer = CAShapeLayer()
         shadowLayer.masksToBounds = false
         

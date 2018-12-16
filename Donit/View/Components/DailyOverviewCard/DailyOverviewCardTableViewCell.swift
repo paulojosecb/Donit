@@ -18,7 +18,15 @@ class DailyOverviewCardTableViewCell: UITableViewCell {
         
         cardView.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue])
 //        cardView.setBackgroundToGradient(with: [UIColor.lightishBlue, UIColor.greenyBlue])
-        
+    }
+    
+    override func draw(_ rect: CGRect) {
+        cardView.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue])
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        cardView.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue])
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

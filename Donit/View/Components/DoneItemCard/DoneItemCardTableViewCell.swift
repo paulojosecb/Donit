@@ -16,6 +16,15 @@ class DoneItemCardTableViewCell: UITableViewCell {
         super.awakeFromNib()
         cardView.addRoundedBorder(in: .opaque, colors: [UIColor.white])
     }
+    
+    override func draw(_ rect: CGRect) {
+        cardView.addRoundedBorder(in: .opaque, colors: [UIColor.white])
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        cardView.addRoundedBorder(in: .opaque, colors: [UIColor.white])
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
