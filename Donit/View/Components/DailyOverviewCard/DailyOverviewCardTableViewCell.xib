@@ -22,8 +22,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOB-kB-B1h">
                         <rect key="frame" x="16" y="6" width="343" height="114.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNW-RY-qlF">
-                                <rect key="frame" x="129" y="8" width="206" height="98.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="245" translatesAutoresizingMaskIntoConstraints="NO" id="bNW-RY-qlF">
+                                <rect key="frame" x="89" y="8" width="245" height="98.5"/>
                                 <string key="text">is the number of things 
 you’ve done so far. 
 Keep it up! 🎉🎉</string>
@@ -31,21 +31,24 @@ Keep it up! 🎉🎉</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7Z-mR-J8j">
-                                <rect key="frame" x="8" y="8" width="113" height="98.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7Z-mR-J8j">
+                                <rect key="frame" x="8" y="8" width="74" height="98.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="AbQ-sB-OIa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="D7Z-mR-J8j" secondAttribute="bottom" constant="8" id="06R-Be-0SP"/>
-                            <constraint firstAttribute="trailing" secondItem="bNW-RY-qlF" secondAttribute="trailing" constant="8" id="0Sn-y6-XtW"/>
-                            <constraint firstItem="bNW-RY-qlF" firstAttribute="top" secondItem="DOB-kB-B1h" secondAttribute="top" constant="8" id="7Sg-sz-vJH"/>
-                            <constraint firstItem="bNW-RY-qlF" firstAttribute="leading" secondItem="D7Z-mR-J8j" secondAttribute="trailing" constant="8" id="Cgm-I4-Vj6"/>
-                            <constraint firstAttribute="bottom" secondItem="bNW-RY-qlF" secondAttribute="bottom" constant="8" id="Teb-mi-g6j"/>
-                            <constraint firstItem="D7Z-mR-J8j" firstAttribute="leading" secondItem="DOB-kB-B1h" secondAttribute="leading" constant="8" id="eqZ-Ou-SYP"/>
-                            <constraint firstItem="D7Z-mR-J8j" firstAttribute="top" secondItem="DOB-kB-B1h" secondAttribute="top" constant="8" id="gXA-nm-R1O"/>
+                            <constraint firstItem="D7Z-mR-J8j" firstAttribute="top" secondItem="DOB-kB-B1h" secondAttribute="topMargin" id="0qb-gv-gZ2"/>
+                            <constraint firstItem="bNW-RY-qlF" firstAttribute="leading" secondItem="D7Z-mR-J8j" secondAttribute="trailing" constant="7" id="2Pi-ce-wn3"/>
+                            <constraint firstItem="D7Z-mR-J8j" firstAttribute="leading" secondItem="DOB-kB-B1h" secondAttribute="leadingMargin" id="47F-5Y-hlm"/>
+                            <constraint firstItem="D7Z-mR-J8j" firstAttribute="bottom" secondItem="bNW-RY-qlF" secondAttribute="bottom" id="kTn-w6-6cw"/>
+                            <constraint firstItem="D7Z-mR-J8j" firstAttribute="top" secondItem="bNW-RY-qlF" secondAttribute="top" id="q3g-hA-aJI"/>
+                            <constraint firstAttribute="trailing" secondItem="bNW-RY-qlF" secondAttribute="trailing" constant="9" id="qo8-xA-YR8"/>
+                            <constraint firstItem="D7Z-mR-J8j" firstAttribute="bottom" secondItem="DOB-kB-B1h" secondAttribute="bottomMargin" id="y7B-xO-9WX"/>
                         </constraints>
                     </view>
                 </subviews>
