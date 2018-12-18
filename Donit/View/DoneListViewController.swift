@@ -16,9 +16,17 @@ class DoneListViewController: UIViewController {
 
     @IBOutlet weak var floatButton: UIView!
     @IBOutlet weak var doneListTableView: UITableView!
+    @IBOutlet weak var emptyStateCard: InfoCard!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emptyStateCard.isHidden = true
+        doneListTableView.isHidden = false
+        
+        emptyStateCard.imageView.image = UIImage(named: "Empty")
+        emptyStateCard.titleLabel.text = "Isn’t kind of empty here?"
+        emptyStateCard.descriptionLabel.text = "Tap on this float button on the right corner and tell me what you’ve done today"
        
         doneListTableView.delegate = self
         doneListTableView.dataSource = self
@@ -112,6 +120,14 @@ class DoneListViewController: UIViewController {
             request.sortDescriptors = [sort]
             doneList = try managedContext.fetch(request)
             
+            if doneList.count > 0 {
+                doneListTableView.isHidden = false
+                emptyStateCard.isHidden = true
+            } else {
+                doneListTableView.isHidden = true
+                emptyStateCard.isHidden = false
+            }
+            
         } catch _ as NSError {
             print("Deu ruim no fetch")
         }
@@ -139,9 +155,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
         
         if editingStyle == .delete {
             guard let itemToRemove = doneList[indexPath.row - 1] as? DoneItem else {return}
-            
-            print(itemToRemove.name)
-            
+                        
             managedContext.delete(itemToRemove)
             
             do {

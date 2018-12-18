@@ -31,6 +31,10 @@
 		2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */; };
 		2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */; };
 		2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */; };
+		2BD0ED3621C9641900EC9CFF /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3421C9641900EC9CFF /* XibView.swift */; };
+		2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3821C9683500EC9CFF /* XibView.xib */; };
+		2BD0ED3C21C9688E00EC9CFF /* InfoCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3B21C9688E00EC9CFF /* InfoCard.xib */; };
+		2BD0ED3E21C968A500EC9CFF /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3D21C968A500EC9CFF /* InfoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneListHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		2BD0ED3421C9641900EC9CFF /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		2BD0ED3821C9683500EC9CFF /* XibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibView.xib; sourceTree = "<group>"; };
+		2BD0ED3B21C9688E00EC9CFF /* InfoCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCard.xib; sourceTree = "<group>"; };
+		2BD0ED3D21C968A500EC9CFF /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,8 @@
 		2B1A7AEC21C3D880002FD5E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BD0ED3A21C9687600EC9CFF /* InfoCard */,
+				2BD0ED3321C9638A00EC9CFF /* XibView */,
 				2BD0ED2D21C4963E00EC9CFF /* LaunchScreen */,
 				2B15BE3D21C449D4006426BB /* Components */,
 				2B15BE3821C4497D006426BB /* Welcome */,
@@ -207,6 +217,24 @@
 				2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		2BD0ED3321C9638A00EC9CFF /* XibView */ = {
+			isa = PBXGroup;
+			children = (
+				2BD0ED3421C9641900EC9CFF /* XibView.swift */,
+				2BD0ED3821C9683500EC9CFF /* XibView.xib */,
+			);
+			path = XibView;
+			sourceTree = "<group>";
+		};
+		2BD0ED3A21C9687600EC9CFF /* InfoCard */ = {
+			isa = PBXGroup;
+			children = (
+				2BD0ED3B21C9688E00EC9CFF /* InfoCard.xib */,
+				2BD0ED3D21C968A500EC9CFF /* InfoCard.swift */,
+			);
+			path = InfoCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +297,9 @@
 			files = (
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
 				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
+				2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */,
 				2B15BE3A21C4498E006426BB /* Welcome.storyboard in Resources */,
+				2BD0ED3C21C9688E00EC9CFF /* InfoCard.xib in Resources */,
 				2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */,
 				2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */,
 				2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */,
@@ -284,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD0ED3E21C968A500EC9CFF /* InfoCard.swift in Sources */,
 				2B15BE4421C44C40006426BB /* UIView.swift in Sources */,
 				2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */,
 				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
@@ -300,6 +331,7 @@
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
 				2B15BE3721C42500006426BB /* User+CoreDataProperties.swift in Sources */,
 				2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */,
+				2BD0ED3621C9641900EC9CFF /* XibView.swift in Sources */,
 				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

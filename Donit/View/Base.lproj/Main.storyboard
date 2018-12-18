@@ -23,6 +23,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eT-wQ-uLB" customClass="InfoCard" customModule="Donit" customModuleProvider="target">
+                                <rect key="frame" x="16" y="180.5" width="343" height="306"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6eT-wQ-uLB" secondAttribute="height" multiplier="343:306" id="fnh-BN-pDz"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWZ-I8-dgl">
                                 <rect key="frame" x="295" y="587" width="64" height="64"/>
                                 <subviews>
@@ -43,10 +49,14 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="greenyBlue"/>
+                        <color key="backgroundColor" name="paleGrey"/>
                         <constraints>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0A1-Ej-CPD"/>
+                            <constraint firstItem="6eT-wQ-uLB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="37i-jZ-nTy"/>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3aH-0j-tDF"/>
+                            <constraint firstItem="6eT-wQ-uLB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="51n-WF-qev"/>
+                            <constraint firstItem="6eT-wQ-uLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="62U-F0-5Gy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6eT-wQ-uLB" secondAttribute="trailing" constant="16" id="FNp-zh-o4u"/>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jwr-C2-wrU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pWZ-I8-dgl" secondAttribute="bottom" constant="16" id="OIe-FC-XSl"/>
                             <constraint firstItem="VO2-rz-7As" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cFO-wJ-S8l"/>
@@ -57,6 +67,7 @@
                     <navigationItem key="navigationItem" title="Hello, Paulo" id="EQC-us-QET"/>
                     <connections>
                         <outlet property="doneListTableView" destination="VO2-rz-7As" id="qoc-Mj-hoc"/>
+                        <outlet property="emptyStateCard" destination="6eT-wQ-uLB" id="S5s-bj-0Dd"/>
                         <outlet property="floatButton" destination="pWZ-I8-dgl" id="0r1-cT-zbq"/>
                     </connections>
                 </viewController>
@@ -86,9 +97,6 @@
     </scenes>
     <resources>
         <image name="Plus" width="22" height="22"/>
-        <namedColor name="greenyBlue">
-            <color red="0.24300000071525574" green="0.63899999856948853" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="paleGrey">
             <color red="0.98799997568130493" green="0.98000001907348633" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
