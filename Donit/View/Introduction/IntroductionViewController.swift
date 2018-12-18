@@ -69,6 +69,7 @@ extension IntroductionViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTextField.resignFirstResponder()
+        UserDefaults.standard.set(nameTextField.text, forKey: "username")
         performSegue(withIdentifier: "showTutorial", sender: self)
         return true
     }

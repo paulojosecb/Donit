@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        if let userName = UserDefaults.standard.string(forKey: "usernamed") ?? nil {
+            let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? UINavigationController
+            self.window?.rootViewController = initialViewController
+        }
+        
         // Override point for customization after application launch.
         
         guard
@@ -24,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             return true
         }
-        
+
         vc.managedContext = persistentContainer.viewContext
         
         return true

@@ -21,6 +21,13 @@ class DoneListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if managedContext == nil {
+            guard let appDeledate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            managedContext = appDeledate.persistentContainer.viewContext
+        }
+        
         emptyStateCard.isHidden = true
         doneListTableView.isHidden = false
         
@@ -35,6 +42,9 @@ class DoneListViewController: UIViewController {
         
         floatButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.addDidPress(_:))))
         
+        let username = UserDefaults.standard.value(forKey: "username") as? String ?? "Stranger"
+        
+        self.navigationItem.title = "Hello, \(username)"
         self.navigationController?.navigationBar.barTintColor = UIColor.paleGrey
         self.navigationController?.navigationBar.shadowImage = UIImage()
         doneListTableView.backgroundColor = UIColor.paleGrey
