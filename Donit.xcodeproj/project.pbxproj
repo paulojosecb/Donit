@@ -35,6 +35,11 @@
 		2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3821C9683500EC9CFF /* XibView.xib */; };
 		2BD0ED3C21C9688E00EC9CFF /* InfoCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3B21C9688E00EC9CFF /* InfoCard.xib */; };
 		2BD0ED3E21C968A500EC9CFF /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3D21C968A500EC9CFF /* InfoCard.swift */; };
+		2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4021C96D5900EC9CFF /* Introduction.storyboard */; };
+		2BD0ED4321C96D7000EC9CFF /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4221C96D7000EC9CFF /* IntroductionViewController.swift */; };
+		2BD0ED4621C97A3900EC9CFF /* TutorialCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4521C97A3900EC9CFF /* TutorialCard.xib */; };
+		2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */; };
+		2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +73,11 @@
 		2BD0ED3821C9683500EC9CFF /* XibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibView.xib; sourceTree = "<group>"; };
 		2BD0ED3B21C9688E00EC9CFF /* InfoCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCard.xib; sourceTree = "<group>"; };
 		2BD0ED3D21C968A500EC9CFF /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		2BD0ED4021C96D5900EC9CFF /* Introduction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
+		2BD0ED4221C96D7000EC9CFF /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		2BD0ED4521C97A3900EC9CFF /* TutorialCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialCard.xib; sourceTree = "<group>"; };
+		2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCard.swift; sourceTree = "<group>"; };
+		2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +185,7 @@
 		2B1A7AEC21C3D880002FD5E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BD0ED3F21C96D4900EC9CFF /* Introduction */,
 				2BD0ED3A21C9687600EC9CFF /* InfoCard */,
 				2BD0ED3321C9638A00EC9CFF /* XibView */,
 				2BD0ED2D21C4963E00EC9CFF /* LaunchScreen */,
@@ -237,6 +248,34 @@
 			path = InfoCard;
 			sourceTree = "<group>";
 		};
+		2BD0ED3F21C96D4900EC9CFF /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				2BD0ED4921C97F0F00EC9CFF /* Tutorial */,
+				2BD0ED4021C96D5900EC9CFF /* Introduction.storyboard */,
+				2BD0ED4221C96D7000EC9CFF /* IntroductionViewController.swift */,
+			);
+			path = Introduction;
+			sourceTree = "<group>";
+		};
+		2BD0ED4421C97A2800EC9CFF /* TutorialCard */ = {
+			isa = PBXGroup;
+			children = (
+				2BD0ED4521C97A3900EC9CFF /* TutorialCard.xib */,
+				2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */,
+			);
+			path = TutorialCard;
+			sourceTree = "<group>";
+		};
+		2BD0ED4921C97F0F00EC9CFF /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				2BD0ED4421C97A2800EC9CFF /* TutorialCard */,
+				2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */,
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
 				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
 				2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */,
@@ -303,6 +343,7 @@
 				2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */,
 				2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */,
 				2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */,
+				2BD0ED4621C97A3900EC9CFF /* TutorialCard.xib in Resources */,
 				2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +363,7 @@
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
 				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
 				2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */,
+				2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */,
 				2B15BE3421C42500006426BB /* DoneItem+CoreDataClass.swift in Sources */,
 				2B15BE2921C3DAB0006426BB /* CAGradientLayer.swift in Sources */,
 				2B15BE3521C42500006426BB /* DoneItem+CoreDataProperties.swift in Sources */,
@@ -330,8 +372,10 @@
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
 				2B15BE3721C42500006426BB /* User+CoreDataProperties.swift in Sources */,
+				2BD0ED4321C96D7000EC9CFF /* IntroductionViewController.swift in Sources */,
 				2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */,
 				2BD0ED3621C9641900EC9CFF /* XibView.swift in Sources */,
+				2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */,
 				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
