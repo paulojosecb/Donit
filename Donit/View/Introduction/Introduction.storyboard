@@ -30,11 +30,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7dk-Hu-kh3" secondAttribute="height" multiplier="375:58" id="btE-h7-qZg"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Start">
-                                    <color key="titleColor" name="paleGrey"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mot-Ao-TZr" kind="show" identifier="showTutorial" id="GiH-Gr-Ytx"/>
+                                    <segue destination="2Rd-OD-nxq" kind="show" identifier="showTutorial" id="XL4-uf-XNQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4og-mh-960">
@@ -69,88 +70,13 @@
             </objects>
             <point key="canvasLocation" x="1164" y="26.53673163418291"/>
         </scene>
-        <!--Tutorial View Controller-->
-        <scene sceneID="Tt3-iG-DMJ">
+        <!--Tutorial-->
+        <scene sceneID="9pA-92-Yvd">
             <objects>
-                <viewController id="Mot-Ao-TZr" customClass="TutorialViewController" customModule="Donit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aab-B2-2CT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="712-Rl-g7O">
-                                <rect key="frame" x="0.0" y="204" width="375" height="273.5"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6J-Dw-Cm5" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="266"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jE7-eR-XSe" userLabel="Tutorial Card2" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="375" y="3" width="375" height="266"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-EQ-85I" userLabel="Tutorial Card3" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="750" y="3" width="375" height="266"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="EB0-EQ-85I" firstAttribute="top" secondItem="712-Rl-g7O" secondAttribute="top" id="1wj-Q6-hHl"/>
-                                    <constraint firstAttribute="bottom" secondItem="EB0-EQ-85I" secondAttribute="bottom" id="7Se-Iu-WHl"/>
-                                    <constraint firstItem="jE7-eR-XSe" firstAttribute="top" secondItem="712-Rl-g7O" secondAttribute="top" id="7Y8-lm-jpI"/>
-                                    <constraint firstItem="S6J-Dw-Cm5" firstAttribute="top" secondItem="712-Rl-g7O" secondAttribute="top" id="9Cm-Mh-auG"/>
-                                    <constraint firstItem="EB0-EQ-85I" firstAttribute="leading" secondItem="jE7-eR-XSe" secondAttribute="trailing" id="BK0-tT-iRP"/>
-                                    <constraint firstItem="S6J-Dw-Cm5" firstAttribute="leading" secondItem="712-Rl-g7O" secondAttribute="leading" id="FY4-Pl-Oah"/>
-                                    <constraint firstAttribute="bottom" secondItem="S6J-Dw-Cm5" secondAttribute="bottom" id="P22-0P-Ym2"/>
-                                    <constraint firstItem="jE7-eR-XSe" firstAttribute="leading" secondItem="S6J-Dw-Cm5" secondAttribute="trailing" id="pQ2-NG-sNc"/>
-                                    <constraint firstAttribute="bottom" secondItem="jE7-eR-XSe" secondAttribute="bottom" id="rvz-3m-fbO"/>
-                                </constraints>
-                            </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Donit, Paulo!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0B-58-McO">
-                                <rect key="frame" x="16" y="71" width="343" height="81.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-js-ftr">
-                                <rect key="frame" x="0.0" y="609" width="375" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="0w6-46-e4E"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" name="paleGrey"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextDidPress:" destination="Mot-Ao-TZr" eventType="touchUpInside" id="jzK-qS-rn2"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" name="paleGrey"/>
-                        <constraints>
-                            <constraint firstItem="EB0-EQ-85I" firstAttribute="width" secondItem="1ql-Az-CW8" secondAttribute="width" id="144-fT-nVG"/>
-                            <constraint firstItem="712-Rl-g7O" firstAttribute="leading" secondItem="1ql-Az-CW8" secondAttribute="leading" id="2Kv-TP-fOO"/>
-                            <constraint firstItem="e0B-58-McO" firstAttribute="leading" secondItem="1ql-Az-CW8" secondAttribute="leading" constant="16" id="5No-KE-ALy"/>
-                            <constraint firstItem="S6J-Dw-Cm5" firstAttribute="width" secondItem="1ql-Az-CW8" secondAttribute="width" id="Fcg-RC-ViY"/>
-                            <constraint firstItem="o7j-js-ftr" firstAttribute="leading" secondItem="1ql-Az-CW8" secondAttribute="leading" id="ItE-lJ-TK6"/>
-                            <constraint firstItem="e0B-58-McO" firstAttribute="top" secondItem="1ql-Az-CW8" secondAttribute="top" constant="7" id="JRA-NZ-lEj"/>
-                            <constraint firstItem="1ql-Az-CW8" firstAttribute="trailing" secondItem="e0B-58-McO" secondAttribute="trailing" constant="16" id="Q2O-SZ-XPC"/>
-                            <constraint firstItem="712-Rl-g7O" firstAttribute="top" secondItem="e0B-58-McO" secondAttribute="bottom" constant="51.5" id="c2I-7h-Bgq"/>
-                            <constraint firstItem="o7j-js-ftr" firstAttribute="trailing" secondItem="1ql-Az-CW8" secondAttribute="trailing" id="dQo-Cp-xWL"/>
-                            <constraint firstItem="jE7-eR-XSe" firstAttribute="width" secondItem="1ql-Az-CW8" secondAttribute="width" id="eAq-7P-aIZ"/>
-                            <constraint firstItem="712-Rl-g7O" firstAttribute="trailing" secondItem="1ql-Az-CW8" secondAttribute="trailing" id="hBY-Of-TTd"/>
-                            <constraint firstItem="o7j-js-ftr" firstAttribute="bottom" secondItem="1ql-Az-CW8" secondAttribute="bottom" id="pu3-Re-yoT"/>
-                            <constraint firstItem="712-Rl-g7O" firstAttribute="height" secondItem="aab-B2-2CT" secondAttribute="height" multiplier="0.41" id="yPF-SH-DM1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="1ql-Az-CW8"/>
-                    </view>
-                    <connections>
-                        <outlet property="nextButton" destination="o7j-js-ftr" id="mMH-XE-dVs"/>
-                        <outlet property="scrollView" destination="712-Rl-g7O" id="hRR-DO-12g"/>
-                        <outlet property="tutorialCard1" destination="S6J-Dw-Cm5" id="CIj-Rk-U4l"/>
-                        <outlet property="tutorialCard2" destination="jE7-eR-XSe" id="50T-8E-GPV"/>
-                        <outlet property="tutorialCard3" destination="EB0-EQ-85I" id="qbl-eZ-rAp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gbY-VW-dUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Tutorial" id="2Rd-OD-nxq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPt-Ju-UxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261.5999999999999" y="26.53673163418291"/>
+            <point key="canvasLocation" x="2056" y="-17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dz2-Fm-PQn">

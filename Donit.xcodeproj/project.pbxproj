@@ -40,6 +40,7 @@
 		2BD0ED4621C97A3900EC9CFF /* TutorialCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4521C97A3900EC9CFF /* TutorialCard.xib */; };
 		2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */; };
 		2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */; };
+		2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		2BD0ED4521C97A3900EC9CFF /* TutorialCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialCard.xib; sourceTree = "<group>"; };
 		2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCard.swift; sourceTree = "<group>"; };
 		2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD0ED4421C97A2800EC9CFF /* TutorialCard */,
+				2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */,
 				2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */,
 			);
 			path = Tutorial;
@@ -344,6 +347,7 @@
 				2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */,
 				2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */,
 				2BD0ED4621C97A3900EC9CFF /* TutorialCard.xib in Resources */,
+				2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */,
 				2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
