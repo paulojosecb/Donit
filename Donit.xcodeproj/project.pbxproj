@@ -41,7 +41,6 @@
 		2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */; };
 		2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */; };
 		2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */; };
-		2BD0ED5221CA5CDA00EC9CFF /* AddScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5121CA5CDA00EC9CFF /* AddScreen.storyboard */; };
 		2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +81,6 @@
 		2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCard.swift; sourceTree = "<group>"; };
 		2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
-		2BD0ED5121CA5CDA00EC9CFF /* AddScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreen.storyboard; sourceTree = "<group>"; };
 		2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,7 +285,6 @@
 		2BD0ED5021CA5CC900EC9CFF /* AddScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2BD0ED5121CA5CDA00EC9CFF /* AddScreen.storyboard */,
 				2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */,
 			);
 			path = AddScreen;
@@ -352,7 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */,
-				2BD0ED5221CA5CDA00EC9CFF /* AddScreen.storyboard in Resources */,
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
 				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
 				2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */,

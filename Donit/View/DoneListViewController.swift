@@ -104,9 +104,7 @@ class DoneListViewController: UIViewController {
 //
 //        present(alert, animated: true, completion: nil)
         
-        let vc = UIStoryboard(name: "AddScreen", bundle: nil).instantiateInitialViewController() as? AddScreenViewController
-        
-        present(vc! , animated: true, completion: nil)
+        self.performSegue(withIdentifier: "showAddScreen", sender: self)
         
     }
     
