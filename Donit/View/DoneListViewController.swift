@@ -92,17 +92,22 @@ class DoneListViewController: UIViewController {
 
     @IBAction func addDidPress(_ sender: Any) {
         
-        let alert = UIAlertController(title: "New DoneItem", message: "What've you done today?", preferredStyle: .alert)
+//        let alert = UIAlertController(title: "New DoneItem", message: "What've you done today?", preferredStyle: .alert)
+//
+//        alert.addTextField { (textField) in
+//            textField.placeholder = "Here"
+//        }
+//
+//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+//            self.saveDoneItem(with: alert.textFields?.first?.text ?? "")
+//        }))
+//
+//        present(alert, animated: true, completion: nil)
         
-        alert.addTextField { (textField) in
-            textField.placeholder = "Here"
-        }
+        let vc = UIStoryboard(name: "AddScreen", bundle: nil).instantiateInitialViewController() as? AddScreenViewController
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            self.saveDoneItem(with: alert.textFields?.first?.text ?? "")
-        }))
+        present(vc! , animated: true, completion: nil)
         
-        present(alert, animated: true, completion: nil)
     }
     
     func saveDoneItem(with name: String) {

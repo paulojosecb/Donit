@@ -41,6 +41,8 @@
 		2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */; };
 		2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */; };
 		2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */; };
+		2BD0ED5221CA5CDA00EC9CFF /* AddScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5121CA5CDA00EC9CFF /* AddScreen.storyboard */; };
+		2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCard.swift; sourceTree = "<group>"; };
 		2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		2BD0ED5121CA5CDA00EC9CFF /* AddScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreen.storyboard; sourceTree = "<group>"; };
+		2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 		2B1A7AEC21C3D880002FD5E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BD0ED5021CA5CC900EC9CFF /* AddScreen */,
 				2BD0ED3F21C96D4900EC9CFF /* Introduction */,
 				2BD0ED3A21C9687600EC9CFF /* InfoCard */,
 				2BD0ED3321C9638A00EC9CFF /* XibView */,
@@ -279,6 +284,15 @@
 			path = Tutorial;
 			sourceTree = "<group>";
 		};
+		2BD0ED5021CA5CC900EC9CFF /* AddScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2BD0ED5121CA5CDA00EC9CFF /* AddScreen.storyboard */,
+				2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */,
+			);
+			path = AddScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */,
+				2BD0ED5221CA5CDA00EC9CFF /* AddScreen.storyboard in Resources */,
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
 				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
 				2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */,
@@ -364,6 +379,7 @@
 				2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */,
 				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
 				2B15BE4A21C44DF5006426BB /* DoneItemCardTableViewCell.swift in Sources */,
+				2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */,
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
 				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
 				2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */,

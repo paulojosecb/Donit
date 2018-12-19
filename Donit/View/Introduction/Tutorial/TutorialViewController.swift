@@ -14,6 +14,7 @@ class TutorialViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     @IBOutlet weak var tutorialCard1: TutorialCard!
     @IBOutlet weak var tutorialCard2: TutorialCard!
@@ -21,6 +22,9 @@ class TutorialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let username = UserDefaults.standard.value(forKey: "username") as? String ?? "Stranger"
+        welcomeLabel.text = "Welcome to Donit, \(username)"
         
         nextButton.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue], radius: 0, shadowOppacity: 0.5, shadowRadius: 10)
     
@@ -38,31 +42,29 @@ class TutorialViewController: UIViewController {
         
         self.navigationController?.navigationBar.setTransparentBackground()
         
-        
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func nextDidPress(_ sender: Any) {
+        
+        let viewWidth = self.view.frame.width
+        
+        if scrollView.contentOffset.x >= 0 && scrollView.contentOffset.x < viewWidth {
+            currentPage = 1
+        } else if scrollView.contentOffset.x >= viewWidth && scrollView.contentOffset.x < viewWidth * 2 {
+            currentPage = 2
+        } else {
+            currentPage = 3
+        }
         
         switch currentPage {
         case 1:
                 UIView.animate(withDuration: 0.3) {
-                    self.scrollView.contentOffset = CGPoint(x: self.view.frame.width, y: 0)
+                    self.scrollView.contentOffset = CGPoint(x: viewWidth, y: 0)
                 }
                 currentPage = currentPage + 1
         case 2:
                 UIView.animate(withDuration: 0.3) {
-                    self.scrollView.contentOffset = CGPoint(x: 375 * self.currentPage, y: 0)
+                    self.scrollView.contentOffset = CGPoint(x: viewWidth * CGFloat(self.currentPage), y: 0)
                 }
                 currentPage = currentPage + 1
                 nextButton.titleLabel?.text = "Let's start!"

@@ -20,28 +20,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNr-ZP-4yU">
-                                <rect key="frame" x="0.0" y="204" width="375" height="273.5"/>
+                                <rect key="frame" x="0.0" y="204" width="375" height="277"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDl-s2-zoC" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="266"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-Ba-jEM" userLabel="Tutorial Card2" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="375" y="3" width="375" height="266"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ca-Kt-1hk" userLabel="Tutorial Card3" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="750" y="3" width="375" height="266"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vle-Jf-Ph4" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="1125" height="277"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDl-s2-zoC" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="277"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-Ba-jEM" userLabel="Tutorial Card2" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
+                                                <rect key="frame" x="375" y="0.0" width="375" height="277"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ca-Kt-1hk" userLabel="Tutorial Card3" customClass="TutorialCard" customModule="Donit" customModuleProvider="target">
+                                                <rect key="frame" x="750" y="0.0" width="375" height="277"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="OcW-Ba-jEM" secondAttribute="bottom" id="2AG-3Q-KYm"/>
+                                            <constraint firstItem="OcW-Ba-jEM" firstAttribute="top" secondItem="vle-Jf-Ph4" secondAttribute="top" id="529-iR-bL7"/>
+                                            <constraint firstAttribute="bottom" secondItem="5ca-Kt-1hk" secondAttribute="bottom" id="Edv-tu-9B3"/>
+                                            <constraint firstItem="OcW-Ba-jEM" firstAttribute="leading" secondItem="vDl-s2-zoC" secondAttribute="trailing" id="FGM-w3-eIg"/>
+                                            <constraint firstItem="5ca-Kt-1hk" firstAttribute="top" secondItem="vle-Jf-Ph4" secondAttribute="top" id="Nre-Kz-OYn"/>
+                                            <constraint firstAttribute="bottom" secondItem="vDl-s2-zoC" secondAttribute="bottom" id="bfT-gn-bEU"/>
+                                            <constraint firstItem="5ca-Kt-1hk" firstAttribute="leading" secondItem="OcW-Ba-jEM" secondAttribute="trailing" id="dpC-7H-3El"/>
+                                            <constraint firstItem="vDl-s2-zoC" firstAttribute="leading" secondItem="vle-Jf-Ph4" secondAttribute="leading" id="fJC-WR-B7s"/>
+                                            <constraint firstItem="vDl-s2-zoC" firstAttribute="top" secondItem="vle-Jf-Ph4" secondAttribute="top" id="qx5-Oz-8gj"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="OcW-Ba-jEM" firstAttribute="leading" secondItem="vDl-s2-zoC" secondAttribute="trailing" id="3NV-Wa-Vkm"/>
-                                    <constraint firstItem="5ca-Kt-1hk" firstAttribute="leading" secondItem="OcW-Ba-jEM" secondAttribute="trailing" id="62Y-H3-eYE"/>
-                                    <constraint firstItem="5ca-Kt-1hk" firstAttribute="top" secondItem="gNr-ZP-4yU" secondAttribute="top" id="DF8-RR-ed0"/>
-                                    <constraint firstAttribute="bottom" secondItem="vDl-s2-zoC" secondAttribute="bottom" id="Klg-32-3rS"/>
-                                    <constraint firstAttribute="bottom" secondItem="OcW-Ba-jEM" secondAttribute="bottom" id="Mxk-Vy-dTP"/>
-                                    <constraint firstAttribute="bottom" secondItem="5ca-Kt-1hk" secondAttribute="bottom" id="OkJ-Ix-2gv"/>
-                                    <constraint firstItem="OcW-Ba-jEM" firstAttribute="top" secondItem="gNr-ZP-4yU" secondAttribute="top" id="Rkr-wW-A2A"/>
-                                    <constraint firstItem="vDl-s2-zoC" firstAttribute="leading" secondItem="gNr-ZP-4yU" secondAttribute="leading" id="dvS-qi-I0x"/>
-                                    <constraint firstItem="vDl-s2-zoC" firstAttribute="top" secondItem="gNr-ZP-4yU" secondAttribute="top" id="yQx-pZ-5QW"/>
+                                    <constraint firstAttribute="bottom" secondItem="vle-Jf-Ph4" secondAttribute="bottom" id="12H-v8-c9i"/>
+                                    <constraint firstItem="vle-Jf-Ph4" firstAttribute="top" secondItem="gNr-ZP-4yU" secondAttribute="top" id="2gV-bq-MCj"/>
+                                    <constraint firstItem="vDl-s2-zoC" firstAttribute="width" secondItem="gNr-ZP-4yU" secondAttribute="width" id="4Ad-JN-WBG"/>
+                                    <constraint firstItem="OcW-Ba-jEM" firstAttribute="width" secondItem="gNr-ZP-4yU" secondAttribute="width" id="6Mc-EV-Aex"/>
+                                    <constraint firstAttribute="width" secondItem="gNr-ZP-4yU" secondAttribute="height" multiplier="375:277" id="I3L-ET-c30"/>
+                                    <constraint firstItem="5ca-Kt-1hk" firstAttribute="width" secondItem="gNr-ZP-4yU" secondAttribute="width" id="ZU4-T5-QNp"/>
+                                    <constraint firstItem="vle-Jf-Ph4" firstAttribute="leading" secondItem="gNr-ZP-4yU" secondAttribute="leading" id="cna-ZF-ZPr"/>
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Donit, Paulo!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89g-Dg-GJ4">
@@ -68,16 +83,12 @@
                         <constraints>
                             <constraint firstItem="vAZ-eh-6zu" firstAttribute="trailing" secondItem="89g-Dg-GJ4" secondAttribute="trailing" constant="16" id="5UK-FE-Lgc"/>
                             <constraint firstItem="gNr-ZP-4yU" firstAttribute="leading" secondItem="vAZ-eh-6zu" secondAttribute="leading" id="69H-UF-Req"/>
-                            <constraint firstItem="gNr-ZP-4yU" firstAttribute="height" secondItem="uJE-tT-2XB" secondAttribute="height" multiplier="0.41" id="Adh-C5-USK"/>
                             <constraint firstItem="FM8-Bw-2Z5" firstAttribute="trailing" secondItem="vAZ-eh-6zu" secondAttribute="trailing" id="EMV-px-qyQ"/>
                             <constraint firstItem="FM8-Bw-2Z5" firstAttribute="leading" secondItem="vAZ-eh-6zu" secondAttribute="leading" id="Fcx-Od-xtg"/>
-                            <constraint firstItem="OcW-Ba-jEM" firstAttribute="width" secondItem="vAZ-eh-6zu" secondAttribute="width" id="ScJ-vC-AtY"/>
-                            <constraint firstItem="5ca-Kt-1hk" firstAttribute="width" secondItem="vAZ-eh-6zu" secondAttribute="width" id="T96-VR-Kyi"/>
                             <constraint firstItem="gNr-ZP-4yU" firstAttribute="trailing" secondItem="vAZ-eh-6zu" secondAttribute="trailing" id="XWH-Rd-6oH"/>
                             <constraint firstItem="89g-Dg-GJ4" firstAttribute="leading" secondItem="vAZ-eh-6zu" secondAttribute="leading" constant="16" id="gO9-QL-Tp8"/>
                             <constraint firstItem="89g-Dg-GJ4" firstAttribute="top" secondItem="vAZ-eh-6zu" secondAttribute="top" constant="7" id="mbC-7p-3Z6"/>
-                            <constraint firstItem="vDl-s2-zoC" firstAttribute="width" secondItem="vAZ-eh-6zu" secondAttribute="width" id="nvL-bl-KFy"/>
-                            <constraint firstItem="gNr-ZP-4yU" firstAttribute="top" secondItem="89g-Dg-GJ4" secondAttribute="bottom" constant="51.5" id="rS1-qO-WPk"/>
+                            <constraint firstItem="gNr-ZP-4yU" firstAttribute="top" secondItem="89g-Dg-GJ4" secondAttribute="bottom" constant="51" id="rS1-qO-WPk"/>
                             <constraint firstItem="FM8-Bw-2Z5" firstAttribute="bottom" secondItem="vAZ-eh-6zu" secondAttribute="bottom" id="wmI-U6-Wce"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vAZ-eh-6zu"/>
@@ -89,6 +100,7 @@
                         <outlet property="tutorialCard1" destination="vDl-s2-zoC" id="vM9-HZ-cR2"/>
                         <outlet property="tutorialCard2" destination="OcW-Ba-jEM" id="ime-zj-jME"/>
                         <outlet property="tutorialCard3" destination="5ca-Kt-1hk" id="OaU-1A-rGl"/>
+                        <outlet property="welcomeLabel" destination="89g-Dg-GJ4" id="3DU-RH-RKE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUi-j1-9q9" userLabel="First Responder" sceneMemberID="firstResponder"/>

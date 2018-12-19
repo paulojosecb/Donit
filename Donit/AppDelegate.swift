@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        if let userName = UserDefaults.standard.string(forKey: "usernamed") ?? nil {
+        if let userName = UserDefaults.standard.string(forKey: "username") ?? nil {
             let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? UINavigationController
             self.window?.rootViewController = initialViewController
         }
