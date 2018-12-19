@@ -42,6 +42,8 @@
 		2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */; };
 		2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */; };
 		2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */; };
+		2BD0ED5621CAB09100EC9CFF /* AddScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */; };
+		2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
+		2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreen.storyboard; sourceTree = "<group>"; };
+		2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */,
+				2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */,
+				2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */,
 			);
 			path = AddScreen;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */,
+				2BD0ED5621CAB09100EC9CFF /* AddScreen.storyboard in Resources */,
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
 				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
 				2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */,
@@ -376,6 +383,7 @@
 				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
 				2B15BE4A21C44DF5006426BB /* DoneItemCardTableViewCell.swift in Sources */,
 				2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */,
+				2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */,
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
 				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
 				2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */,

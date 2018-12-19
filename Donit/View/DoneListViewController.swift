@@ -104,7 +104,11 @@ class DoneListViewController: UIViewController {
 //
 //        present(alert, animated: true, completion: nil)
         
-        self.performSegue(withIdentifier: "showAddScreen", sender: self)
+        
+        let vc = UIStoryboard(name: "AddScreen", bundle: nil).instantiateInitialViewController() as? AddScreenViewController
+        vc?.modalPresentationStyle = .overCurrentContext
+        vc?.delegate = self
+        present(vc!, animated: true, completion: nil)
         
     }
     
@@ -242,5 +246,13 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
         return indexPath.section == 0 ? 126 : indexPath.row == 0 ? 92 : 72
     }
         
+}
+
+extension DoneListViewController : AddScreenDelegate {
+    
+    func addItem(item: String) {
+        self.saveDoneItem(with: item)
+    }
+    
 }
 
