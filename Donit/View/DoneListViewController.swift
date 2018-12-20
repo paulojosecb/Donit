@@ -243,7 +243,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 126 : indexPath.row == 0 ? 92 : 72
+        return indexPath.section == 0 ? 126 : indexPath.row == 0 ? 75 : 72
     }
         
 }

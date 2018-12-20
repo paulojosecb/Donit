@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="FvU-xo-Oj4"/>
+                <outlet property="progressView" destination="0eq-YW-LqQ" id="zFl-dJ-av2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="21" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eq-YW-LqQ">
+                    <rect key="frame" x="0.0" y="0.0" width="21" height="58"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="0eq-YW-LqQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="daw-cq-bAh"/>
+                <constraint firstAttribute="bottom" secondItem="0eq-YW-LqQ" secondAttribute="bottom" id="gEd-dM-XL1"/>
+                <constraint firstItem="0eq-YW-LqQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gsV-YQ-mFn"/>
+                <constraint firstItem="0eq-YW-LqQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="khl-iV-ABC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-220" y="406.59670164917543"/>
+        </view>
+    </objects>
+</document>

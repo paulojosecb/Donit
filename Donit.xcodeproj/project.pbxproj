@@ -44,6 +44,12 @@
 		2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */; };
 		2BD0ED5621CAB09100EC9CFF /* AddScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */; };
 		2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */; };
+		2BDECBFC21CC2B4E00DEDABA /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECBFB21CC2B4E00DEDABA /* Overview.storyboard */; };
+		2BDECBFE21CC2B6000DEDABA /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */; };
+		2BDECC0621CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC0421CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift */; };
+		2BDECC0721CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0521CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib */; };
+		2BDECC0A21CC3F4700DEDABA /* ProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */; };
+		2BDECC0C21CC3F6200DEDABA /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +92,12 @@
 		2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreen.storyboard; sourceTree = "<group>"; };
 		2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenDelegate.swift; sourceTree = "<group>"; };
+		2BDECBFB21CC2B4E00DEDABA /* Overview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overview.storyboard; sourceTree = "<group>"; };
+		2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		2BDECC0421CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyOverviewCardTableViewCell.swift; sourceTree = "<group>"; };
+		2BDECC0521CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeklyOverviewCardTableViewCell.xib; sourceTree = "<group>"; };
+		2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBar.xib; sourceTree = "<group>"; };
+		2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,8 @@
 		2B15BE3D21C449D4006426BB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2BDECC0821CC3F3500DEDABA /* ProgressBar */,
+				2BDECBFF21CC323100DEDABA /* WeeklyOverviewCard */,
 				2BD0ED2B21C461F900EC9CFF /* Buttons */,
 				2BD0ED2621C45B5000EC9CFF /* DoneListHeader */,
 				2B15BE4721C44DE0006426BB /* DoneItemCard */,
@@ -193,6 +207,7 @@
 		2B1A7AEC21C3D880002FD5E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BDECBFA21CC2B3E00DEDABA /* Overview */,
 				2BD0ED5021CA5CC900EC9CFF /* AddScreen */,
 				2BD0ED3F21C96D4900EC9CFF /* Introduction */,
 				2BD0ED3A21C9687600EC9CFF /* InfoCard */,
@@ -201,6 +216,7 @@
 				2B15BE3D21C449D4006426BB /* Components */,
 				2B15BE3821C4497D006426BB /* Welcome */,
 				2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */,
+				2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */,
 				2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */,
 			);
 			path = View;
@@ -296,6 +312,32 @@
 			path = AddScreen;
 			sourceTree = "<group>";
 		};
+		2BDECBFA21CC2B3E00DEDABA /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				2BDECBFB21CC2B4E00DEDABA /* Overview.storyboard */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		2BDECBFF21CC323100DEDABA /* WeeklyOverviewCard */ = {
+			isa = PBXGroup;
+			children = (
+				2BDECC0421CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift */,
+				2BDECC0521CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib */,
+			);
+			path = WeeklyOverviewCard;
+			sourceTree = "<group>";
+		};
+		2BDECC0821CC3F3500DEDABA /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */,
+				2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,12 +399,15 @@
 				2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */,
 				2BD0ED5621CAB09100EC9CFF /* AddScreen.storyboard in Resources */,
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
+				2BDECC0721CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib in Resources */,
 				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
 				2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */,
 				2B15BE3A21C4498E006426BB /* Welcome.storyboard in Resources */,
 				2BD0ED3C21C9688E00EC9CFF /* InfoCard.xib in Resources */,
 				2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */,
 				2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */,
+				2BDECC0A21CC3F4700DEDABA /* ProgressBar.xib in Resources */,
+				2BDECBFC21CC2B4E00DEDABA /* Overview.storyboard in Resources */,
 				2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */,
 				2BD0ED4621C97A3900EC9CFF /* TutorialCard.xib in Resources */,
 				2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */,
@@ -386,6 +431,7 @@
 				2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */,
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
 				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
+				2BDECC0621CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift in Sources */,
 				2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */,
 				2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */,
 				2B15BE3421C42500006426BB /* DoneItem+CoreDataClass.swift in Sources */,
@@ -394,9 +440,11 @@
 				2B15BE4121C44A30006426BB /* DailyOverviewCardTableViewCell.swift in Sources */,
 				2B15BE3621C42500006426BB /* User+CoreDataClass.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
+				2BDECBFE21CC2B6000DEDABA /* OverviewViewController.swift in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
 				2B15BE3721C42500006426BB /* User+CoreDataProperties.swift in Sources */,
 				2BD0ED4321C96D7000EC9CFF /* IntroductionViewController.swift in Sources */,
+				2BDECC0C21CC3F6200DEDABA /* ProgressBar.swift in Sources */,
 				2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */,
 				2BD0ED3621C9641900EC9CFF /* XibView.swift in Sources */,
 				2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */,

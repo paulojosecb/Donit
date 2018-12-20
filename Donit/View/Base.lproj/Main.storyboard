@@ -64,7 +64,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hello, Paulo" id="EQC-us-QET"/>
+                    <navigationItem key="navigationItem" title="Hello, Paulo" id="EQC-us-QET">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="it9-0m-ig4">
+                            <connections>
+                                <segue destination="8tb-rS-ISL" kind="show" id="wik-r8-NCy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="doneListTableView" destination="VO2-rz-7As" id="qoc-Mj-hoc"/>
                         <outlet property="emptyStateCard" destination="6eT-wQ-uLB" id="S5s-bj-0Dd"/>
@@ -93,6 +99,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qll-8s-YrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="56.799999999999997" y="792.95352323838085"/>
+        </scene>
+        <!--Paulo,-->
+        <scene sceneID="4zG-54-T4l">
+            <objects>
+                <viewController title="Paulo," id="8tb-rS-ISL" customClass="OverviewViewController" customModule="Donit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aHU-fd-7rc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LzO-0Z-cKR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" name="paleGrey"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="paleGrey"/>
+                        <constraints>
+                            <constraint firstItem="xpp-Fa-tmK" firstAttribute="trailing" secondItem="LzO-0Z-cKR" secondAttribute="trailing" id="BlA-Mt-bdc"/>
+                            <constraint firstItem="LzO-0Z-cKR" firstAttribute="top" secondItem="aHU-fd-7rc" secondAttribute="top" id="K43-9m-3m2"/>
+                            <constraint firstItem="LzO-0Z-cKR" firstAttribute="leading" secondItem="xpp-Fa-tmK" secondAttribute="leading" id="PDi-2A-75b"/>
+                            <constraint firstItem="xpp-Fa-tmK" firstAttribute="bottom" secondItem="LzO-0Z-cKR" secondAttribute="bottom" id="YGK-ZR-oJE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xpp-Fa-tmK"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="LzO-0Z-cKR" id="2oD-Mi-Qdt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKX-mn-X4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.8" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>
