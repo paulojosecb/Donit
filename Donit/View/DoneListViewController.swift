@@ -82,6 +82,11 @@ class DoneListViewController: UIViewController {
         
         currentDay.insertIntoDoneItems(doneItem, at: 0)
         
+//        currentDay.doneItems?.forEach({ (item) in
+//
+//            print()
+//        })
+        
         do {
             try managedContext.save()
             updateDataSource()
@@ -239,7 +244,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
                 doneListTableView.register(UINib(nibName: "DailyOverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "DailyOverviewCardTableViewCell")
                 cell = doneListTableView.dequeueReusableCell(withIdentifier: "DailyOverviewCardTableViewCell") as? DailyOverviewCardTableViewCell
             }
-            
+        
             cell?.numberLabel.text = "\(currentDay.doneItems?.count ?? 0)"
             return cell ?? UITableViewCell()
             
@@ -265,7 +270,8 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
                 cell = doneListTableView.dequeueReusableCell(withIdentifier: "DoneItemCardTableViewCell") as? DoneItemCardTableViewCell
             }
             
-            let item = currentDay.doneItems?.object(at: indexPath.row - 1) as? DoneItem
+            let reversedDoneItems = currentDay.doneItems?.reversed
+            let item = reversedDoneItems?.object(at: indexPath.row - 1) as? DoneItem
             let name = item?.name
             cell?.nameLabel.text = item?.name
             
