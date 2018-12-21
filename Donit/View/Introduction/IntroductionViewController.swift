@@ -8,8 +8,11 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 class IntroductionViewController: UIViewController {
+    
+    var managedContext : NSManagedObjectContext!
 
     @IBOutlet weak var startBottomConstrait: NSLayoutConstraint!
     @IBOutlet weak var nameTextField: UITextField!
@@ -17,6 +20,13 @@ class IntroductionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if managedContext == nil {
+            guard let appDeledate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            managedContext = appDeledate.persistentContainer.viewContext
+        }
         
         nameTextField.delegate = self
         
@@ -70,6 +80,16 @@ extension IntroductionViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTextField.resignFirstResponder()
         UserDefaults.standard.set(nameTextField.text, forKey: "username")
+        
+        let newUser = User(context: managedContext)
+        newUser.name = nameTextField.text ?? ""
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
         performSegue(withIdentifier: "showTutorial", sender: self)
         return true
     }

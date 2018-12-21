@@ -1,5 +1,5 @@
 //
-//  User+CoreDataProperties.swift
+//  Day+CoreDataProperties.swift
 //  Donit
 //
 //  Created by Paulo José on 21/12/18.
@@ -11,21 +11,21 @@ import Foundation
 import CoreData
 
 
-extension User {
+extension Day {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
-        return NSFetchRequest<User>(entityName: "User")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Day> {
+        return NSFetchRequest<Day>(entityName: "Day")
     }
 
     @NSManaged public var id: UUID?
-    @NSManaged public var name: String?
+    @NSManaged public var date: NSDate?
+    @NSManaged public var week: Week?
     @NSManaged public var doneItems: NSOrderedSet?
-    @NSManaged public var weeks: NSOrderedSet?
 
 }
 
 // MARK: Generated accessors for doneItems
-extension User {
+extension Day {
 
     @objc(insertObject:inDoneItemsAtIndex:)
     @NSManaged public func insertIntoDoneItems(_ value: DoneItem, at idx: Int)
@@ -56,40 +56,5 @@ extension User {
 
     @objc(removeDoneItems:)
     @NSManaged public func removeFromDoneItems(_ values: NSOrderedSet)
-
-}
-
-// MARK: Generated accessors for weeks
-extension User {
-
-    @objc(insertObject:inWeeksAtIndex:)
-    @NSManaged public func insertIntoWeeks(_ value: Week, at idx: Int)
-
-    @objc(removeObjectFromWeeksAtIndex:)
-    @NSManaged public func removeFromWeeks(at idx: Int)
-
-    @objc(insertWeeks:atIndexes:)
-    @NSManaged public func insertIntoWeeks(_ values: [Week], at indexes: NSIndexSet)
-
-    @objc(removeWeeksAtIndexes:)
-    @NSManaged public func removeFromWeeks(at indexes: NSIndexSet)
-
-    @objc(replaceObjectInWeeksAtIndex:withObject:)
-    @NSManaged public func replaceWeeks(at idx: Int, with value: Week)
-
-    @objc(replaceWeeksAtIndexes:withWeeks:)
-    @NSManaged public func replaceWeeks(at indexes: NSIndexSet, with values: [Week])
-
-    @objc(addWeeksObject:)
-    @NSManaged public func addToWeeks(_ value: Week)
-
-    @objc(removeWeeksObject:)
-    @NSManaged public func removeFromWeeks(_ value: Week)
-
-    @objc(addWeeks:)
-    @NSManaged public func addToWeeks(_ values: NSOrderedSet)
-
-    @objc(removeWeeks:)
-    @NSManaged public func removeFromWeeks(_ values: NSOrderedSet)
 
 }

@@ -2,7 +2,7 @@
 //  User+CoreDataClass.swift
 //  Donit
 //
-//  Created by Paulo José on 14/12/18.
+//  Created by Paulo José on 21/12/18.
 //  Copyright © 2018 Paulo José. All rights reserved.
 //
 //

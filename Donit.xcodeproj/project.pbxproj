@@ -10,10 +10,6 @@
 		2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2621C3DA99006426BB /* UIImage.swift */; };
 		2B15BE2921C3DAB0006426BB /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */; };
 		2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */; };
-		2B15BE3421C42500006426BB /* DoneItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3021C42500006426BB /* DoneItem+CoreDataClass.swift */; };
-		2B15BE3521C42500006426BB /* DoneItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3121C42500006426BB /* DoneItem+CoreDataProperties.swift */; };
-		2B15BE3621C42500006426BB /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3221C42500006426BB /* User+CoreDataClass.swift */; };
-		2B15BE3721C42500006426BB /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3321C42500006426BB /* User+CoreDataProperties.swift */; };
 		2B15BE3A21C4498E006426BB /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B15BE3921C4498E006426BB /* Welcome.storyboard */; };
 		2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3B21C449A0006426BB /* WelcomeViewController.swift */; };
 		2B15BE4121C44A30006426BB /* DailyOverviewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3F21C44A30006426BB /* DailyOverviewCardTableViewCell.swift */; };
@@ -50,16 +46,20 @@
 		2BDECC0721CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0521CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib */; };
 		2BDECC0A21CC3F4700DEDABA /* ProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */; };
 		2BDECC0C21CC3F6200DEDABA /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */; };
+		2BDECC5F21CCFDA400DEDABA /* DoneItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5721CCFDA400DEDABA /* DoneItem+CoreDataClass.swift */; };
+		2BDECC6021CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5821CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift */; };
+		2BDECC6121CCFDA400DEDABA /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5921CCFDA400DEDABA /* Day+CoreDataClass.swift */; };
+		2BDECC6221CCFDA400DEDABA /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5A21CCFDA400DEDABA /* Day+CoreDataProperties.swift */; };
+		2BDECC6321CCFDA400DEDABA /* Week+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5B21CCFDA400DEDABA /* Week+CoreDataClass.swift */; };
+		2BDECC6421CCFDA400DEDABA /* Week+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5C21CCFDA400DEDABA /* Week+CoreDataProperties.swift */; };
+		2BDECC6521CCFDA400DEDABA /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5D21CCFDA400DEDABA /* User+CoreDataClass.swift */; };
+		2BDECC6621CCFDA400DEDABA /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5E21CCFDA400DEDABA /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B15BE2621C3DA99006426BB /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
-		2B15BE3021C42500006426BB /* DoneItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2B15BE3121C42500006426BB /* DoneItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2B15BE3221C42500006426BB /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2B15BE3321C42500006426BB /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2B15BE3921C4498E006426BB /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		2B15BE3B21C449A0006426BB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2B15BE3F21C44A30006426BB /* DailyOverviewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyOverviewCardTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +98,14 @@
 		2BDECC0521CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeklyOverviewCardTableViewCell.xib; sourceTree = "<group>"; };
 		2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBar.xib; sourceTree = "<group>"; };
 		2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		2BDECC5721CCFDA400DEDABA /* DoneItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BDECC5821CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BDECC5921CCFDA400DEDABA /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BDECC5A21CCFDA400DEDABA /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BDECC5B21CCFDA400DEDABA /* Week+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Week+CoreDataClass.swift"; path = "../../Week+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BDECC5C21CCFDA400DEDABA /* Week+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Week+CoreDataProperties.swift"; path = "../../Week+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BDECC5D21CCFDA400DEDABA /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BDECC5E21CCFDA400DEDABA /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,10 +204,14 @@
 		2B1A7AEB21C3D86D002FD5E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B15BE3021C42500006426BB /* DoneItem+CoreDataClass.swift */,
-				2B15BE3121C42500006426BB /* DoneItem+CoreDataProperties.swift */,
-				2B15BE3221C42500006426BB /* User+CoreDataClass.swift */,
-				2B15BE3321C42500006426BB /* User+CoreDataProperties.swift */,
+				2BDECC5721CCFDA400DEDABA /* DoneItem+CoreDataClass.swift */,
+				2BDECC5821CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift */,
+				2BDECC5921CCFDA400DEDABA /* Day+CoreDataClass.swift */,
+				2BDECC5A21CCFDA400DEDABA /* Day+CoreDataProperties.swift */,
+				2BDECC5B21CCFDA400DEDABA /* Week+CoreDataClass.swift */,
+				2BDECC5C21CCFDA400DEDABA /* Week+CoreDataProperties.swift */,
+				2BDECC5D21CCFDA400DEDABA /* User+CoreDataClass.swift */,
+				2BDECC5E21CCFDA400DEDABA /* User+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDECC5F21CCFDA400DEDABA /* DoneItem+CoreDataClass.swift in Sources */,
 				2BD0ED3E21C968A500EC9CFF /* InfoCard.swift in Sources */,
 				2B15BE4421C44C40006426BB /* UIView.swift in Sources */,
 				2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */,
@@ -433,22 +446,25 @@
 				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
 				2BDECC0621CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift in Sources */,
 				2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */,
+				2BDECC6121CCFDA400DEDABA /* Day+CoreDataClass.swift in Sources */,
 				2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */,
-				2B15BE3421C42500006426BB /* DoneItem+CoreDataClass.swift in Sources */,
+				2BDECC6521CCFDA400DEDABA /* User+CoreDataClass.swift in Sources */,
+				2BDECC6621CCFDA400DEDABA /* User+CoreDataProperties.swift in Sources */,
 				2B15BE2921C3DAB0006426BB /* CAGradientLayer.swift in Sources */,
-				2B15BE3521C42500006426BB /* DoneItem+CoreDataProperties.swift in Sources */,
+				2BDECC6021CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift in Sources */,
 				2B15BE4121C44A30006426BB /* DailyOverviewCardTableViewCell.swift in Sources */,
-				2B15BE3621C42500006426BB /* User+CoreDataClass.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
+				2BDECC6421CCFDA400DEDABA /* Week+CoreDataProperties.swift in Sources */,
 				2BDECBFE21CC2B6000DEDABA /* OverviewViewController.swift in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
-				2B15BE3721C42500006426BB /* User+CoreDataProperties.swift in Sources */,
 				2BD0ED4321C96D7000EC9CFF /* IntroductionViewController.swift in Sources */,
 				2BDECC0C21CC3F6200DEDABA /* ProgressBar.swift in Sources */,
 				2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */,
+				2BDECC6221CCFDA400DEDABA /* Day+CoreDataProperties.swift in Sources */,
 				2BD0ED3621C9641900EC9CFF /* XibView.swift in Sources */,
 				2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */,
 				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
+				2BDECC6321CCFDA400DEDABA /* Week+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

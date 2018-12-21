@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Day" representedClassName="Day" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="doneItems" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DoneItem" inverseName="day" inverseEntity="DoneItem" syncable="YES"/>
+        <relationship name="week" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week" inverseName="days" inverseEntity="Week" syncable="YES"/>
+    </entity>
     <entity name="DoneItem" representedClassName="DoneItem" syncable="YES">
         <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="createdBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="doneItems" inverseEntity="User" syncable="YES"/>
+        <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="doneItems" inverseEntity="Day" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="doneItems" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DoneItem" inverseName="createdBy" inverseEntity="DoneItem" syncable="YES"/>
+        <relationship name="weeks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Week" inverseName="createdBy" inverseEntity="Week" syncable="YES"/>
+    </entity>
+    <entity name="Week" representedClassName="Week" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="createdBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="weeks" inverseEntity="User" syncable="YES"/>
+        <relationship name="days" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Day" inverseName="week" inverseEntity="Day" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DoneItem" positionX="-20.2578125" positionY="266.66015625" width="128" height="105"/>
-        <element name="User" positionX="-45" positionY="0" width="128" height="90"/>
+        <element name="DoneItem" positionX="-20.2578125" positionY="266.66015625" width="128" height="120"/>
+        <element name="User" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="Week" positionX="-18" positionY="171" width="128" height="90"/>
+        <element name="Day" positionX="9" positionY="180" width="128" height="105"/>
     </elements>
 </model>

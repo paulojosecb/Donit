@@ -1,5 +1,5 @@
 //
-//  DoneItem+CoreDataClass.swift
+//  Week+CoreDataClass.swift
 //  Donit
 //
 //  Created by Paulo José on 21/12/18.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(DoneItem)
-public class DoneItem: NSManagedObject {
+@objc(Week)
+public class Week: NSManagedObject {
 
 }

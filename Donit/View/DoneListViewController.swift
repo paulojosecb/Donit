@@ -11,6 +11,7 @@ import CoreData
 
 class DoneListViewController: UIViewController {
     var user: User!
+    var currentDay: Day!
     var doneList : [DoneItem]!
     var managedContext : NSManagedObjectContext!
 
@@ -42,46 +43,18 @@ class DoneListViewController: UIViewController {
         
         floatButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.addDidPress(_:))))
         
-        let username = UserDefaults.standard.value(forKey: "username") as? String ?? "Stranger"
-        
-        self.navigationItem.title = "Hello, \(username)"
+//        let username = UserDefaults.standard.value(forKey: "username") as? String ?? "Stranger"
+//        
+//        self.navigationItem.title = "Hello, \(username)"
         self.navigationController?.navigationBar.barTintColor = UIColor.paleGrey
         self.navigationController?.navigationBar.shadowImage = UIImage()
         doneListTableView.backgroundColor = UIColor.paleGrey
         
         do {
-            
             let users : [User] = try managedContext.fetch(User.fetchRequest())
-            
-            if users.count == 0 {
-                
-                let newUser = User(context: managedContext)
-                
-                let alert = UIAlertController(title: "Qual seu nome", message: "Digite seu nome", preferredStyle: .alert)
-                
-                alert.addTextField { (textField) in
-                    textField.placeholder = "Write here your name"
-                }
-                
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    newUser.name = alert.textFields?.first?.text ?? "Joaquim"
-                    self.navigationController?.navigationBar.topItem?.title = "Hello, \(String(describing: newUser.name!))"
-                }))
-                
-                present(alert, animated: true, completion: nil)
-                
-                user = newUser
-                try managedContext.save()
-        
-            } else {
-            
-                user = users[0]
-//                self.navigationController?.navigationBar.topItem?.title = "Hello, \(String(describing: users[0].name!))"
-                
-            }
-            
-            
-            
+            user = users[0]
+            let username = user.name ?? ""
+            self.navigationItem.title = "Hello, \(username)"
         } catch let error as NSError {
             print(error.localizedDescription)
         }
@@ -91,20 +64,7 @@ class DoneListViewController: UIViewController {
     }
 
     @IBAction func addDidPress(_ sender: Any) {
-        
-//        let alert = UIAlertController(title: "New DoneItem", message: "What've you done today?", preferredStyle: .alert)
-//
-//        alert.addTextField { (textField) in
-//            textField.placeholder = "Here"
-//        }
-//
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-//            self.saveDoneItem(with: alert.textFields?.first?.text ?? "")
-//        }))
-//
-//        present(alert, animated: true, completion: nil)
-        
-        
+
         let vc = UIStoryboard(name: "AddScreen", bundle: nil).instantiateInitialViewController() as? AddScreenViewController
         vc?.modalPresentationStyle = .overCurrentContext
         vc?.delegate = self
@@ -113,12 +73,14 @@ class DoneListViewController: UIViewController {
     }
     
     func saveDoneItem(with name: String) {
+        
         let doneItem = DoneItem(context: managedContext)
         doneItem.name = name
         doneItem.createdOn = NSDate()
         doneItem.createdBy = user
+        doneItem.day = currentDay
         
-        user.addToDoneItems(doneItem)
+        currentDay.insertIntoDoneItems(doneItem, at: 0)
         
         do {
             try managedContext.save()
@@ -128,26 +90,93 @@ class DoneListViewController: UIViewController {
         } catch _ as NSError {
             print("Nao foi possivel salvar")
         }
+        
     }
     
     func updateDataSource() {
-        do {
-            let request : NSFetchRequest<DoneItem> = DoneItem.fetchRequest()
-            let sort = NSSortDescriptor(key: #keyPath(DoneItem.createdOn), ascending: false)
-            request.sortDescriptors = [sort]
-            doneList = try managedContext.fetch(request)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        if user == nil {
             
-            if doneList.count > 0 {
-                doneListTableView.isHidden = false
-                emptyStateCard.isHidden = true
-            } else {
-                doneListTableView.isHidden = true
-                emptyStateCard.isHidden = false
+            do {
+                let users : [User] = try managedContext.fetch(User.fetchRequest())
+                user = users[0]
+                let username = user.name ?? ""
+                self.navigationItem.title = "Hello, \(username)"
+            } catch let error as NSError {
+                print(error.localizedDescription)
+                fatalError()
             }
             
-        } catch _ as NSError {
-            print("Deu ruim no fetch")
         }
+        
+        if user.weeks?.count == 0 {
+            
+            let currentWeek = Week(context: managedContext)
+            
+            let newDay = Day(context: managedContext)
+            newDay.date = NSDate()
+            
+            currentWeek.addToDays(newDay)
+            currentDay = newDay
+            user.addToWeeks(currentWeek)
+            
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+            
+        } else {
+            
+            let currentWeek = user.weeks?.lastObject as? Week
+            
+            if let lastDayOnCurrentWeek = currentWeek?.days?.lastObject as? Day, let date = lastDayOnCurrentWeek.date as Date? {
+               
+                if dateFormatter.string(from: date) != dateFormatter.string(from: Date()) {
+                    let newDay = Day(context: managedContext)
+                    newDay.date = NSDate()
+                    currentWeek?.addToDays(newDay)
+                    currentDay = newDay
+                    
+                    do {
+                        try managedContext.save()
+                    } catch let error as NSError {
+                        print(error.localizedDescription)
+                    }
+                    
+                } else {
+                    currentDay = lastDayOnCurrentWeek
+                }
+                
+            } else {
+                
+                let newDay = Day(context: managedContext)
+                currentWeek?.addToDays(newDay)
+                currentDay = newDay
+                
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+                
+            }
+            
+        }
+        
+        guard let count = currentDay.doneItems?.count else { return }
+        
+        if count > 0 {
+            doneListTableView.isHidden = false
+            emptyStateCard.isHidden = true
+        } else {
+            doneListTableView.isHidden = true
+            emptyStateCard.isHidden = false
+        }
+        
     }
 }
 
@@ -158,7 +187,8 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : doneList.count + 1
+        let count = currentDay.doneItems?.count ?? 0
+        return section == 0 ? 1 : count + 1
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -171,7 +201,10 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            guard let itemToRemove = doneList[indexPath.row - 1] as? DoneItem else {return}
+            
+            let doneItems = currentDay.doneItems
+            
+            guard let itemToRemove : DoneItem = doneItems?.object(at: indexPath.row - 1) as? DoneItem else {return}
                         
             managedContext.delete(itemToRemove)
             
@@ -189,7 +222,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        var cell = doneListTableView.cellForRow(at: indexPath)
+        let cell = doneListTableView.cellForRow(at: indexPath)
         cell?.selectionStyle = .none
         
         print("HUEEE \(indexPath.row)")
@@ -207,7 +240,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
                 cell = doneListTableView.dequeueReusableCell(withIdentifier: "DailyOverviewCardTableViewCell") as? DailyOverviewCardTableViewCell
             }
             
-            cell?.numberLabel.text = "\(doneList.count)"
+            cell?.numberLabel.text = "\(currentDay.doneItems?.count ?? 0)"
             return cell ?? UITableViewCell()
             
         case 1:
@@ -232,7 +265,9 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
                 cell = doneListTableView.dequeueReusableCell(withIdentifier: "DoneItemCardTableViewCell") as? DoneItemCardTableViewCell
             }
             
-            cell?.nameLabel.text = doneList[indexPath.row - 1].name
+            let item = currentDay.doneItems?.object(at: indexPath.row - 1) as? DoneItem
+            let name = item?.name
+            cell?.nameLabel.text = item?.name
             
             return cell ?? UITableViewCell()
             
