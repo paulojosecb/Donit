@@ -26,8 +26,6 @@ class TutorialViewController: UIViewController {
         let username = UserDefaults.standard.value(forKey: "username") as? String ?? "Stranger"
         welcomeLabel.text = "Welcome to Donit, \(username)"
         
-        nextButton.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue], radius: 0, shadowOppacity: 0.5, shadowRadius: 10)
-    
         scrollView.contentSize = CGSize(width: scrollView.frame.width * 3, height: scrollView.frame.height)
         scrollView.contentOffset = CGPoint.zero
         
@@ -42,6 +40,11 @@ class TutorialViewController: UIViewController {
         
         self.navigationController?.navigationBar.setTransparentBackground()
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        nextButton.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue], radius: 0, shadowOppacity: 0.5, shadowRadius: 10)
     }
     
     @IBAction func nextDidPress(_ sender: Any) {

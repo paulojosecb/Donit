@@ -23,62 +23,55 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="338-qf-26j">
                         <rect key="frame" x="16" y="0.0" width="288" height="173.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTK-H8-4Kg">
-                                <rect key="frame" x="16" y="16" width="248" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="MTK-H8-4Kg">
+                                <rect key="frame" x="16" y="16" width="240" height="79"/>
                                 <string key="text">34 things per week is your 
 weekly average in the last 7 weeks</string>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3B-FH-1Ko">
-                                <rect key="frame" x="16" y="104" width="256" height="42"/>
+                                <rect key="frame" x="16" y="105" width="256" height="41.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksM-HO-keH" userLabel="1" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="246" y="0.0" width="21" height="42"/>
-                                        <color key="backgroundColor" name="iris"/>
+                                        <rect key="frame" x="246" y="0.0" width="21" height="41.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="G1I-Jk-qL8"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lF-YU-SzT" userLabel="2" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="205" y="0.0" width="21" height="42"/>
-                                        <color key="backgroundColor" name="iris"/>
+                                        <rect key="frame" x="205" y="0.0" width="21" height="41.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="AsR-Vx-pUr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-84-x93" userLabel="3" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="164" y="0.0" width="21" height="42"/>
-                                        <color key="backgroundColor" name="iris"/>
+                                        <rect key="frame" x="164" y="0.0" width="21" height="41.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="e43-Nr-veT"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFP-CZ-u4d" userLabel="4" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="123" y="0.0" width="21" height="42"/>
-                                        <color key="backgroundColor" name="iris"/>
+                                        <rect key="frame" x="123" y="0.0" width="21" height="41.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="fzB-5h-PIr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-re-Zgv" userLabel="5" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="82" y="0.0" width="21" height="42"/>
-                                        <color key="backgroundColor" name="iris"/>
+                                        <rect key="frame" x="82" y="0.0" width="21" height="41.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="Hrh-Rm-jWE"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIC-d8-XHw" userLabel="7" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="21" height="42"/>
-                                        <color key="backgroundColor" name="iris"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="21" height="41.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="2qN-X7-zUs"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-AN-apj" userLabel="6" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="41" y="0.0" width="21" height="42"/>
-                                        <color key="backgroundColor" name="iris"/>
+                                        <rect key="frame" x="41" y="0.0" width="21" height="41.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="dM2-ek-Mel"/>
                                         </constraints>
@@ -120,11 +113,11 @@ weekly average in the last 7 weeks</string>
                             <constraint firstAttribute="trailing" secondItem="h3B-FH-1Ko" secondAttribute="trailing" constant="16" id="4AL-ps-Suc"/>
                             <constraint firstAttribute="trailing" secondItem="hkt-3q-gep" secondAttribute="trailing" constant="16" id="4tk-cB-XXP"/>
                             <constraint firstItem="MTK-H8-4Kg" firstAttribute="leading" secondItem="338-qf-26j" secondAttribute="leading" constant="16" id="6aL-T4-fPf"/>
-                            <constraint firstItem="h3B-FH-1Ko" firstAttribute="top" secondItem="MTK-H8-4Kg" secondAttribute="bottom" constant="16" id="BvF-NN-bi1"/>
-                            <constraint firstItem="hkt-3q-gep" firstAttribute="top" secondItem="h3B-FH-1Ko" secondAttribute="bottom" constant="1.5" id="GLQ-wK-XfJ"/>
+                            <constraint firstItem="h3B-FH-1Ko" firstAttribute="top" secondItem="MTK-H8-4Kg" secondAttribute="bottom" constant="10" id="BvF-NN-bi1"/>
+                            <constraint firstItem="h3B-FH-1Ko" firstAttribute="bottom" secondItem="hkt-3q-gep" secondAttribute="top" constant="-1" id="GLQ-wK-XfJ"/>
                             <constraint firstItem="h3B-FH-1Ko" firstAttribute="leading" secondItem="338-qf-26j" secondAttribute="leading" constant="16" id="M7J-ce-Q2F"/>
                             <constraint firstAttribute="bottom" secondItem="hkt-3q-gep" secondAttribute="bottom" constant="8" id="bRi-9i-mFu"/>
-                            <constraint firstAttribute="trailing" secondItem="MTK-H8-4Kg" secondAttribute="trailing" constant="24" id="cRO-FG-1mo"/>
+                            <constraint firstItem="MTK-H8-4Kg" firstAttribute="trailing" secondItem="338-qf-26j" secondAttribute="trailing" constant="-32" id="cRO-FG-1mo"/>
                             <constraint firstItem="MTK-H8-4Kg" firstAttribute="top" secondItem="338-qf-26j" secondAttribute="top" constant="16" id="hbH-SP-NBW"/>
                         </constraints>
                     </view>
@@ -141,6 +134,8 @@ weekly average in the last 7 weeks</string>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardView" destination="338-qf-26j" id="jNX-cT-GKF"/>
+                <outlet property="commentLabelTrailingConstraint" destination="cRO-FG-1mo" id="fbX-dT-eYB"/>
+                <outlet property="progressBarWrapperTopConstraint" destination="BvF-NN-bi1" id="T7n-Ez-0lW"/>
                 <outlet property="progressBarWrapperView" destination="h3B-FH-1Ko" id="1Zi-7a-6dH"/>
                 <outletCollection property="progressBars" destination="ksM-HO-keH" collectionClass="NSMutableArray" id="B6b-kC-egr"/>
                 <outletCollection property="progressBars" destination="4lF-YU-SzT" collectionClass="NSMutableArray" id="vR9-Ka-9Hb"/>
@@ -160,9 +155,6 @@ weekly average in the last 7 weeks</string>
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="iris">
-            <color red="0.34099999070167542" green="0.44299998879432678" blue="0.74500000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="paleGrey">
             <color red="0.98799997568130493" green="0.98000001907348633" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

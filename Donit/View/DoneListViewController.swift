@@ -82,11 +82,6 @@ class DoneListViewController: UIViewController {
         
         currentDay.insertIntoDoneItems(doneItem, at: 0)
         
-//        currentDay.doneItems?.forEach({ (item) in
-//
-//            print()
-//        })
-        
         do {
             try managedContext.save()
             updateDataSource()

@@ -30,8 +30,6 @@ class IntroductionViewController: UIViewController {
         
         nameTextField.delegate = self
         
-        startButton.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue], radius: 0, shadowOppacity: 0.5, shadowRadius: 10)
-
         self.navigationController?.navigationBar.setTransparentBackground()
         
         NotificationCenter.default.addObserver(
@@ -50,9 +48,31 @@ class IntroductionViewController: UIViewController {
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+         startButton.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue], radius: 0, shadowOppacity: 0.5, shadowRadius: 10)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         nameTextField.becomeFirstResponder()
     }
+    
+    @IBAction func startButtonDidPress(_ sender: Any) {
+        nameTextField.resignFirstResponder()
+        UserDefaults.standard.set(nameTextField.text, forKey: "username")
+        
+        let newUser = User(context: managedContext)
+        newUser.name = nameTextField.text ?? ""
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
+        performSegue(withIdentifier: "showTutorial", sender: self)
+    }
+    
     
     @objc func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {

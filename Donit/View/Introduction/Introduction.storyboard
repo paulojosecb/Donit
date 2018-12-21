@@ -35,6 +35,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="startButtonDidPress:" destination="VLK-dk-Bvg" eventType="touchUpInside" id="qiI-xu-Qga"/>
                                     <segue destination="2Rd-OD-nxq" kind="show" identifier="showTutorial" id="XL4-uf-XNQ"/>
                                 </connections>
                             </button>

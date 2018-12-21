@@ -14,10 +14,13 @@ class WeeklyOverviewCardTableViewCell: UITableViewCell {
     @IBOutlet var progressBars: [ProgressBar]!
     @IBOutlet weak var progressBarWrapperView: UIView!
     
+    @IBOutlet weak var commentLabelTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var progressBarWrapperTopConstraint: NSLayoutConstraint!
     @IBOutlet var progressBarsLeadingContraints: [NSLayoutConstraint]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
@@ -27,14 +30,24 @@ class WeeklyOverviewCardTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    override func draw(_ rect: CGRect) {
-        cardView.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue])
+    override func layoutSubviews() {
+    
+        if progressBarWrapperView.frame.height > CGFloat(70.0) {
+            progressBarWrapperTopConstraint.constant = 24
+        }
         
+    }
+    
+    override func draw(_ rect: CGRect) {
         let newLeadingConstant = (progressBarWrapperView.frame.width - (progressBars[0].frame.width * CGFloat(progressBars.count))) / CGFloat(progressBars.count - 1)
         
         progressBarsLeadingContraints.forEach { (constrait) in
             constrait.constant = newLeadingConstant
         }
+        
+        cardView.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue])
+        
+        
 
     }
     
