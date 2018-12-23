@@ -23,27 +23,25 @@
                         <rect key="frame" x="16" y="6" width="343" height="59.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcH-cl-PLj">
-                                <rect key="frame" x="89" y="8" width="246" height="43.5"/>
+                                <rect key="frame" x="93" y="8" width="242" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69534000880281688" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-Oz-baL">
-                                <rect key="frame" x="34" y="21" width="18" height="17.5"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="qCZ-ZQ-WzJ">
+                                <rect key="frame" x="36" y="19.5" width="21" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="17.5" id="QHk-Tb-gVs"/>
-                                    <constraint firstAttribute="width" constant="18" id="cIz-15-Jqt"/>
+                                    <constraint firstAttribute="width" constant="21" id="48q-OW-CkI"/>
+                                    <constraint firstAttribute="height" constant="21" id="bdn-Ox-1ao"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="EcH-cl-PLj" secondAttribute="bottom" constant="8" id="3Z8-Gu-bSd"/>
-                            <constraint firstItem="EcH-cl-PLj" firstAttribute="leading" secondItem="OFR-Oz-baL" secondAttribute="trailing" constant="37" id="9Bt-18-OTR"/>
-                            <constraint firstItem="OFR-Oz-baL" firstAttribute="top" secondItem="NLu-CH-Ph3" secondAttribute="top" constant="21" id="EbC-8U-Fac"/>
+                            <constraint firstItem="qCZ-ZQ-WzJ" firstAttribute="leading" secondItem="NLu-CH-Ph3" secondAttribute="leading" constant="36" id="3nc-lR-xBr"/>
                             <constraint firstAttribute="trailing" secondItem="EcH-cl-PLj" secondAttribute="trailing" constant="8" id="QxI-8H-5HB"/>
-                            <constraint firstAttribute="bottom" secondItem="OFR-Oz-baL" secondAttribute="bottom" constant="21" id="a8J-07-vli"/>
-                            <constraint firstItem="OFR-Oz-baL" firstAttribute="leading" secondItem="NLu-CH-Ph3" secondAttribute="leading" constant="34" id="brf-xp-9E0"/>
+                            <constraint firstItem="EcH-cl-PLj" firstAttribute="leading" secondItem="qCZ-ZQ-WzJ" secondAttribute="trailing" constant="36" id="cXv-Xk-ce3"/>
+                            <constraint firstItem="qCZ-ZQ-WzJ" firstAttribute="centerY" secondItem="NLu-CH-Ph3" secondAttribute="centerY" id="nyy-uZ-dbp"/>
                             <constraint firstItem="EcH-cl-PLj" firstAttribute="top" secondItem="NLu-CH-Ph3" secondAttribute="top" constant="8" id="vAW-if-MoY"/>
                         </constraints>
                     </view>
@@ -65,4 +63,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Check" width="22" height="22"/>
+    </resources>
 </document>

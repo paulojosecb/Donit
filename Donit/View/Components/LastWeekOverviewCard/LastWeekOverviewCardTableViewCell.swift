@@ -16,6 +16,7 @@ class LastWeekOverviewCardTableViewCell: UITableViewCell {
 
     @IBOutlet var progressBars: [ProgressBarWithLabel]!
     @IBOutlet var progressBarLeadingConstraints: [NSLayoutConstraint]!
+    @IBOutlet weak var progressBarWrapperTopConstraint: NSLayoutConstraint!
     
     
     override func awakeFromNib() {
@@ -27,6 +28,15 @@ class LastWeekOverviewCardTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if progressBarWrapperView.frame.height > CGFloat(70.0) {
+            progressBarWrapperTopConstraint.constant = 100
+        }
+        
     }
     
     override func draw(_ rect: CGRect) {

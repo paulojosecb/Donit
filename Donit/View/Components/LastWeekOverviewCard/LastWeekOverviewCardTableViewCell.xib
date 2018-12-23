@@ -22,55 +22,53 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LmJ-FN-OAe">
                         <rect key="frame" x="16" y="10" width="288" height="156.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sN0-xQ-2LE">
-                                <rect key="frame" x="16" y="16" width="256" height="53"/>
-                                <string key="text">5 things per day is your 
-daily average this week</string>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 things/day is your average this week" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sN0-xQ-2LE">
+                                <rect key="frame" x="16" y="16" width="256" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fer-me-Zod">
-                                <rect key="frame" x="16" y="77" width="256" height="71.5"/>
+                                <rect key="frame" x="16" y="72" width="256" height="76.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oa-Vh-6JN" userLabel="M" customClass="ProgressBarWithLabel" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="21" height="71.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="21" height="76.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="w2V-0U-28f"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oC9-qd-2r1" userLabel="W" customClass="ProgressBarWithLabel" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="82" y="0.0" width="21" height="71.5"/>
+                                        <rect key="frame" x="82" y="0.0" width="21" height="76.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="RRT-Yr-ZjJ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-L4-Kko" userLabel="T" customClass="ProgressBarWithLabel" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="123" y="0.0" width="21" height="71.5"/>
+                                        <rect key="frame" x="123" y="0.0" width="21" height="76.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="OuW-Oi-w7M"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lze-EM-keb" userLabel="F" customClass="ProgressBarWithLabel" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="164" y="0.0" width="21" height="71.5"/>
+                                        <rect key="frame" x="164" y="0.0" width="21" height="76.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="p5z-Kg-yuB"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCC-7E-bBa" userLabel="S" customClass="ProgressBarWithLabel" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="205" y="0.0" width="21" height="71.5"/>
+                                        <rect key="frame" x="205" y="0.0" width="21" height="76.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="UJf-Lf-UgN"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-yf-9E2" userLabel="S" customClass="ProgressBarWithLabel" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="246" y="0.0" width="21" height="71.5"/>
+                                        <rect key="frame" x="246" y="0.0" width="21" height="76.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="peu-4G-Dcu"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUj-6Q-Dgk" userLabel="T" customClass="ProgressBarWithLabel" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="41" y="0.0" width="21" height="71.5"/>
+                                        <rect key="frame" x="41" y="0.0" width="21" height="76.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="udT-l4-S2f"/>
                                         </constraints>
@@ -124,6 +122,7 @@ daily average this week</string>
             <connections>
                 <outlet property="cardView" destination="LmJ-FN-OAe" id="34O-su-0pS"/>
                 <outlet property="commentLabel" destination="sN0-xQ-2LE" id="C16-Hu-CED"/>
+                <outlet property="progressBarWrapperTopConstraint" destination="9Dw-9N-lLV" id="3sW-uH-NaW"/>
                 <outlet property="progressBarWrapperView" destination="fer-me-Zod" id="QC4-O2-rvq"/>
                 <outletCollection property="progressBars" destination="7oa-Vh-6JN" collectionClass="NSMutableArray" id="hLZ-lE-FBO"/>
                 <outletCollection property="progressBars" destination="ZUj-6Q-Dgk" collectionClass="NSMutableArray" id="1Ro-t5-NeC"/>

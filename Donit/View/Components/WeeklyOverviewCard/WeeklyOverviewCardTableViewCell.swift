@@ -31,7 +31,8 @@ class WeeklyOverviewCardTableViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-    
+        super.layoutSubviews()
+        
         if progressBarWrapperView.frame.height > CGFloat(70.0) {
             progressBarWrapperTopConstraint.constant = 24
         }
