@@ -46,7 +46,7 @@ class OverviewViewController: UIViewController {
 extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,6 +68,17 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             return cell ?? UITableViewCell()
+        
+        case 2:
+            var cell = tableView.dequeueReusableCell(withIdentifier: "LastWeekOverviewCardTableViewCell") as? LastWeekOverviewCardTableViewCell
+            
+            if cell == nil {
+                tableView.register(UINib(nibName: "LastWeekOverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "LastWeekOverviewCardTableViewCell")
+                cell = tableView.dequeueReusableCell(withIdentifier: "LastWeekOverviewCardTableViewCell") as? LastWeekOverviewCardTableViewCell
+            }
+            
+            return cell ?? UITableViewCell()
+            
         default:
             return UITableViewCell()
         }
@@ -79,8 +90,12 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 75
         case 1:
-            let scaleFator : Double = 174/320
-            let height = tableView.frame.width * CGFloat(scaleFator)
+            let scaleFactor: Double = 174/320
+            let height = tableView.frame.width * CGFloat(scaleFactor)
+            return height
+        case 2:
+            let scaleFactor: Double = 167/320
+            let height = tableView.frame.width * CGFloat(scaleFactor)
             return height
         default:
             print("Error")
