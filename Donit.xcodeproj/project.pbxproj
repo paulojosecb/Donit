@@ -143,6 +143,7 @@
 		2B15BE3D21C449D4006426BB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2B3A15AC21CFBC2900F75166 /* DailyOverviewCard */,
 				2BDECC0821CC3F3500DEDABA /* ProgressBar */,
 				2BDECBFF21CC323100DEDABA /* WeeklyOverviewCard */,
 				2BD0ED2B21C461F900EC9CFF /* Buttons */,
@@ -232,6 +233,14 @@
 				2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2B3A15AC21CFBC2900F75166 /* DailyOverviewCard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DailyOverviewCard;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		2BD0ED2621C45B5000EC9CFF /* DoneListHeader */ = {

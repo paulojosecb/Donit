@@ -35,6 +35,5 @@ extension UIColor {
         return UIColor(red: 239.0 / 255.0, green: 163.0 / 255.0, blue: 156.0 / 255.0, alpha: 1.0)
     }
     
-    
-    
+
 }

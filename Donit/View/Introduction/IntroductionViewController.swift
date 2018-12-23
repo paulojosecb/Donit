@@ -21,6 +21,8 @@ class IntroductionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startButton.isEnabled = false
+        
         if managedContext == nil {
             guard let appDeledate = UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -46,6 +48,8 @@ class IntroductionViewController: UIViewController {
             object: nil
         )
         
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange(_ :)), for: UIControl.Event.editingChanged)
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,19 +62,35 @@ class IntroductionViewController: UIViewController {
     }
     
     @IBAction func startButtonDidPress(_ sender: Any) {
-        nameTextField.resignFirstResponder()
-        UserDefaults.standard.set(nameTextField.text, forKey: "username")
         
-        let newUser = User(context: managedContext)
-        newUser.name = nameTextField.text ?? ""
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print(error.localizedDescription)
+        if nameTextField.text != "" {
+            
+            guard let count = nameTextField.text?.count, count <= 12 else {
+               
+                let alert = UIAlertController(title: "Your name is too long :(", message: "Choose a nme for yourself shorter than 12 characters", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                present(alert, animated: true, completion: nil)
+                
+                return
+            }
+            
+            nameTextField.resignFirstResponder()
+            UserDefaults.standard.set(nameTextField.text, forKey: "username")
+            
+            let newUser = User(context: managedContext)
+            newUser.name = nameTextField.text ?? ""
+            
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+            
+            performSegue(withIdentifier: "showTutorial", sender: self)
+            
         }
-        
-        performSegue(withIdentifier: "showTutorial", sender: self)
+
     }
     
     
@@ -93,24 +113,52 @@ class IntroductionViewController: UIViewController {
         }, completion: nil)
         
     }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        
+        if textField.text == "" {
+            startButton.isEnabled = false
+        } else {
+            startButton.isEnabled = true
+        }
+        
+    }
+    
 }
 
 extension IntroductionViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        nameTextField.resignFirstResponder()
-        UserDefaults.standard.set(nameTextField.text, forKey: "username")
         
-        let newUser = User(context: managedContext)
-        newUser.name = nameTextField.text ?? ""
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print(error.localizedDescription)
+        if textField.text != "" {
+            
+            guard let count = textField.text?.count, count <= 12 else {
+                
+                let alert = UIAlertController(title: "Your name is too long :(", message: "Choose a nme for yourself shorter than 12 characters", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                present(alert, animated: true, completion: nil)
+                
+                return true
+            }
+            
+            nameTextField.resignFirstResponder()
+            UserDefaults.standard.set(nameTextField.text, forKey: "username")
+            
+            let newUser = User(context: managedContext)
+            newUser.name = nameTextField.text ?? ""
+            
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+            
+            performSegue(withIdentifier: "showTutorial", sender: self)
+            return true
+            
         }
-        
-        performSegue(withIdentifier: "showTutorial", sender: self)
+
         return true
     }
     

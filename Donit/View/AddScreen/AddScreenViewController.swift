@@ -24,6 +24,8 @@ class AddScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        doneButton.isEnabled = false
+        
         let username = UserDefaults.standard.value(forKey: "username") as? String ?? ""
         promptLabel.text = "What else have you done today, \(username)?"
         
@@ -45,6 +47,8 @@ class AddScreenViewController: UIViewController {
             name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
+        
+        doneItemTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
     
     override func viewDidLayoutSubviews() {
@@ -85,16 +89,35 @@ class AddScreenViewController: UIViewController {
         }, completion: nil)
         
     }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        
+        if textField.text == "" {
+            
+            doneButton.isEnabled = false
+            
+        } else {
+            
+            doneButton.isEnabled = true
+        }
+        
+    }
 
 }
 
 extension AddScreenViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        doneItemTextField.resignFirstResponder()
-        delegate.addItem(item: doneItemTextField.text ?? "")
-        dismiss(animated: true, completion: nil)
+        
+        if textField.text != "" {
+            doneItemTextField.resignFirstResponder()
+            delegate.addItem(item: doneItemTextField.text ?? "")
+            dismiss(animated: true, completion: nil)
+            return true
+        }
+        
         return true
+        
     }
     
 }

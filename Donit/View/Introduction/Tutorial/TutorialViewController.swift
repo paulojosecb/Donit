@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class TutorialViewController: UIViewController {
-    
+    var user: User!
+    var managedContext: NSManagedObjectContext!
     var currentPage = 1
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -23,8 +25,21 @@ class TutorialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let username = UserDefaults.standard.value(forKey: "username") as? String ?? "Stranger"
-        welcomeLabel.text = "Welcome to Donit, \(username)"
+        if managedContext == nil {
+            guard let appDeledate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            managedContext = appDeledate.persistentContainer.viewContext
+        }
+        
+        do {
+            let users : [User] = try managedContext.fetch(User.fetchRequest())
+            user = users[0]
+            let username = user.name ?? ""
+            welcomeLabel.text = "Welcome to Donit, \(username)"
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
         
         scrollView.contentSize = CGSize(width: scrollView.frame.width * 3, height: scrollView.frame.height)
         scrollView.contentOffset = CGPoint.zero

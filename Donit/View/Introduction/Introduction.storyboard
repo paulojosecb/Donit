@@ -34,20 +34,31 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="startButtonDidPress:" destination="VLK-dk-Bvg" eventType="touchUpInside" id="qiI-xu-Qga"/>
                                     <segue destination="2Rd-OD-nxq" kind="show" identifier="showTutorial" id="XL4-uf-XNQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4og-mh-960">
-                                <rect key="frame" x="16" y="192" width="343" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4og-mh-960">
+                                <rect key="frame" x="16" y="192" width="343" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPU-km-wo0">
+                                <rect key="frame" x="16" y="208" width="343" height="1"/>
+                                <color key="backgroundColor" name="periwinkleBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="dsa-7C-tCX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JPU-km-wo0" firstAttribute="trailing" secondItem="4og-mh-960" secondAttribute="trailing" id="1J6-Nx-65z"/>
                             <constraint firstItem="jG5-RO-5wE" firstAttribute="trailing" secondItem="Yj7-5K-115" secondAttribute="trailing" constant="57" id="2fg-0t-szu"/>
                             <constraint firstItem="7dk-Hu-kh3" firstAttribute="bottom" secondItem="jG5-RO-5wE" secondAttribute="bottom" id="BVs-LZ-MHg"/>
                             <constraint firstItem="Yj7-5K-115" firstAttribute="top" secondItem="jG5-RO-5wE" secondAttribute="top" constant="7" id="HQo-cX-qAy"/>
@@ -55,6 +66,8 @@
                             <constraint firstItem="4og-mh-960" firstAttribute="top" secondItem="Yj7-5K-115" secondAttribute="bottom" constant="39.5" id="RUK-fO-otR"/>
                             <constraint firstItem="7dk-Hu-kh3" firstAttribute="leading" secondItem="jG5-RO-5wE" secondAttribute="leading" id="YEI-gj-l13"/>
                             <constraint firstItem="Yj7-5K-115" firstAttribute="leading" secondItem="jG5-RO-5wE" secondAttribute="leading" constant="16" id="ZNc-ZU-iru"/>
+                            <constraint firstItem="JPU-km-wo0" firstAttribute="leading" secondItem="4og-mh-960" secondAttribute="leading" id="cFY-BU-uok"/>
+                            <constraint firstItem="JPU-km-wo0" firstAttribute="bottom" secondItem="4og-mh-960" secondAttribute="bottom" id="izL-Zq-bH6"/>
                             <constraint firstItem="4og-mh-960" firstAttribute="leading" secondItem="jG5-RO-5wE" secondAttribute="leading" constant="16" id="q0u-mu-rmR"/>
                             <constraint firstItem="jG5-RO-5wE" firstAttribute="trailing" secondItem="4og-mh-960" secondAttribute="trailing" constant="16" id="udt-Ik-VSl"/>
                         </constraints>
@@ -102,6 +115,9 @@
     <resources>
         <namedColor name="paleGrey">
             <color red="0.98799997568130493" green="0.98000001907348633" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="periwinkleBlue">
+            <color red="0.5220000147819519" green="0.63899999856948853" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

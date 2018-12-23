@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class OverviewViewController: UIViewController {
+    
+    var user: User!
+    var managedContext: NSManagedObjectContext!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,8 +21,23 @@ class OverviewViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-
-        // Do any additional setup after loading the view.
+        
+        if managedContext == nil {
+            guard let appDeledate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            managedContext = appDeledate.persistentContainer.viewContext
+        }
+        
+        do {
+            let users : [User] = try managedContext.fetch(User.fetchRequest())
+            user = users[0]
+            let username = user.name ?? ""
+            self.navigationItem.title = "\(username),"
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
     }
     
 
