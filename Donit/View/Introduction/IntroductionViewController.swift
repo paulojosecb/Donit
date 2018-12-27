@@ -83,11 +83,11 @@ class IntroductionViewController: UIViewController {
             
             do {
                 try managedContext.save()
+                performSegue(withIdentifier: "showTutorial", sender: self)
             } catch let error as NSError {
                 print(error.localizedDescription)
+                return 
             }
-            
-            performSegue(withIdentifier: "showTutorial", sender: self)
             
         }
 
@@ -99,8 +99,12 @@ class IntroductionViewController: UIViewController {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
             
+            self.startBottomConstrait.constant = 0
+            self.view.layoutIfNeeded()
+            
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
                 self.startBottomConstrait.constant = self.startBottomConstrait.constant - keyboardHeight
+                self.view.layoutIfNeeded()
             }, completion: nil)
             
         }
@@ -110,6 +114,7 @@ class IntroductionViewController: UIViewController {
         
         UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
             self.startBottomConstrait.constant = 0
+            self.view.layoutIfNeeded()
         }, completion: nil)
         
     }
@@ -152,6 +157,7 @@ extension IntroductionViewController: UITextFieldDelegate {
                 try managedContext.save()
             } catch let error as NSError {
                 print(error.localizedDescription)
+                return true
             }
             
             performSegue(withIdentifier: "showTutorial", sender: self)

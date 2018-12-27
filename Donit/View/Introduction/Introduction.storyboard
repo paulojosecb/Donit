@@ -39,7 +39,6 @@
                                 </state>
                                 <connections>
                                     <action selector="startButtonDidPress:" destination="VLK-dk-Bvg" eventType="touchUpInside" id="qiI-xu-Qga"/>
-                                    <segue destination="2Rd-OD-nxq" kind="show" identifier="showTutorial" id="XL4-uf-XNQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4og-mh-960">
@@ -78,6 +77,7 @@
                         <outlet property="nameTextField" destination="4og-mh-960" id="vwJ-eX-GBx"/>
                         <outlet property="startBottomConstrait" destination="BVs-LZ-MHg" id="kX8-8n-kRC"/>
                         <outlet property="startButton" destination="7dk-Hu-kh3" id="zXa-8M-8hy"/>
+                        <segue destination="2Rd-OD-nxq" kind="show" identifier="showTutorial" id="pRk-7D-8W3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kY2-Si-1cd" userLabel="First Responder" sceneMemberID="firstResponder"/>

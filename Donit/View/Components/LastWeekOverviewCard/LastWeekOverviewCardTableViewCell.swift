@@ -37,14 +37,14 @@ class LastWeekOverviewCardTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         if progressBarWrapperView.frame.height > CGFloat(70.0) {
-            progressBarWrapperTopConstraint.constant = 100
+            //progressBarWrapperTopConstraint.constant = 100
         }
         
         guard
             let days = lastWeek.days
             else { return }
         
-        var lastWeekDays = days.array as? [Day]
+        let lastWeekDays = days.array as? [Day]
         
         let progressBarsReversed = progressBars.reversed()
         var topConstraintsReversed = [NSLayoutConstraint]()
@@ -57,9 +57,6 @@ class LastWeekOverviewCardTableViewCell: UITableViewCell {
         for arrayIndex in 0..<progressBarTopConstraints.count {
             topConstraintsReversed.append(progressBarTopConstraints[(progressBarTopConstraints.count - 1) - arrayIndex])
         }
-        
-       
-        
         
         for day in lastWeekDays! {
             if day.doneItems?.count ?? 0 > maxDoneItemCount {
@@ -106,6 +103,8 @@ class LastWeekOverviewCardTableViewCell: UITableViewCell {
 //            
 //            var constant = (CGFloat(referenceValue) * CGFloat(day.doneItems?.count ?? 0)) / wrapperHeight
 //            print(constant)
+            
+            self.layoutIfNeeded()
         }
     
     }

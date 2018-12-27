@@ -11,7 +11,9 @@ import UIKit
 class AddScreenViewController: UIViewController {
     
     var delegate : AddScreenDelegate!
+    var isPreseting: Bool = false
 
+    @IBOutlet weak var cardViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var backdropView: UIView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var cardView: UIView!
@@ -20,6 +22,12 @@ class AddScreenViewController: UIViewController {
     @IBOutlet weak var doneItemTextField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var doneButtomBottomConstrait: NSLayoutConstraint!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        modalPresentationStyle = .custom
+        transitioningDelegate = self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +41,8 @@ class AddScreenViewController: UIViewController {
         doneItemTextField.delegate = self
         
         backdropView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-    
+        backdropView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backdropViewDidPress)))
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
@@ -55,6 +64,11 @@ class AddScreenViewController: UIViewController {
         super.viewDidLayoutSubviews()
         cardView.addRoundedBorder(in: .opaque, colors: [UIColor.white])
         doneButton.addRoundedBorder(in: .gradient, colors: [UIColor.lightishBlue, UIColor.greenyBlue], radius: 0, shadowOppacity: 0.5, shadowRadius: 10)
+    }
+    
+    @objc func backdropViewDidPress() {
+        doneItemTextField.resignFirstResponder()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelDidPress(_ sender: Any) {
@@ -119,5 +133,62 @@ extension AddScreenViewController: UITextFieldDelegate {
         return true
         
     }
+    
+}
+
+extension AddScreenViewController: UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self
+    }
+    
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 1
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let containerView = transitionContext.containerView
+        let toViewController = transitionContext.viewController(forKey: .to)
+        
+        guard let toVC = toViewController else {
+            return
+        }
+        
+        isPreseting = !isPreseting
+        
+        if isPreseting {
+            
+            containerView.addSubview(toVC.view)
+            backdropView.alpha = 0
+            cardViewBottomConstraint.constant = cardView.frame.height + 10
+            self.view.layoutIfNeeded()
+            
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+                self.backdropView.alpha = 1
+                self.cardViewBottomConstraint.constant = 10
+                self.view.layoutIfNeeded()
+            }) { (completed) in
+                transitionContext.completeTransition(completed)
+            }
+            
+        } else {
+            
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                self.backdropView.alpha = 0
+                self.cardViewBottomConstraint.constant = self.cardView.frame.height + 10
+                self.view.layoutIfNeeded()
+            }) { (completed) in
+                transitionContext.completeTransition(true)
+            }
+            
+        }
+        
+    }
+    
+    
     
 }

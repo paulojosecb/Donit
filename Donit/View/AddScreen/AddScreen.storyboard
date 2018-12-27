@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cL-Ur-GpK">
-                                <rect key="frame" x="0.0" y="141" width="375" height="536"/>
+                                <rect key="frame" x="0.0" y="127" width="375" height="550"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jq-4N-ysy">
                                         <rect key="frame" x="16" y="16" width="48" height="30"/>
@@ -55,7 +55,7 @@ done today, Paulo?</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGy-8n-iaW">
-                                        <rect key="frame" x="0.0" y="470" width="375" height="58"/>
+                                        <rect key="frame" x="0.0" y="484" width="375" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="RGr-tb-Lg4"/>
                                         </constraints>
@@ -87,14 +87,14 @@ done today, Paulo?</string>
                                     <constraint firstAttribute="trailing" secondItem="WWD-Jx-a5i" secondAttribute="trailing" constant="16" id="ndv-R1-nkC"/>
                                     <constraint firstItem="9D9-AY-ZXc" firstAttribute="leading" secondItem="9cL-Ur-GpK" secondAttribute="leading" constant="16" id="oLl-0D-lNz"/>
                                     <constraint firstItem="WWD-Jx-a5i" firstAttribute="top" secondItem="4jq-4N-ysy" secondAttribute="bottom" constant="16" id="pdQ-cQ-2fL"/>
-                                    <constraint firstAttribute="height" constant="536" id="sNh-Qu-8La"/>
+                                    <constraint firstAttribute="height" constant="550" id="sNh-Qu-8La"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9cL-Ur-GpK" firstAttribute="leading" secondItem="NB4-VJ-0Yd" secondAttribute="leading" id="996-2F-aYg"/>
-                            <constraint firstAttribute="bottom" secondItem="9cL-Ur-GpK" secondAttribute="bottom" constant="-10" id="EKI-iv-XBy"/>
+                            <constraint firstItem="9cL-Ur-GpK" firstAttribute="bottom" secondItem="wGS-sT-caZ" secondAttribute="bottom" constant="10" id="EKI-iv-XBy"/>
                             <constraint firstItem="Kdc-Oq-PBv" firstAttribute="leading" secondItem="NB4-VJ-0Yd" secondAttribute="leading" id="Fmn-Uw-eOV"/>
                             <constraint firstItem="Kdc-Oq-PBv" firstAttribute="top" secondItem="NB4-VJ-0Yd" secondAttribute="top" constant="-20" id="HwK-pA-l35"/>
                             <constraint firstItem="9cL-Ur-GpK" firstAttribute="trailing" secondItem="NB4-VJ-0Yd" secondAttribute="trailing" id="WkG-Wh-uEN"/>
@@ -107,6 +107,7 @@ done today, Paulo?</string>
                         <outlet property="backdropView" destination="Kdc-Oq-PBv" id="4Sf-t2-AdI"/>
                         <outlet property="cancelButton" destination="4jq-4N-ysy" id="PIs-RK-5Jd"/>
                         <outlet property="cardView" destination="9cL-Ur-GpK" id="6Fe-98-lol"/>
+                        <outlet property="cardViewBottomConstraint" destination="EKI-iv-XBy" id="LBa-y3-CP7"/>
                         <outlet property="contentView" destination="wGS-sT-caZ" id="rGs-Zh-xWh"/>
                         <outlet property="doneButtomBottomConstrait" destination="m03-xp-pju" id="VSB-7x-VCH"/>
                         <outlet property="doneButton" destination="zGy-8n-iaW" id="pAM-xm-sij"/>
