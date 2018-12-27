@@ -81,6 +81,7 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
                 cell = tableView.dequeueReusableCell(withIdentifier: "LastWeekOverviewCardTableViewCell") as? LastWeekOverviewCardTableViewCell
             }
             
+            cell?.lastWeek = user.weeks?.lastObject as? Week
             return cell ?? UITableViewCell()
             
         default:

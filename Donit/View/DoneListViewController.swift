@@ -57,6 +57,10 @@ class DoneListViewController: UIViewController {
         }
         
         updateDataSource()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        print(getDayOfWeek("22/12/2018"))
     
     }
 
@@ -88,6 +92,15 @@ class DoneListViewController: UIViewController {
             print("Nao foi possivel salvar")
         }
         
+    }
+    
+    func getDayOfWeek(_ today: String) -> Int? {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "dd/MM-yyyy"
+        guard let todayDate = formatter.date(from: today) else { return nil }
+        let myCalendar = Calendar(identifier: .gregorian)
+        let weekDay = myCalendar.component(.weekday, from: todayDate)
+        return weekDay
     }
     
     func updateDataSource() {
@@ -132,11 +145,24 @@ class DoneListViewController: UIViewController {
             
             if let lastDayOnCurrentWeek = currentWeek?.days?.lastObject as? Day, let date = lastDayOnCurrentWeek.date as Date? {
                
-                if dateFormatter.string(from: date) != dateFormatter.string(from: Date()) {
-                    let newDay = Day(context: managedContext)
-                    newDay.date = NSDate()
-                    currentWeek?.addToDays(newDay)
-                    currentDay = newDay
+                if dateFormatter.string(from: date) != dateFormatter.string(from: Date()) { //Se o dia de hoje for diferente do ultimo dia, cria um novo dia
+                    
+                    if getDayOfWeek(dateFormatter.string(from: date)) == 7 {
+                        //Create new week
+                        let newWeek = Week(context: managedContext)
+                        user.addToWeeks(newWeek)
+                        
+                        let today = Day(context: managedContext)
+                        today.date = NSDate()
+                        newWeek.addToDays(today)
+                        currentDay = today
+                        
+                    } else {
+                        let newDay = Day(context: managedContext)
+                        newDay.date = NSDate()
+                        currentWeek?.addToDays(newDay)
+                        currentDay = newDay
+                    }
                     
                     do {
                         try managedContext.save()
@@ -144,11 +170,11 @@ class DoneListViewController: UIViewController {
                         print(error.localizedDescription)
                     }
                     
-                } else {
+                } else { //Se o dia atual for igual ao ultimo da lista, pega ele
                     currentDay = lastDayOnCurrentWeek
                 }
                 
-            } else {
+            } else { //Se a semana estiver vazia, cria um novo dia
                 
                 let newDay = Day(context: managedContext)
                 currentWeek?.addToDays(newDay)

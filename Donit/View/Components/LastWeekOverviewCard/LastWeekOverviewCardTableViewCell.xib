@@ -137,6 +137,13 @@
                 <outletCollection property="progressBarLeadingConstraints" destination="zzU-fy-XXQ" collectionClass="NSMutableArray" id="hlF-wv-4KN"/>
                 <outletCollection property="progressBarLeadingConstraints" destination="8mO-so-aHY" collectionClass="NSMutableArray" id="kr3-SY-S2r"/>
                 <outletCollection property="progressBarLeadingConstraints" destination="dD4-r0-fsH" collectionClass="NSMutableArray" id="7wD-QG-gph"/>
+                <outletCollection property="progressBarTopConstraints" destination="slH-Jd-SkR" collectionClass="NSMutableArray" id="Agh-1O-vqS"/>
+                <outletCollection property="progressBarTopConstraints" destination="XpS-Ag-lDj" collectionClass="NSMutableArray" id="mNY-DT-CDc"/>
+                <outletCollection property="progressBarTopConstraints" destination="7CL-P9-yCz" collectionClass="NSMutableArray" id="p85-8c-w5i"/>
+                <outletCollection property="progressBarTopConstraints" destination="LB4-wD-G8J" collectionClass="NSMutableArray" id="Nqh-yD-E3d"/>
+                <outletCollection property="progressBarTopConstraints" destination="ySV-CN-h7p" collectionClass="NSMutableArray" id="bCF-C0-q0U"/>
+                <outletCollection property="progressBarTopConstraints" destination="Fge-5b-DHu" collectionClass="NSMutableArray" id="fCE-LM-WXf"/>
+                <outletCollection property="progressBarTopConstraints" destination="Ahf-Bs-W6a" collectionClass="NSMutableArray" id="nJv-WD-uxP"/>
             </connections>
             <point key="canvasLocation" x="52.799999999999997" y="129.08545727136433"/>
         </tableViewCell>
