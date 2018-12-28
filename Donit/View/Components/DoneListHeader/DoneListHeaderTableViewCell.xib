@@ -37,6 +37,9 @@
             </tableViewCellContentView>
             <color key="backgroundColor" name="paleGrey"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="headerLabel" destination="epP-wr-mXV" id="dFC-w7-Z4P"/>
+            </connections>
             <point key="canvasLocation" x="135.19999999999999" y="125.93703148425789"/>
         </tableViewCell>
     </objects>

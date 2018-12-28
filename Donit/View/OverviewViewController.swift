@@ -42,7 +42,7 @@ class OverviewViewController: UIViewController {
 extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
@@ -59,8 +59,19 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
                 cell = tableView.dequeueReusableCell(withIdentifier: "DoneListHeaderTableViewCell") as? DoneListHeaderTableViewCell
             }
             
+            cell?.headerLabel.text = "This is your overview screen"
             return cell ?? UITableViewCell()
         case 1:
+            var cell = tableView.dequeueReusableCell(withIdentifier: "DailyOverviewCardTableViewCell") as? DailyOverviewCardTableViewCell
+            
+            if cell == nil {
+                tableView.register(UINib(nibName: "DailyOverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "DailyOverviewCardTableViewCell")
+                cell = tableView.dequeueReusableCell(withIdentifier: "DailyOverviewCardTableViewCell") as? DailyOverviewCardTableViewCell
+            }
+            cell?.numberLabel.text = "23"
+            return cell ?? UITableViewCell()
+            
+        case 2:
             
             var cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCardTableViewCell") as? OverviewCardTableViewCell
             if cell == nil {
@@ -72,7 +83,7 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.dataSource = coreDataManager.getLastWeekOverView() ?? [OverviewModel]()
             return cell ?? UITableViewCell()
         
-        case 2:
+        case 3:
             var cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCardTableViewCell") as? OverviewCardTableViewCell
             
             if cell == nil {
@@ -95,10 +106,12 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 75
         case 1:
+            return 126
+        case 2:
             let scaleFactor: Double = 190/320
             let height = tableView.frame.width * CGFloat(scaleFactor)
             return height
-        case 2:
+        case 3:
             let scaleFactor: Double = 190/320
             let height = tableView.frame.width * CGFloat(scaleFactor)
             return height
