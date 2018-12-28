@@ -44,10 +44,12 @@
 		2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */; };
 		2BD0ED5621CAB09100EC9CFF /* AddScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */; };
 		2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */; };
+		2BD9542721D57FDF00827D66 /* OverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9542621D57FDF00827D66 /* OverviewModel.swift */; };
+		2BD9542A21D580F800827D66 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9542921D580F800827D66 /* CoreDataManager.swift */; };
 		2BDECBFC21CC2B4E00DEDABA /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECBFB21CC2B4E00DEDABA /* Overview.storyboard */; };
 		2BDECBFE21CC2B6000DEDABA /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */; };
-		2BDECC0621CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC0421CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift */; };
-		2BDECC0721CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0521CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib */; };
+		2BDECC0621CC32A900DEDABA /* OverviewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC0421CC32A900DEDABA /* OverviewCardTableViewCell.swift */; };
+		2BDECC0721CC32A900DEDABA /* OverviewCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0521CC32A900DEDABA /* OverviewCardTableViewCell.xib */; };
 		2BDECC0A21CC3F4700DEDABA /* ProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */; };
 		2BDECC0C21CC3F6200DEDABA /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */; };
 		2BDECC5F21CCFDA400DEDABA /* DoneItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5721CCFDA400DEDABA /* DoneItem+CoreDataClass.swift */; };
@@ -100,10 +102,12 @@
 		2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreen.storyboard; sourceTree = "<group>"; };
 		2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenDelegate.swift; sourceTree = "<group>"; };
+		2BD9542621D57FDF00827D66 /* OverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModel.swift; sourceTree = "<group>"; };
+		2BD9542921D580F800827D66 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2BDECBFB21CC2B4E00DEDABA /* Overview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overview.storyboard; sourceTree = "<group>"; };
 		2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
-		2BDECC0421CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyOverviewCardTableViewCell.swift; sourceTree = "<group>"; };
-		2BDECC0521CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeklyOverviewCardTableViewCell.xib; sourceTree = "<group>"; };
+		2BDECC0421CC32A900DEDABA /* OverviewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCardTableViewCell.swift; sourceTree = "<group>"; };
+		2BDECC0521CC32A900DEDABA /* OverviewCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCardTableViewCell.xib; sourceTree = "<group>"; };
 		2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBar.xib; sourceTree = "<group>"; };
 		2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		2BDECC5721CCFDA400DEDABA /* DoneItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				2BDECC5C21CCFDA400DEDABA /* Week+CoreDataProperties.swift */,
 				2BDECC5D21CCFDA400DEDABA /* User+CoreDataClass.swift */,
 				2BDECC5E21CCFDA400DEDABA /* User+CoreDataProperties.swift */,
+				2BD9542621D57FDF00827D66 /* OverviewModel.swift */,
+				2BD9542921D580F800827D66 /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -363,8 +369,8 @@
 		2BDECBFF21CC323100DEDABA /* WeeklyOverviewCard */ = {
 			isa = PBXGroup;
 			children = (
-				2BDECC0421CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift */,
-				2BDECC0521CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib */,
+				2BDECC0421CC32A900DEDABA /* OverviewCardTableViewCell.swift */,
+				2BDECC0521CC32A900DEDABA /* OverviewCardTableViewCell.xib */,
 			);
 			path = WeeklyOverviewCard;
 			sourceTree = "<group>";
@@ -439,7 +445,7 @@
 				2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */,
 				2BD0ED5621CAB09100EC9CFF /* AddScreen.storyboard in Resources */,
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
-				2BDECC0721CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.xib in Resources */,
+				2BDECC0721CC32A900DEDABA /* OverviewCardTableViewCell.xib in Resources */,
 				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
 				2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */,
 				2B15BE3A21C4498E006426BB /* Welcome.storyboard in Resources */,
@@ -474,8 +480,9 @@
 				2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */,
 				2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */,
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
+				2BD9542721D57FDF00827D66 /* OverviewModel.swift in Sources */,
 				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
-				2BDECC0621CC32A900DEDABA /* WeeklyOverviewCardTableViewCell.swift in Sources */,
+				2BDECC0621CC32A900DEDABA /* OverviewCardTableViewCell.swift in Sources */,
 				2B15BE3C21C449A0006426BB /* WelcomeViewController.swift in Sources */,
 				2BDECC6121CCFDA400DEDABA /* Day+CoreDataClass.swift in Sources */,
 				2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */,
@@ -496,6 +503,7 @@
 				2BD0ED3621C9641900EC9CFF /* XibView.swift in Sources */,
 				2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */,
 				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
+				2BD9542A21D580F800827D66 /* CoreDataManager.swift in Sources */,
 				2BDECC6321CCFDA400DEDABA /* Week+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

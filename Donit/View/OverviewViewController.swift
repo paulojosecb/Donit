@@ -13,6 +13,7 @@ class OverviewViewController: UIViewController {
     
     var user: User!
     var managedContext: NSManagedObjectContext!
+    var coreDataManager: CoreDataManager!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,6 +28,7 @@ class OverviewViewController: UIViewController {
                 return
             }
             managedContext = appDeledate.persistentContainer.viewContext
+            coreDataManager = CoreDataManager(managedContext: managedContext)
         }
         
         do {
@@ -65,23 +67,27 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
             
             return cell ?? UITableViewCell()
         case 1:
-            var cell = tableView.dequeueReusableCell(withIdentifier: "WeeklyOverviewCardTableViewCell") as? WeeklyOverviewCardTableViewCell
+            
+            var cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCardTableViewCell") as? OverviewCardTableViewCell
             if cell == nil {
-                tableView.register(UINib(nibName: "WeeklyOverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "WeeklyOverviewCardTableViewCell")
-                cell = tableView.dequeueReusableCell(withIdentifier: "WeeklyOverviewCardTableViewCell") as? WeeklyOverviewCardTableViewCell
+                tableView.register(UINib(nibName: "OverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "OverviewCardTableViewCell")
+                cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCardTableViewCell") as? OverviewCardTableViewCell
             }
             
+            cell?.dataSource = coreDataManager.getLastWeekOverView() ?? [OverviewModel]()
+            print(coreDataManager.getLastWeekOverView())
             return cell ?? UITableViewCell()
         
         case 2:
-            var cell = tableView.dequeueReusableCell(withIdentifier: "LastWeekOverviewCardTableViewCell") as? LastWeekOverviewCardTableViewCell
+            var cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCardTableViewCell") as? OverviewCardTableViewCell
             
             if cell == nil {
-                tableView.register(UINib(nibName: "LastWeekOverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "LastWeekOverviewCardTableViewCell")
-                cell = tableView.dequeueReusableCell(withIdentifier: "LastWeekOverviewCardTableViewCell") as? LastWeekOverviewCardTableViewCell
+                tableView.register(UINib(nibName: "OverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "OverviewCardTableViewCell")
+                cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCardTableViewCell") as? OverviewCardTableViewCell
             }
             
-            cell?.lastWeek = user.weeks?.lastObject as? Week
+            cell?.dataSource = coreDataManager.getLastSevenWeeksOverview()
+            print(coreDataManager.getLastSevenWeeksOverview())
             return cell ?? UITableViewCell()
             
         default:
@@ -95,11 +101,11 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 75
         case 1:
-            let scaleFactor: Double = 174/320
+            let scaleFactor: Double = 190/320
             let height = tableView.frame.width * CGFloat(scaleFactor)
             return height
         case 2:
-            let scaleFactor: Double = 167/320
+            let scaleFactor: Double = 190/320
             let height = tableView.frame.width * CGFloat(scaleFactor)
             return height
         default:

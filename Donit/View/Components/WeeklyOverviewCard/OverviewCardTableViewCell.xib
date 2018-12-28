@@ -13,15 +13,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WeeklyOverviewCardTableViewCell" customModule="Donit" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="OverviewCardTableViewCell" customModule="Donit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="173.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="338-qf-26j">
-                        <rect key="frame" x="16" y="0.0" width="288" height="173.5"/>
+                        <rect key="frame" x="16" y="16" width="288" height="173.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34 things/week is your average in the last 7 weeks" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="MTK-H8-4Kg">
                                 <rect key="frame" x="16" y="16" width="240" height="48"/>
@@ -122,7 +122,7 @@
                 </subviews>
                 <color key="backgroundColor" name="paleGrey"/>
                 <constraints>
-                    <constraint firstItem="338-qf-26j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1ut-6N-aJn"/>
+                    <constraint firstItem="338-qf-26j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="1ut-6N-aJn"/>
                     <constraint firstAttribute="bottom" secondItem="338-qf-26j" secondAttribute="bottom" id="ZRe-Uc-5Cp"/>
                     <constraint firstAttribute="trailing" secondItem="338-qf-26j" secondAttribute="trailing" constant="16" id="pR2-kY-xVS"/>
                     <constraint firstItem="338-qf-26j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="r84-lN-CE5"/>
@@ -148,6 +148,13 @@
                 <outletCollection property="progressBarsLeadingContraints" destination="Dfq-Bz-AYM" collectionClass="NSMutableArray" id="OHE-8w-XqZ"/>
                 <outletCollection property="progressBarsLeadingContraints" destination="eue-z6-MUX" collectionClass="NSMutableArray" id="eii-aN-r1D"/>
                 <outletCollection property="progressBarsLeadingContraints" destination="2pb-hZ-rsY" collectionClass="NSMutableArray" id="cKp-9G-VFR"/>
+                <outletCollection property="progressBarsTopConstraints" destination="1nD-Zr-g17" collectionClass="NSMutableArray" id="QGO-Q8-WVw"/>
+                <outletCollection property="progressBarsTopConstraints" destination="IGQ-hc-ZiD" collectionClass="NSMutableArray" id="kLT-I2-quw"/>
+                <outletCollection property="progressBarsTopConstraints" destination="zXi-Js-wQA" collectionClass="NSMutableArray" id="Hmd-ZN-1z0"/>
+                <outletCollection property="progressBarsTopConstraints" destination="vsJ-cM-bF4" collectionClass="NSMutableArray" id="J2s-Xo-YbG"/>
+                <outletCollection property="progressBarsTopConstraints" destination="Vov-rM-TnM" collectionClass="NSMutableArray" id="OK9-9a-rQ2"/>
+                <outletCollection property="progressBarsTopConstraints" destination="6wO-Pe-HQE" collectionClass="NSMutableArray" id="DFD-bH-LqT"/>
+                <outletCollection property="progressBarsTopConstraints" destination="EUa-xd-Hfi" collectionClass="NSMutableArray" id="suq-Nw-f7w"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="138.53073463268368"/>
         </tableViewCell>
