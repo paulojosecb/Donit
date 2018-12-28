@@ -26,8 +26,7 @@
 		2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */; };
 		2B3A15B321CFBD8D00F75166 /* ProgressBarWithLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A15B221CFBD8D00F75166 /* ProgressBarWithLabel.xib */; };
 		2B3A15B521CFBDA100F75166 /* ProgressBarWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A15B421CFBDA100F75166 /* ProgressBarWithLabel.swift */; };
-		2B3A15BD21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A15BB21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.swift */; };
-		2B3A15BE21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A15BC21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.xib */; };
+		2BBD86F921D6BD9300DE854B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD86F821D6BD9300DE854B /* Double.swift */; };
 		2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */; };
 		2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */; };
 		2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */; };
@@ -84,8 +83,7 @@
 		2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B3A15B221CFBD8D00F75166 /* ProgressBarWithLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBarWithLabel.xib; sourceTree = "<group>"; };
 		2B3A15B421CFBDA100F75166 /* ProgressBarWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarWithLabel.swift; sourceTree = "<group>"; };
-		2B3A15BB21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastWeekOverviewCardTableViewCell.swift; sourceTree = "<group>"; };
-		2B3A15BC21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastWeekOverviewCardTableViewCell.xib; sourceTree = "<group>"; };
+		2BBD86F821D6BD9300DE854B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneListHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +137,7 @@
 				2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */,
 				2B15BE4321C44C40006426BB /* UIView.swift */,
 				2B15BE4521C44D9E006426BB /* UIColor.swift */,
+				2BBD86F821D6BD9300DE854B /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -155,7 +154,6 @@
 		2B15BE3D21C449D4006426BB /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2B3A15BA21CFC39000F75166 /* LastWeekOverviewCard */,
 				2B3A15B121CFBD7C00F75166 /* ProgressBarWithLabel */,
 				2BDECC0821CC3F3500DEDABA /* ProgressBar */,
 				2BDECBFF21CC323100DEDABA /* WeeklyOverviewCard */,
@@ -257,15 +255,6 @@
 				2B3A15B421CFBDA100F75166 /* ProgressBarWithLabel.swift */,
 			);
 			path = ProgressBarWithLabel;
-			sourceTree = "<group>";
-		};
-		2B3A15BA21CFC39000F75166 /* LastWeekOverviewCard */ = {
-			isa = PBXGroup;
-			children = (
-				2B3A15BB21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.swift */,
-				2B3A15BC21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.xib */,
-			);
-			path = LastWeekOverviewCard;
 			sourceTree = "<group>";
 		};
 		2BD0ED2621C45B5000EC9CFF /* DoneListHeader */ = {
@@ -456,7 +445,6 @@
 				2BDECBFC21CC2B4E00DEDABA /* Overview.storyboard in Resources */,
 				2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */,
 				2BD0ED4621C97A3900EC9CFF /* TutorialCard.xib in Resources */,
-				2B3A15BE21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.xib in Resources */,
 				2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */,
 				2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */,
 				2B3A15B321CFBD8D00F75166 /* ProgressBarWithLabel.xib in Resources */,
@@ -475,7 +463,6 @@
 				2B15BE4421C44C40006426BB /* UIView.swift in Sources */,
 				2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */,
 				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
-				2B3A15BD21CFC3AE00F75166 /* LastWeekOverviewCardTableViewCell.swift in Sources */,
 				2B15BE4A21C44DF5006426BB /* DoneItemCardTableViewCell.swift in Sources */,
 				2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */,
 				2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */,
@@ -504,6 +491,7 @@
 				2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */,
 				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
 				2BD9542A21D580F800827D66 /* CoreDataManager.swift in Sources */,
+				2BBD86F921D6BD9300DE854B /* Double.swift in Sources */,
 				2BDECC6321CCFDA400DEDABA /* Week+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

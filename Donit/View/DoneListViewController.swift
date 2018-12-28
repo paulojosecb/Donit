@@ -62,9 +62,7 @@ class DoneListViewController: UIViewController {
         updateDataSource()
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        print(getDayOfWeek("22/12/2018"))
-    
+        dateFormatter.dateFormat = "dd/MM/yyyy"    
     }
 
     @IBAction func addDidPress(_ sender: Any) {
@@ -210,7 +208,7 @@ extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
             
             let reversedDoneItems = currentDay.doneItems?.reversed
             let item = reversedDoneItems?.object(at: indexPath.row - 1) as? DoneItem
-            let name = item?.name
+            _ = item?.name
             cell?.nameLabel.text = item?.name
             
             return cell ?? UITableViewCell()

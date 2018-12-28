@@ -17,7 +17,7 @@ class OverviewCardTableViewCell: UITableViewCell {
     
     var dataSource = [OverviewModel]()
     var mode: overviewMode = .lastWeek
-
+    
     @IBOutlet weak var cardView: UIView!
     
     @IBOutlet var progressBars: [ProgressBar]!
@@ -30,7 +30,6 @@ class OverviewCardTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     
         // Initialization code
     }
@@ -46,9 +45,9 @@ class OverviewCardTableViewCell: UITableViewCell {
         
         switch mode {
         case .lastWeek:
-            commentLabel.text = "5 things per day is your daily average this week"
+            commentLabel.text = " \(getAverage(with: dataSource)) things per day is your daily average this week"
         case .sevenWeeks:
-            commentLabel.text = "34 things per week is your weekly average in the last 7 weeks"
+            commentLabel.text = "\(getAverage(with: dataSource)) things per week is your weekly average in the last 7 weeks"
         }
         
         if progressBarWrapperView.frame.height > CGFloat(70.0) {
@@ -109,6 +108,15 @@ class OverviewCardTableViewCell: UITableViewCell {
         
         self.layoutIfNeeded()
                 
+    }
+    
+    func getAverage(with model: [OverviewModel]) -> Double {
+        
+        let average : Double = Double(model.reduce(0, { previous, data in
+            return previous + data.count
+        })) / Double(model.count)
+        
+        return average.rounded(toPlaces: 2)
     }
     
 }

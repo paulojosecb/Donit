@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import CoreData
 
 class CoreDataManager {
@@ -16,20 +17,33 @@ class CoreDataManager {
         self.managedContext = managedContext
     }
     
+    func getLastWeekSum() -> Int {
+        let user = getUser()
+        let weeks = user?.weeks?.array as? [Week]
+        let count = weeks?.count ?? 0
+        
+        if count > 1 {
+            let lastWeek = weeks?[count - 2]
+            let days = lastWeek?.days?.array as? [Day]
+            
+            let sum = days?.reduce(0, { previous, d in
+                let day = d as Day
+                let count = day.doneItems?.count ?? 0
+                return previous ?? 0 + count
+            })
+            
+            return sum ?? 0
+        }
+        
+        return 0
+        
+    }
+
     func getLastWeekOverView() -> [OverviewModel]! {
         
         var overview : [OverviewModel]!
-        let user = getUser()
-        
-//        guard
-//            let weeks = user?.weeks?.array as? [Week],
-//            weeks.count > 1,
-//            let lastWeek = weeks.last,
-//            let days = lastWeek.days?.array as? [Day],
-//            days.count == 7 else {
-//            return nil
-//        }
-        
+        _ = getUser()
+    
         guard
             let currentWeek = getCurrentWeek(),
             let days = currentWeek.days?.array as? [Day] else {
@@ -148,15 +162,13 @@ class CoreDataManager {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         
-        guard let user = getUser() else { return nil }
+        guard getUser() != nil else { return nil }
         
         let currentWeek = getCurrentWeek()
         let days = currentWeek?.days?.array as! [Day]
         
         let currentDay = days.first { (day) -> Bool in
-            print(dateFormatter.string(from: day.date as! Date))
-            print(dateFormatter.string(from: Date()))
-            let isEqual = dateFormatter.string(from: day.date as! Date) == dateFormatter.string(from: Date())
+            let isEqual = dateFormatter.string(from: day.date! as Date) == dateFormatter.string(from: Date())
             return isEqual
         }
         

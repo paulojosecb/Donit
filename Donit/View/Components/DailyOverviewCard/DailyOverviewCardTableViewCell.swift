@@ -12,7 +12,7 @@ class DailyOverviewCardTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var numberLabel: UILabel!
-    
+    @IBOutlet weak var commentLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

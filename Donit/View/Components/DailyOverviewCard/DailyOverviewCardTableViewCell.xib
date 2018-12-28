@@ -64,6 +64,7 @@ Keep it up! 🎉🎉</string>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardView" destination="DOB-kB-B1h" id="VYJ-Iv-e4M"/>
+                <outlet property="commentLabel" destination="bNW-RY-qlF" id="muj-0f-wy2"/>
                 <outlet property="numberLabel" destination="D7Z-mR-J8j" id="gcU-at-UPn"/>
             </connections>
             <point key="canvasLocation" x="138.40000000000001" y="186.65667166416793"/>

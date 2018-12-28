@@ -68,7 +68,10 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
                 tableView.register(UINib(nibName: "DailyOverviewCardTableViewCell", bundle: nil), forCellReuseIdentifier: "DailyOverviewCardTableViewCell")
                 cell = tableView.dequeueReusableCell(withIdentifier: "DailyOverviewCardTableViewCell") as? DailyOverviewCardTableViewCell
             }
-            cell?.numberLabel.text = "23"
+            
+            let sum = coreDataManager.getLastSevenWeeksOverview()!
+            cell?.numberLabel.text = "\(sum[sum.count - 2].count)"
+            cell?.commentLabel.text = "is the number of things you’ve done in th last 7 days. Keep it up! 🎉🎉"
             return cell ?? UITableViewCell()
             
         case 2:
