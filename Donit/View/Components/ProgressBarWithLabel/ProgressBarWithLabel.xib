@@ -36,7 +36,7 @@
                 </label>
             </subviews>
             <constraints>
-                <constraint firstItem="sUk-Rf-2te" firstAttribute="top" secondItem="f0c-13-xAC" secondAttribute="bottom" constant="2" id="6Nr-Cr-l2t"/>
+                <constraint firstItem="f0c-13-xAC" firstAttribute="bottom" secondItem="sUk-Rf-2te" secondAttribute="top" constant="-2" id="6Nr-Cr-l2t"/>
                 <constraint firstItem="sUk-Rf-2te" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="U5C-wm-PIb"/>
                 <constraint firstItem="f0c-13-xAC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ciW-Kl-kGo"/>
                 <constraint firstItem="f0c-13-xAC" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mbf-iX-X8e"/>

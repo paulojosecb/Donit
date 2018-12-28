@@ -13,6 +13,7 @@ import CoreData
 class IntroductionViewController: UIViewController {
     
     var managedContext : NSManagedObjectContext!
+    var coreDataManager: CoreDataManager!
 
     @IBOutlet weak var startBottomConstrait: NSLayoutConstraint!
     @IBOutlet weak var nameTextField: UITextField!
@@ -29,6 +30,8 @@ class IntroductionViewController: UIViewController {
             }
             managedContext = appDeledate.persistentContainer.viewContext
         }
+        
+        coreDataManager = CoreDataManager(managedContext: managedContext)
         
         nameTextField.delegate = self
         
@@ -78,17 +81,8 @@ class IntroductionViewController: UIViewController {
             nameTextField.resignFirstResponder()
             UserDefaults.standard.set(nameTextField.text, forKey: "username")
             
-            let newUser = User(context: managedContext)
-            newUser.name = nameTextField.text ?? ""
-            
-            do {
-                try managedContext.save()
-                performSegue(withIdentifier: "showTutorial", sender: self)
-            } catch let error as NSError {
-                print(error.localizedDescription)
-                return 
-            }
-            
+            coreDataManager.createUser(with: nameTextField.text ?? "")
+            performSegue(withIdentifier: "showTutorial", sender: self)
         }
 
     }
@@ -150,15 +144,7 @@ extension IntroductionViewController: UITextFieldDelegate {
             nameTextField.resignFirstResponder()
             UserDefaults.standard.set(nameTextField.text, forKey: "username")
             
-            let newUser = User(context: managedContext)
-            newUser.name = nameTextField.text ?? ""
-            
-            do {
-                try managedContext.save()
-            } catch let error as NSError {
-                print(error.localizedDescription)
-                return true
-            }
+            coreDataManager.createUser(with: nameTextField.text ?? "")
             
             performSegue(withIdentifier: "showTutorial", sender: self)
             return true

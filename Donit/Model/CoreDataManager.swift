@@ -19,23 +19,20 @@ class CoreDataManager {
     func getLastWeekOverView() -> [OverviewModel]! {
         
         var overview : [OverviewModel]!
-        var user: User!
+        let user = getUser()
         
-        do {
-            user = try managedContext.fetch(User.fetchRequest()).last
-            guard user != nil else { return nil }
-        } catch let error as NSError {
-            print(error.localizedDescription)
-            return nil
-        }
-        
+//        guard
+//            let weeks = user?.weeks?.array as? [Week],
+//            weeks.count > 1,
+//            let lastWeek = weeks.last,
+//            let days = lastWeek.days?.array as? [Day],
+//            days.count == 7 else {
+//            return nil
+//        }
         
         guard
-            let weeks = user.weeks?.array as? [Week],
-            weeks.count > 1,
-            let lastWeek = weeks.last,
-            let days = lastWeek.days?.array as? [Day],
-            days.count == 7 else {
+            let currentWeek = getCurrentWeek(),
+            let days = currentWeek.days?.array as? [Day] else {
             return nil
         }
         
@@ -45,25 +42,16 @@ class CoreDataManager {
             overview.append(OverviewModel(count: day.doneItems?.count ?? 0))
         }
         
-        
         return overview
     }
     
     func getLastSevenWeeksOverview() -> [OverviewModel]! {
         
         var overview : [OverviewModel]!
-        var user : User!
-        
-        do {
-            user = try managedContext.fetch(User.fetchRequest()).last
-            guard user != nil else { return nil }
-        } catch let error as NSError {
-            print(error.localizedDescription)
-            return nil
-        }
+        let user = getUser()
         
         guard
-            let weeks = user.weeks?.array as? [Week] else {
+            let weeks = user?.weeks?.array as? [Week] else {
             return nil
         }
         
@@ -102,6 +90,110 @@ class CoreDataManager {
         })
         
         return sum
+        
+    }
+    
+    func getDayOfWeek(_ today: String) -> Int? {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "dd/MM-yyyy"
+        guard let todayDate = formatter.date(from: today) else { return nil }
+        let myCalendar = Calendar(identifier: .gregorian)
+        let weekDay = myCalendar.component(.weekday, from: todayDate)
+        return weekDay
+    }
+    
+    func createUser(with name: String) {
+        let newUser = User(context: managedContext)
+        newUser.name = name
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
+        createNewWeek()
+    }
+    
+    func createNewWeek() {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let newWeek = Week(context: managedContext)
+        let user = getUser()
+        
+        guard user != nil else { return }
+        
+        let dayOfTheWeek = getDayOfWeek(dateFormatter.string(from: Date()))
+        
+        for i in 1...7 {
+            let date = Calendar.current.date(byAdding: .day, value: i - dayOfTheWeek!, to: Date())
+            let newDay = Day(context: managedContext)
+            newDay.date = date as NSDate?
+            newWeek.addToDays(newDay)
+        }
+        
+        user?.addToWeeks(newWeek)
+    
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+
+    }
+    
+    func getCurrentDay() -> Day! {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        guard let user = getUser() else { return nil }
+        
+        let currentWeek = getCurrentWeek()
+        let days = currentWeek?.days?.array as! [Day]
+        
+        let currentDay = days.first { (day) -> Bool in
+            print(dateFormatter.string(from: day.date as! Date))
+            print(dateFormatter.string(from: Date()))
+            let isEqual = dateFormatter.string(from: day.date as! Date) == dateFormatter.string(from: Date())
+            return isEqual
+        }
+        
+        if currentDay == nil {
+            createNewWeek()
+            return getCurrentDay()
+        }
+        
+        return currentDay
+    }
+    
+    func getUser() -> User! {
+        var user: User!
+        do {
+            let users: [User] = try managedContext.fetch(User.fetchRequest())
+            user = users[0]
+            guard user != nil else { return nil }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            return nil
+        }
+        
+        return user
+    }
+    
+    func getCurrentWeek() -> Week! {
+        
+        guard let user = getUser() else { return nil }
+        
+        var currentWeek = user.weeks?.lastObject as? Week
+        
+        if currentWeek == nil {
+            createNewWeek()
+            currentWeek = user.weeks?.lastObject as? Week
+        }
+        
+        return currentWeek
         
     }
 }

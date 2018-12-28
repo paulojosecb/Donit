@@ -65,7 +65,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hello, Paulo" id="EQC-us-QET">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="it9-0m-ig4">
+                        <barButtonItem key="rightBarButtonItem" title="Overview" id="it9-0m-ig4">
                             <connections>
                                 <segue destination="8tb-rS-ISL" kind="show" id="wik-r8-NCy"/>
                             </connections>

@@ -30,15 +30,9 @@ class OverviewViewController: UIViewController {
             managedContext = appDeledate.persistentContainer.viewContext
             coreDataManager = CoreDataManager(managedContext: managedContext)
         }
-        
-        do {
-            let users : [User] = try managedContext.fetch(User.fetchRequest())
-            user = users[0]
-            let username = user.name ?? ""
-            self.navigationItem.title = "\(username),"
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
+        let user = coreDataManager.getUser()
+        let username = user?.name ?? ""
+        self.navigationItem.title = "\(username),"
         
     }
     
@@ -74,8 +68,8 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
                 cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCardTableViewCell") as? OverviewCardTableViewCell
             }
             
+            cell?.mode = overviewMode.lastWeek
             cell?.dataSource = coreDataManager.getLastWeekOverView() ?? [OverviewModel]()
-            print(coreDataManager.getLastWeekOverView())
             return cell ?? UITableViewCell()
         
         case 2:
@@ -86,8 +80,8 @@ extension OverviewViewController: UITableViewDelegate, UITableViewDataSource {
                 cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCardTableViewCell") as? OverviewCardTableViewCell
             }
             
+            cell?.mode = overviewMode.sevenWeeks
             cell?.dataSource = coreDataManager.getLastSevenWeeksOverview()
-            print(coreDataManager.getLastSevenWeeksOverview())
             return cell ?? UITableViewCell()
             
         default:

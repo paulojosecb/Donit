@@ -27,7 +27,7 @@
             </subviews>
             <constraints>
                 <constraint firstItem="0eq-YW-LqQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="daw-cq-bAh"/>
-                <constraint firstAttribute="bottom" secondItem="0eq-YW-LqQ" secondAttribute="bottom" id="gEd-dM-XL1"/>
+                <constraint firstItem="0eq-YW-LqQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gEd-dM-XL1"/>
                 <constraint firstItem="0eq-YW-LqQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gsV-YQ-mFn"/>
                 <constraint firstItem="0eq-YW-LqQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="khl-iV-ABC"/>
             </constraints>

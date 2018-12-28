@@ -30,46 +30,46 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3B-FH-1Ko">
-                                <rect key="frame" x="16" y="72" width="256" height="74.5"/>
+                                <rect key="frame" x="16" y="72" width="256" height="85.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksM-HO-keH" userLabel="1" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="246" y="0.0" width="21" height="74.5"/>
+                                        <rect key="frame" x="246" y="0.0" width="21" height="85.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="G1I-Jk-qL8"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lF-YU-SzT" userLabel="2" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="205" y="0.0" width="21" height="74.5"/>
+                                        <rect key="frame" x="205" y="0.0" width="21" height="85.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="AsR-Vx-pUr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-84-x93" userLabel="3" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="164" y="0.0" width="21" height="74.5"/>
+                                        <rect key="frame" x="164" y="0.0" width="21" height="85.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="e43-Nr-veT"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFP-CZ-u4d" userLabel="4" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="123" y="0.0" width="21" height="74.5"/>
+                                        <rect key="frame" x="123" y="0.0" width="21" height="85.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="fzB-5h-PIr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-re-Zgv" userLabel="5" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="82" y="0.0" width="21" height="74.5"/>
+                                        <rect key="frame" x="82" y="0.0" width="21" height="85.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="Hrh-Rm-jWE"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIC-d8-XHw" userLabel="7" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="21" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="21" height="85.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="2qN-X7-zUs"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-AN-apj" userLabel="6" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
-                                        <rect key="frame" x="41" y="0.0" width="21" height="74.5"/>
+                                        <rect key="frame" x="41" y="0.0" width="21" height="85.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="dM2-ek-Mel"/>
                                         </constraints>
@@ -79,44 +79,36 @@
                                 <constraints>
                                     <constraint firstItem="ksM-HO-keH" firstAttribute="top" secondItem="h3B-FH-1Ko" secondAttribute="top" id="1nD-Zr-g17"/>
                                     <constraint firstItem="ksM-HO-keH" firstAttribute="leading" secondItem="4lF-YU-SzT" secondAttribute="trailing" constant="20" id="2pb-hZ-rsY"/>
-                                    <constraint firstAttribute="bottom" secondItem="e4b-84-x93" secondAttribute="bottom" id="3TT-9e-BRa"/>
+                                    <constraint firstItem="e4b-84-x93" firstAttribute="bottom" secondItem="h3B-FH-1Ko" secondAttribute="bottom" id="3TT-9e-BRa"/>
                                     <constraint firstItem="pFP-CZ-u4d" firstAttribute="leading" secondItem="fMw-re-Zgv" secondAttribute="trailing" constant="20" id="5MN-TW-9sC"/>
                                     <constraint firstItem="ziu-AN-apj" firstAttribute="leading" secondItem="PIC-d8-XHw" secondAttribute="trailing" constant="20" id="64d-eq-hQB"/>
                                     <constraint firstItem="ziu-AN-apj" firstAttribute="top" secondItem="h3B-FH-1Ko" secondAttribute="top" id="6wO-Pe-HQE"/>
                                     <constraint firstItem="e4b-84-x93" firstAttribute="leading" secondItem="pFP-CZ-u4d" secondAttribute="trailing" constant="20" id="Dfq-Bz-AYM"/>
                                     <constraint firstItem="PIC-d8-XHw" firstAttribute="top" secondItem="h3B-FH-1Ko" secondAttribute="top" id="EUa-xd-Hfi"/>
                                     <constraint firstItem="PIC-d8-XHw" firstAttribute="leading" secondItem="h3B-FH-1Ko" secondAttribute="leading" id="Ea1-Mb-aE8"/>
-                                    <constraint firstAttribute="bottom" secondItem="fMw-re-Zgv" secondAttribute="bottom" id="GaV-Yw-z9b"/>
+                                    <constraint firstItem="fMw-re-Zgv" firstAttribute="bottom" secondItem="h3B-FH-1Ko" secondAttribute="bottom" id="GaV-Yw-z9b"/>
                                     <constraint firstItem="4lF-YU-SzT" firstAttribute="top" secondItem="h3B-FH-1Ko" secondAttribute="top" id="IGQ-hc-ZiD"/>
-                                    <constraint firstAttribute="bottom" secondItem="ziu-AN-apj" secondAttribute="bottom" id="RSm-s1-Zla"/>
-                                    <constraint firstAttribute="bottom" secondItem="4lF-YU-SzT" secondAttribute="bottom" id="VkQ-Ys-LbL"/>
+                                    <constraint firstItem="ziu-AN-apj" firstAttribute="bottom" secondItem="h3B-FH-1Ko" secondAttribute="bottom" id="RSm-s1-Zla"/>
+                                    <constraint firstItem="4lF-YU-SzT" firstAttribute="bottom" secondItem="h3B-FH-1Ko" secondAttribute="bottom" id="VkQ-Ys-LbL"/>
                                     <constraint firstItem="fMw-re-Zgv" firstAttribute="top" secondItem="h3B-FH-1Ko" secondAttribute="top" id="Vov-rM-TnM"/>
                                     <constraint firstItem="fMw-re-Zgv" firstAttribute="leading" secondItem="ziu-AN-apj" secondAttribute="trailing" constant="20" id="YXo-45-fBw"/>
                                     <constraint firstItem="4lF-YU-SzT" firstAttribute="leading" secondItem="e4b-84-x93" secondAttribute="trailing" constant="20" id="eue-z6-MUX"/>
-                                    <constraint firstAttribute="bottom" secondItem="ksM-HO-keH" secondAttribute="bottom" id="nnz-ZU-vcX"/>
-                                    <constraint firstAttribute="bottom" secondItem="PIC-d8-XHw" secondAttribute="bottom" id="q35-1W-T4N"/>
-                                    <constraint firstAttribute="bottom" secondItem="pFP-CZ-u4d" secondAttribute="bottom" id="r1q-bQ-zNa"/>
+                                    <constraint firstItem="ksM-HO-keH" firstAttribute="bottom" secondItem="h3B-FH-1Ko" secondAttribute="bottom" id="nnz-ZU-vcX"/>
+                                    <constraint firstItem="PIC-d8-XHw" firstAttribute="bottom" secondItem="h3B-FH-1Ko" secondAttribute="bottom" id="q35-1W-T4N"/>
+                                    <constraint firstItem="pFP-CZ-u4d" firstAttribute="bottom" secondItem="h3B-FH-1Ko" secondAttribute="bottom" id="r1q-bQ-zNa"/>
                                     <constraint firstItem="pFP-CZ-u4d" firstAttribute="top" secondItem="h3B-FH-1Ko" secondAttribute="top" id="vsJ-cM-bF4"/>
                                     <constraint firstItem="e4b-84-x93" firstAttribute="top" secondItem="h3B-FH-1Ko" secondAttribute="top" id="zXi-Js-wQA"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkt-3q-gep">
-                                <rect key="frame" x="242" y="147.5" width="30" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="h3B-FH-1Ko" secondAttribute="trailing" constant="16" id="4AL-ps-Suc"/>
-                            <constraint firstAttribute="trailing" secondItem="hkt-3q-gep" secondAttribute="trailing" constant="16" id="4tk-cB-XXP"/>
                             <constraint firstItem="MTK-H8-4Kg" firstAttribute="leading" secondItem="338-qf-26j" secondAttribute="leading" constant="16" id="6aL-T4-fPf"/>
                             <constraint firstItem="h3B-FH-1Ko" firstAttribute="top" secondItem="MTK-H8-4Kg" secondAttribute="bottom" constant="8" id="BvF-NN-bi1"/>
-                            <constraint firstItem="h3B-FH-1Ko" firstAttribute="bottom" secondItem="hkt-3q-gep" secondAttribute="top" constant="-1" id="GLQ-wK-XfJ"/>
                             <constraint firstItem="h3B-FH-1Ko" firstAttribute="leading" secondItem="338-qf-26j" secondAttribute="leading" constant="16" id="M7J-ce-Q2F"/>
-                            <constraint firstAttribute="bottom" secondItem="hkt-3q-gep" secondAttribute="bottom" constant="8" id="bRi-9i-mFu"/>
                             <constraint firstItem="MTK-H8-4Kg" firstAttribute="trailing" secondItem="338-qf-26j" secondAttribute="trailing" constant="-32" id="cRO-FG-1mo"/>
                             <constraint firstItem="MTK-H8-4Kg" firstAttribute="top" secondItem="338-qf-26j" secondAttribute="top" constant="16" id="hbH-SP-NBW"/>
+                            <constraint firstAttribute="bottom" secondItem="h3B-FH-1Ko" secondAttribute="bottom" constant="16" id="ttR-3P-GXe"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -132,16 +124,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardView" destination="338-qf-26j" id="jNX-cT-GKF"/>
+                <outlet property="commentLabel" destination="MTK-H8-4Kg" id="bcB-Fq-qZe"/>
                 <outlet property="commentLabelTrailingConstraint" destination="cRO-FG-1mo" id="fbX-dT-eYB"/>
                 <outlet property="progressBarWrapperTopConstraint" destination="BvF-NN-bi1" id="T7n-Ez-0lW"/>
                 <outlet property="progressBarWrapperView" destination="h3B-FH-1Ko" id="1Zi-7a-6dH"/>
-                <outletCollection property="progressBars" destination="ksM-HO-keH" collectionClass="NSMutableArray" id="B6b-kC-egr"/>
-                <outletCollection property="progressBars" destination="4lF-YU-SzT" collectionClass="NSMutableArray" id="vR9-Ka-9Hb"/>
-                <outletCollection property="progressBars" destination="e4b-84-x93" collectionClass="NSMutableArray" id="HB1-wi-MMB"/>
-                <outletCollection property="progressBars" destination="pFP-CZ-u4d" collectionClass="NSMutableArray" id="fAc-7C-zST"/>
-                <outletCollection property="progressBars" destination="fMw-re-Zgv" collectionClass="NSMutableArray" id="XEf-8T-Qjn"/>
-                <outletCollection property="progressBars" destination="ziu-AN-apj" collectionClass="NSMutableArray" id="Gi4-BR-grQ"/>
-                <outletCollection property="progressBars" destination="PIC-d8-XHw" collectionClass="NSMutableArray" id="6KO-xc-fQv"/>
                 <outletCollection property="progressBarsLeadingContraints" destination="64d-eq-hQB" collectionClass="NSMutableArray" id="ZBT-vF-yiM"/>
                 <outletCollection property="progressBarsLeadingContraints" destination="YXo-45-fBw" collectionClass="NSMutableArray" id="QFD-8O-Vef"/>
                 <outletCollection property="progressBarsLeadingContraints" destination="5MN-TW-9sC" collectionClass="NSMutableArray" id="YqQ-ET-2uC"/>
@@ -155,6 +141,13 @@
                 <outletCollection property="progressBarsTopConstraints" destination="Vov-rM-TnM" collectionClass="NSMutableArray" id="OK9-9a-rQ2"/>
                 <outletCollection property="progressBarsTopConstraints" destination="6wO-Pe-HQE" collectionClass="NSMutableArray" id="DFD-bH-LqT"/>
                 <outletCollection property="progressBarsTopConstraints" destination="EUa-xd-Hfi" collectionClass="NSMutableArray" id="suq-Nw-f7w"/>
+                <outletCollection property="progressBars" destination="ksM-HO-keH" collectionClass="NSMutableArray" id="U3N-he-RM8"/>
+                <outletCollection property="progressBars" destination="4lF-YU-SzT" collectionClass="NSMutableArray" id="WmO-gs-v6y"/>
+                <outletCollection property="progressBars" destination="e4b-84-x93" collectionClass="NSMutableArray" id="ALZ-B0-9cd"/>
+                <outletCollection property="progressBars" destination="pFP-CZ-u4d" collectionClass="NSMutableArray" id="Qpc-qy-bCl"/>
+                <outletCollection property="progressBars" destination="fMw-re-Zgv" collectionClass="NSMutableArray" id="M8r-iT-WDp"/>
+                <outletCollection property="progressBars" destination="ziu-AN-apj" collectionClass="NSMutableArray" id="ciL-Sp-DuG"/>
+                <outletCollection property="progressBars" destination="PIC-d8-XHw" collectionClass="NSMutableArray" id="yBa-Ka-RUt"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="138.53073463268368"/>
         </tableViewCell>

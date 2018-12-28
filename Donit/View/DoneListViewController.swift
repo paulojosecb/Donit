@@ -14,6 +14,7 @@ class DoneListViewController: UIViewController {
     var currentDay: Day!
     var doneList : [DoneItem]!
     var managedContext : NSManagedObjectContext!
+    var coreDataManager: CoreDataManager!
 
     @IBOutlet weak var floatButton: UIView!
     @IBOutlet weak var doneListTableView: UITableView!
@@ -28,6 +29,8 @@ class DoneListViewController: UIViewController {
             }
             managedContext = appDeledate.persistentContainer.viewContext
         }
+        
+        coreDataManager = CoreDataManager(managedContext: managedContext)
         
         emptyStateCard.isHidden = true
         doneListTableView.isHidden = false
@@ -105,93 +108,10 @@ class DoneListViewController: UIViewController {
     
     func updateDataSource() {
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        
-        if user == nil {
-            
-            do {
-                let users : [User] = try managedContext.fetch(User.fetchRequest())
-                user = users[0]
-                let username = user.name ?? ""
-                self.navigationItem.title = "Hello, \(username)"
-            } catch let error as NSError {
-                print(error.localizedDescription)
-                fatalError()
-            }
-            
-        }
-        
-        if user.weeks?.count == 0 {
-            
-            let currentWeek = Week(context: managedContext)
-            
-            let newDay = Day(context: managedContext)
-            newDay.date = NSDate()
-            
-            currentWeek.addToDays(newDay)
-            currentDay = newDay
-            user.addToWeeks(currentWeek)
-            
-            do {
-                try managedContext.save()
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-            
-        } else {
-            
-            let currentWeek = user.weeks?.lastObject as? Week
-            
-            if let lastDayOnCurrentWeek = currentWeek?.days?.lastObject as? Day, let date = lastDayOnCurrentWeek.date as Date? {
-               
-                if dateFormatter.string(from: date) != dateFormatter.string(from: Date()) { //Se o dia de hoje for diferente do ultimo dia, cria um novo dia
-                    
-                    if getDayOfWeek(dateFormatter.string(from: date)) == 7 {
-                        //Create new week
-                        let newWeek = Week(context: managedContext)
-                        user.addToWeeks(newWeek)
-                        
-                        let today = Day(context: managedContext)
-                        today.date = NSDate()
-                        newWeek.addToDays(today)
-                        currentDay = today
-                        
-                    } else {
-                        let newDay = Day(context: managedContext)
-                        newDay.date = NSDate()
-                        currentWeek?.addToDays(newDay)
-                        currentDay = newDay
-                    }
-                    
-                    do {
-                        try managedContext.save()
-                    } catch let error as NSError {
-                        print(error.localizedDescription)
-                    }
-                    
-                } else { //Se o dia atual for igual ao ultimo da lista, pega ele
-                    currentDay = lastDayOnCurrentWeek
-                }
-                
-            } else { //Se a semana estiver vazia, cria um novo dia
-                
-                let newDay = Day(context: managedContext)
-                currentWeek?.addToDays(newDay)
-                currentDay = newDay
-                
-                do {
-                    try managedContext.save()
-                } catch let error as NSError {
-                    print(error.localizedDescription)
-                }
-                
-            }
-            
-        }
+        currentDay = coreDataManager.getCurrentDay()
         
         guard let count = currentDay.doneItems?.count else { return }
-        
+
         if count > 0 {
             doneListTableView.isHidden = false
             emptyStateCard.isHidden = true
@@ -199,7 +119,7 @@ class DoneListViewController: UIViewController {
             doneListTableView.isHidden = true
             emptyStateCard.isHidden = false
         }
-        
+
     }
 }
 
