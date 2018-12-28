@@ -21,7 +21,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="338-qf-26j">
-                        <rect key="frame" x="16" y="16" width="288" height="173.5"/>
+                        <rect key="frame" x="16" y="0.0" width="288" height="173.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34 things/week is your average in the last 7 weeks" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="MTK-H8-4Kg">
                                 <rect key="frame" x="16" y="16" width="240" height="48"/>
@@ -114,8 +114,8 @@
                 </subviews>
                 <color key="backgroundColor" name="paleGrey"/>
                 <constraints>
-                    <constraint firstItem="338-qf-26j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="1ut-6N-aJn"/>
-                    <constraint firstAttribute="bottom" secondItem="338-qf-26j" secondAttribute="bottom" id="ZRe-Uc-5Cp"/>
+                    <constraint firstItem="338-qf-26j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1ut-6N-aJn"/>
+                    <constraint firstAttribute="bottom" secondItem="338-qf-26j" secondAttribute="bottom" constant="16" id="ZRe-Uc-5Cp"/>
                     <constraint firstAttribute="trailing" secondItem="338-qf-26j" secondAttribute="trailing" constant="16" id="pR2-kY-xVS"/>
                     <constraint firstItem="338-qf-26j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="r84-lN-CE5"/>
                 </constraints>
