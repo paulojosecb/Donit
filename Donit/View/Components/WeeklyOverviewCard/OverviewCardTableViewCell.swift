@@ -94,17 +94,17 @@ class OverviewCardTableViewCell: UITableViewCell {
         
         let wrapperHeight = progressBarWrapperView.frame.height
         
-        for topConstraint in progressBarsTopConstraints {
-            topConstraint.constant = wrapperHeight - 10
-            layoutIfNeeded()
-        }
-        
         for (index, data) in dataSource.reversed().enumerated() {
-            progressBarsTopConstraints[index].constant = wrapperHeight - ((CGFloat(data.count) / referenceValue) * wrapperHeight)
-
+            progressBarsTopConstraints[index].constant = wrapperHeight - ((CGFloat(data.count) / referenceValue) * wrapperHeight) - 23
+            
             if progressBarsTopConstraints[index].constant == wrapperHeight {
-                progressBarsTopConstraints[index].constant = wrapperHeight - 1
+                progressBarsTopConstraints[index].constant = wrapperHeight - 23
+            } else if progressBarsTopConstraints[index].constant < 0 {
+                progressBarsTopConstraints[index].constant = 0
             }
+            
+            progressBars[index].countLabel.text = "\(data.count)"
+            
         }
         
         self.layoutIfNeeded()

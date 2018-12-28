@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOB-kB-B1h">
-                        <rect key="frame" x="16" y="6" width="343" height="114.5"/>
+                        <rect key="frame" x="16" y="0.0" width="343" height="114.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="245" translatesAutoresizingMaskIntoConstraints="NO" id="bNW-RY-qlF">
                                 <rect key="frame" x="89" y="8" width="245" height="98.5"/>
@@ -54,8 +54,8 @@ Keep it up! 🎉🎉</string>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="DOB-kB-B1h" secondAttribute="bottom" constant="6" id="1I8-ST-NQ9"/>
-                    <constraint firstItem="DOB-kB-B1h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="amb-JB-lic"/>
+                    <constraint firstAttribute="bottom" secondItem="DOB-kB-B1h" secondAttribute="bottom" constant="12" id="1I8-ST-NQ9"/>
+                    <constraint firstItem="DOB-kB-B1h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="amb-JB-lic"/>
                     <constraint firstItem="DOB-kB-B1h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="iHs-nF-5Pu"/>
                     <constraint firstAttribute="trailing" secondItem="DOB-kB-B1h" secondAttribute="trailing" constant="16" id="vmD-kL-9tw"/>
                 </constraints>

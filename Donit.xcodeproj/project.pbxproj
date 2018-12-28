@@ -243,9 +243,9 @@
 				2BD0ED2D21C4963E00EC9CFF /* LaunchScreen */,
 				2B15BE3D21C449D4006426BB /* Components */,
 				2B15BE3821C4497D006426BB /* Welcome */,
-				2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */,
 				2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */,
 				2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */,
+				2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";

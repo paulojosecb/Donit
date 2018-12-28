@@ -16,6 +16,7 @@ class ProgressBar: XibView {
         }
     }
     
+    @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
     
     override func draw(_ rect: CGRect) {

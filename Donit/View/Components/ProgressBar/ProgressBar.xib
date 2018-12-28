@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressBar" customModule="Donit" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="FvU-xo-Oj4"/>
+                <outlet property="countLabel" destination="Mkb-Bp-geN" id="bWS-ew-hfT"/>
                 <outlet property="progressView" destination="0eq-YW-LqQ" id="zFl-dJ-av2"/>
             </connections>
         </placeholder>
@@ -22,14 +23,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eq-YW-LqQ">
-                    <rect key="frame" x="0.0" y="0.0" width="21" height="58"/>
+                    <rect key="frame" x="0.0" y="21" width="21" height="37"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkb-Bp-geN">
+                    <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="UVM-Nz-x2c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
             </subviews>
             <constraints>
+                <constraint firstItem="Mkb-Bp-geN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Gjg-6W-mBQ"/>
+                <constraint firstItem="Mkb-Bp-geN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bDf-Ey-R8c"/>
                 <constraint firstItem="0eq-YW-LqQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="daw-cq-bAh"/>
+                <constraint firstItem="Mkb-Bp-geN" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ds5-J7-COe"/>
                 <constraint firstItem="0eq-YW-LqQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gEd-dM-XL1"/>
                 <constraint firstItem="0eq-YW-LqQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gsV-YQ-mFn"/>
-                <constraint firstItem="0eq-YW-LqQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="khl-iV-ABC"/>
+                <constraint firstItem="0eq-YW-LqQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="21" id="khl-iV-ABC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
