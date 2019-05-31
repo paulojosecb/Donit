@@ -7,111 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2621C3DA99006426BB /* UIImage.swift */; };
-		2B15BE2921C3DAB0006426BB /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */; };
-		2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */; };
-		2B15BE4121C44A30006426BB /* DailyOverviewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE3F21C44A30006426BB /* DailyOverviewCardTableViewCell.swift */; };
-		2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B15BE4021C44A30006426BB /* DailyOverviewCardTableViewCell.xib */; };
-		2B15BE4421C44C40006426BB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE4321C44C40006426BB /* UIView.swift */; };
-		2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE4521C44D9E006426BB /* UIColor.swift */; };
-		2B15BE4A21C44DF5006426BB /* DoneItemCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE4821C44DF5006426BB /* DoneItemCardTableViewCell.swift */; };
-		2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B15BE4921C44DF5006426BB /* DoneItemCardTableViewCell.xib */; };
 		2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */; };
-		2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */; };
-		2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */; };
-		2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */; };
 		2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */; };
 		2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */; };
-		2B3A15B321CFBD8D00F75166 /* ProgressBarWithLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A15B221CFBD8D00F75166 /* ProgressBarWithLabel.xib */; };
-		2B3A15B521CFBDA100F75166 /* ProgressBarWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A15B421CFBDA100F75166 /* ProgressBarWithLabel.swift */; };
 		2B6E18B122A14B91001B4017 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E18B022A14B91001B4017 /* HomeViewController.swift */; };
-		2BBD86F921D6BD9300DE854B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD86F821D6BD9300DE854B /* Double.swift */; };
-		2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */; };
-		2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */; };
 		2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */; };
-		2BD0ED3621C9641900EC9CFF /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3421C9641900EC9CFF /* XibView.swift */; };
-		2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3821C9683500EC9CFF /* XibView.xib */; };
-		2BD0ED3C21C9688E00EC9CFF /* InfoCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3B21C9688E00EC9CFF /* InfoCard.xib */; };
-		2BD0ED3E21C968A500EC9CFF /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED3D21C968A500EC9CFF /* InfoCard.swift */; };
-		2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4021C96D5900EC9CFF /* Introduction.storyboard */; };
-		2BD0ED4321C96D7000EC9CFF /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4221C96D7000EC9CFF /* IntroductionViewController.swift */; };
-		2BD0ED4621C97A3900EC9CFF /* TutorialCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4521C97A3900EC9CFF /* TutorialCard.xib */; };
-		2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */; };
-		2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */; };
-		2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */; };
-		2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */; };
-		2BD0ED5621CAB09100EC9CFF /* AddScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */; };
-		2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */; };
-		2BD9542721D57FDF00827D66 /* OverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9542621D57FDF00827D66 /* OverviewModel.swift */; };
-		2BD9542A21D580F800827D66 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9542921D580F800827D66 /* CoreDataManager.swift */; };
-		2BDECBFE21CC2B6000DEDABA /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */; };
-		2BDECC0621CC32A900DEDABA /* OverviewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC0421CC32A900DEDABA /* OverviewCardTableViewCell.swift */; };
-		2BDECC0721CC32A900DEDABA /* OverviewCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0521CC32A900DEDABA /* OverviewCardTableViewCell.xib */; };
-		2BDECC0A21CC3F4700DEDABA /* ProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */; };
-		2BDECC0C21CC3F6200DEDABA /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */; };
-		2BDECC5F21CCFDA400DEDABA /* DoneItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5721CCFDA400DEDABA /* DoneItem+CoreDataClass.swift */; };
-		2BDECC6021CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5821CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift */; };
-		2BDECC6121CCFDA400DEDABA /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5921CCFDA400DEDABA /* Day+CoreDataClass.swift */; };
-		2BDECC6221CCFDA400DEDABA /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5A21CCFDA400DEDABA /* Day+CoreDataProperties.swift */; };
-		2BDECC6321CCFDA400DEDABA /* Week+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5B21CCFDA400DEDABA /* Week+CoreDataClass.swift */; };
-		2BDECC6421CCFDA400DEDABA /* Week+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5C21CCFDA400DEDABA /* Week+CoreDataProperties.swift */; };
-		2BDECC6521CCFDA400DEDABA /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5D21CCFDA400DEDABA /* User+CoreDataClass.swift */; };
-		2BDECC6621CCFDA400DEDABA /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECC5E21CCFDA400DEDABA /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B15BE2621C3DA99006426BB /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
-		2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
-		2B15BE3F21C44A30006426BB /* DailyOverviewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyOverviewCardTableViewCell.swift; sourceTree = "<group>"; };
-		2B15BE4021C44A30006426BB /* DailyOverviewCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyOverviewCardTableViewCell.xib; sourceTree = "<group>"; };
-		2B15BE4321C44C40006426BB /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		2B15BE4521C44D9E006426BB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		2B15BE4821C44DF5006426BB /* DoneItemCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemCardTableViewCell.swift; sourceTree = "<group>"; };
-		2B15BE4921C44DF5006426BB /* DoneItemCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneItemCardTableViewCell.xib; sourceTree = "<group>"; };
 		2B1A7ACB21C3D6ED002FD5E1 /* Donit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
-		2B1A7AD321C3D6ED002FD5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2B1A7AD621C3D6ED002FD5E1 /* Donit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Donit.xcdatamodel; sourceTree = "<group>"; };
 		2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1A7ADB21C3D6EE002FD5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B3A15B221CFBD8D00F75166 /* ProgressBarWithLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBarWithLabel.xib; sourceTree = "<group>"; };
-		2B3A15B421CFBDA100F75166 /* ProgressBarWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarWithLabel.swift; sourceTree = "<group>"; };
 		2B6E18B022A14B91001B4017 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2BBD86F821D6BD9300DE854B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneListHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
-		2BD0ED3421C9641900EC9CFF /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
-		2BD0ED3821C9683500EC9CFF /* XibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibView.xib; sourceTree = "<group>"; };
-		2BD0ED3B21C9688E00EC9CFF /* InfoCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCard.xib; sourceTree = "<group>"; };
-		2BD0ED3D21C968A500EC9CFF /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
-		2BD0ED4021C96D5900EC9CFF /* Introduction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
-		2BD0ED4221C96D7000EC9CFF /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
-		2BD0ED4521C97A3900EC9CFF /* TutorialCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialCard.xib; sourceTree = "<group>"; };
-		2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCard.swift; sourceTree = "<group>"; };
-		2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
-		2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
-		2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreen.storyboard; sourceTree = "<group>"; };
-		2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenDelegate.swift; sourceTree = "<group>"; };
-		2BD9542621D57FDF00827D66 /* OverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModel.swift; sourceTree = "<group>"; };
-		2BD9542921D580F800827D66 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
-		2BDECC0421CC32A900DEDABA /* OverviewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCardTableViewCell.swift; sourceTree = "<group>"; };
-		2BDECC0521CC32A900DEDABA /* OverviewCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCardTableViewCell.xib; sourceTree = "<group>"; };
-		2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBar.xib; sourceTree = "<group>"; };
-		2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		2BDECC5721CCFDA400DEDABA /* DoneItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2BDECC5821CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2BDECC5921CCFDA400DEDABA /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2BDECC5A21CCFDA400DEDABA /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2BDECC5B21CCFDA400DEDABA /* Week+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Week+CoreDataClass.swift"; path = "../../Week+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2BDECC5C21CCFDA400DEDABA /* Week+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Week+CoreDataProperties.swift"; path = "../../Week+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2BDECC5D21CCFDA400DEDABA /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2BDECC5E21CCFDA400DEDABA /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,51 +35,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B15BE2521C3DA7E006426BB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2B15BE2621C3DA99006426BB /* UIImage.swift */,
-				2B15BE2821C3DAB0006426BB /* CAGradientLayer.swift */,
-				2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */,
-				2B15BE4321C44C40006426BB /* UIView.swift */,
-				2B15BE4521C44D9E006426BB /* UIColor.swift */,
-				2BBD86F821D6BD9300DE854B /* Double.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2B15BE3D21C449D4006426BB /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				2B3A15B121CFBD7C00F75166 /* ProgressBarWithLabel */,
-				2BDECC0821CC3F3500DEDABA /* ProgressBar */,
-				2BDECBFF21CC323100DEDABA /* WeeklyOverviewCard */,
-				2BD0ED2B21C461F900EC9CFF /* Buttons */,
-				2BD0ED2621C45B5000EC9CFF /* DoneListHeader */,
-				2B15BE4721C44DE0006426BB /* DoneItemCard */,
-				2B15BE3E21C44A0B006426BB /* DailyOverviewCard */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		2B15BE3E21C44A0B006426BB /* DailyOverviewCard */ = {
-			isa = PBXGroup;
-			children = (
-				2B15BE3F21C44A30006426BB /* DailyOverviewCardTableViewCell.swift */,
-				2B15BE4021C44A30006426BB /* DailyOverviewCardTableViewCell.xib */,
-			);
-			path = DailyOverviewCard;
-			sourceTree = "<group>";
-		};
-		2B15BE4721C44DE0006426BB /* DoneItemCard */ = {
-			isa = PBXGroup;
-			children = (
-				2B15BE4821C44DF5006426BB /* DoneItemCardTableViewCell.swift */,
-				2B15BE4921C44DF5006426BB /* DoneItemCardTableViewCell.xib */,
-			);
-			path = DoneItemCard;
-			sourceTree = "<group>";
-		};
 		2B1A7AC221C3D6ED002FD5E1 = {
 			isa = PBXGroup;
 			children = (
@@ -189,82 +54,21 @@
 		2B1A7ACD21C3D6ED002FD5E1 /* Donit */ = {
 			isa = PBXGroup;
 			children = (
-				2B15BE2521C3DA7E006426BB /* Extensions */,
 				2B1A7AEC21C3D880002FD5E1 /* View */,
-				2B1A7AEB21C3D86D002FD5E1 /* Model */,
 				2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */,
 				2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */,
 				2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */,
-				2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */,
 			);
 			path = Donit;
-			sourceTree = "<group>";
-		};
-		2B1A7AEB21C3D86D002FD5E1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2BDECC5721CCFDA400DEDABA /* DoneItem+CoreDataClass.swift */,
-				2BDECC5821CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift */,
-				2BDECC5921CCFDA400DEDABA /* Day+CoreDataClass.swift */,
-				2BDECC5A21CCFDA400DEDABA /* Day+CoreDataProperties.swift */,
-				2BDECC5B21CCFDA400DEDABA /* Week+CoreDataClass.swift */,
-				2BDECC5C21CCFDA400DEDABA /* Week+CoreDataProperties.swift */,
-				2BDECC5D21CCFDA400DEDABA /* User+CoreDataClass.swift */,
-				2BDECC5E21CCFDA400DEDABA /* User+CoreDataProperties.swift */,
-				2BD9542621D57FDF00827D66 /* OverviewModel.swift */,
-				2BD9542921D580F800827D66 /* CoreDataManager.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2B1A7AEC21C3D880002FD5E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				2B6E18B022A14B91001B4017 /* HomeViewController.swift */,
-				2BD0ED5021CA5CC900EC9CFF /* AddScreen */,
-				2BD0ED3F21C96D4900EC9CFF /* Introduction */,
-				2BD0ED3A21C9687600EC9CFF /* InfoCard */,
-				2BD0ED3321C9638A00EC9CFF /* XibView */,
 				2BD0ED2D21C4963E00EC9CFF /* LaunchScreen */,
-				2B15BE3D21C449D4006426BB /* Components */,
-				2BDECBFD21CC2B6000DEDABA /* OverviewViewController.swift */,
-				2B1A7AD021C3D6ED002FD5E1 /* DoneListViewController.swift */,
-				2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2B3A15B121CFBD7C00F75166 /* ProgressBarWithLabel */ = {
-			isa = PBXGroup;
-			children = (
-				2B3A15B221CFBD8D00F75166 /* ProgressBarWithLabel.xib */,
-				2B3A15B421CFBDA100F75166 /* ProgressBarWithLabel.swift */,
-			);
-			path = ProgressBarWithLabel;
-			sourceTree = "<group>";
-		};
-		2BD0ED2621C45B5000EC9CFF /* DoneListHeader */ = {
-			isa = PBXGroup;
-			children = (
-				2BD0ED2721C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift */,
-				2BD0ED2821C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib */,
-			);
-			path = DoneListHeader;
-			sourceTree = "<group>";
-		};
-		2BD0ED2B21C461F900EC9CFF /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				2BD0ED2C21C4620600EC9CFF /* FloatButton */,
-			);
-			path = Buttons;
-			sourceTree = "<group>";
-		};
-		2BD0ED2C21C4620600EC9CFF /* FloatButton */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FloatButton;
 			sourceTree = "<group>";
 		};
 		2BD0ED2D21C4963E00EC9CFF /* LaunchScreen */ = {
@@ -274,81 +78,6 @@
 				2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */,
 			);
 			path = LaunchScreen;
-			sourceTree = "<group>";
-		};
-		2BD0ED3321C9638A00EC9CFF /* XibView */ = {
-			isa = PBXGroup;
-			children = (
-				2BD0ED3421C9641900EC9CFF /* XibView.swift */,
-				2BD0ED3821C9683500EC9CFF /* XibView.xib */,
-			);
-			path = XibView;
-			sourceTree = "<group>";
-		};
-		2BD0ED3A21C9687600EC9CFF /* InfoCard */ = {
-			isa = PBXGroup;
-			children = (
-				2BD0ED3B21C9688E00EC9CFF /* InfoCard.xib */,
-				2BD0ED3D21C968A500EC9CFF /* InfoCard.swift */,
-			);
-			path = InfoCard;
-			sourceTree = "<group>";
-		};
-		2BD0ED3F21C96D4900EC9CFF /* Introduction */ = {
-			isa = PBXGroup;
-			children = (
-				2BD0ED4921C97F0F00EC9CFF /* Tutorial */,
-				2BD0ED4021C96D5900EC9CFF /* Introduction.storyboard */,
-				2BD0ED4221C96D7000EC9CFF /* IntroductionViewController.swift */,
-			);
-			path = Introduction;
-			sourceTree = "<group>";
-		};
-		2BD0ED4421C97A2800EC9CFF /* TutorialCard */ = {
-			isa = PBXGroup;
-			children = (
-				2BD0ED4521C97A3900EC9CFF /* TutorialCard.xib */,
-				2BD0ED4721C97A6300EC9CFF /* TutorialCard.swift */,
-			);
-			path = TutorialCard;
-			sourceTree = "<group>";
-		};
-		2BD0ED4921C97F0F00EC9CFF /* Tutorial */ = {
-			isa = PBXGroup;
-			children = (
-				2BD0ED4421C97A2800EC9CFF /* TutorialCard */,
-				2BD0ED4E21C9A71E00EC9CFF /* Tutorial.storyboard */,
-				2BD0ED4A21C97F2D00EC9CFF /* TutorialViewController.swift */,
-			);
-			path = Tutorial;
-			sourceTree = "<group>";
-		};
-		2BD0ED5021CA5CC900EC9CFF /* AddScreen */ = {
-			isa = PBXGroup;
-			children = (
-				2BD0ED5321CA5CF800EC9CFF /* AddScreenViewController.swift */,
-				2BD0ED5521CAB09100EC9CFF /* AddScreen.storyboard */,
-				2BD0ED5721CAB70800EC9CFF /* AddScreenDelegate.swift */,
-			);
-			path = AddScreen;
-			sourceTree = "<group>";
-		};
-		2BDECBFF21CC323100DEDABA /* WeeklyOverviewCard */ = {
-			isa = PBXGroup;
-			children = (
-				2BDECC0421CC32A900DEDABA /* OverviewCardTableViewCell.swift */,
-				2BDECC0521CC32A900DEDABA /* OverviewCardTableViewCell.xib */,
-			);
-			path = WeeklyOverviewCard;
-			sourceTree = "<group>";
-		};
-		2BDECC0821CC3F3500DEDABA /* ProgressBar */ = {
-			isa = PBXGroup;
-			children = (
-				2BDECC0921CC3F4700DEDABA /* ProgressBar.xib */,
-				2BDECC0B21CC3F6200DEDABA /* ProgressBar.swift */,
-			);
-			path = ProgressBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,21 +138,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD0ED4121C96D5900EC9CFF /* Introduction.storyboard in Resources */,
-				2BD0ED5621CAB09100EC9CFF /* AddScreen.storyboard in Resources */,
 				2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */,
-				2BDECC0721CC32A900DEDABA /* OverviewCardTableViewCell.xib in Resources */,
-				2B15BE4221C44A30006426BB /* DailyOverviewCardTableViewCell.xib in Resources */,
-				2BD0ED3921C9683500EC9CFF /* XibView.xib in Resources */,
-				2BD0ED3C21C9688E00EC9CFF /* InfoCard.xib in Resources */,
 				2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */,
-				2BD0ED2A21C45B7500EC9CFF /* DoneListHeaderTableViewCell.xib in Resources */,
-				2BDECC0A21CC3F4700DEDABA /* ProgressBar.xib in Resources */,
-				2B15BE4B21C44DF5006426BB /* DoneItemCardTableViewCell.xib in Resources */,
-				2BD0ED4621C97A3900EC9CFF /* TutorialCard.xib in Resources */,
-				2BD0ED4F21C9A71E00EC9CFF /* Tutorial.storyboard in Resources */,
-				2B1A7AD421C3D6ED002FD5E1 /* Main.storyboard in Resources */,
-				2B3A15B321CFBD8D00F75166 /* ProgressBarWithLabel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,55 +150,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BDECC5F21CCFDA400DEDABA /* DoneItem+CoreDataClass.swift in Sources */,
-				2BD0ED3E21C968A500EC9CFF /* InfoCard.swift in Sources */,
-				2B15BE4421C44C40006426BB /* UIView.swift in Sources */,
-				2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */,
-				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
 				2B6E18B122A14B91001B4017 /* HomeViewController.swift in Sources */,
-				2B15BE4A21C44DF5006426BB /* DoneItemCardTableViewCell.swift in Sources */,
-				2BD0ED5421CA5CF800EC9CFF /* AddScreenViewController.swift in Sources */,
-				2BD0ED5821CAB70800EC9CFF /* AddScreenDelegate.swift in Sources */,
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
-				2BD9542721D57FDF00827D66 /* OverviewModel.swift in Sources */,
-				2B1A7AD121C3D6ED002FD5E1 /* DoneListViewController.swift in Sources */,
-				2BDECC0621CC32A900DEDABA /* OverviewCardTableViewCell.swift in Sources */,
-				2BDECC6121CCFDA400DEDABA /* Day+CoreDataClass.swift in Sources */,
-				2BD0ED4821C97A6300EC9CFF /* TutorialCard.swift in Sources */,
-				2BDECC6521CCFDA400DEDABA /* User+CoreDataClass.swift in Sources */,
-				2B3A15B521CFBDA100F75166 /* ProgressBarWithLabel.swift in Sources */,
-				2BDECC6621CCFDA400DEDABA /* User+CoreDataProperties.swift in Sources */,
-				2B15BE2921C3DAB0006426BB /* CAGradientLayer.swift in Sources */,
-				2BDECC6021CCFDA400DEDABA /* DoneItem+CoreDataProperties.swift in Sources */,
-				2B15BE4121C44A30006426BB /* DailyOverviewCardTableViewCell.swift in Sources */,
-				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
-				2BDECC6421CCFDA400DEDABA /* Week+CoreDataProperties.swift in Sources */,
-				2BDECBFE21CC2B6000DEDABA /* OverviewViewController.swift in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
-				2BD0ED4321C96D7000EC9CFF /* IntroductionViewController.swift in Sources */,
-				2BDECC0C21CC3F6200DEDABA /* ProgressBar.swift in Sources */,
-				2BD0ED2921C45B7500EC9CFF /* DoneListHeaderTableViewCell.swift in Sources */,
-				2BDECC6221CCFDA400DEDABA /* Day+CoreDataProperties.swift in Sources */,
-				2BD0ED3621C9641900EC9CFF /* XibView.swift in Sources */,
-				2BD0ED4B21C97F2D00EC9CFF /* TutorialViewController.swift in Sources */,
-				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
-				2BD9542A21D580F800827D66 /* CoreDataManager.swift in Sources */,
-				2BBD86F921D6BD9300DE854B /* Double.swift in Sources */,
-				2BDECC6321CCFDA400DEDABA /* Week+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2B1A7AD221C3D6ED002FD5E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B1A7AD321C3D6ED002FD5E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -672,19 +348,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2B1A7AD621C3D6ED002FD5E1 /* Donit.xcdatamodel */,
-			);
-			currentVersion = 2B1A7AD621C3D6ED002FD5E1 /* Donit.xcdatamodel */;
-			path = Donit.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2B1A7AC321C3D6ED002FD5E1 /* Project object */;
 }
