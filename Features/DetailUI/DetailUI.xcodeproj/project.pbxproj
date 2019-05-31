@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BBF524922A154D0001FD6B5 /* DetailUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF523F22A154D0001FD6B5 /* DetailUI.framework */; };
 		2BBF524E22A154D0001FD6B5 /* DetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF524D22A154D0001FD6B5 /* DetailUITests.swift */; };
-		2BBF525022A154D0001FD6B5 /* DetailUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BBF524222A154D0001FD6B5 /* DetailUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BBF526422A15653001FD6B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF526322A15653001FD6B5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		2BBF523F22A154D0001FD6B5 /* DetailUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DetailUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BBF524222A154D0001FD6B5 /* DetailUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailUI.h; sourceTree = "<group>"; };
 		2BBF524322A154D0001FD6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BBF524822A154D0001FD6B5 /* DetailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBF524D22A154D0001FD6B5 /* DetailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUITests.swift; sourceTree = "<group>"; };
 		2BBF524F22A154D0001FD6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BBF526322A15653001FD6B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 		2BBF524122A154D0001FD6B5 /* DetailUI */ = {
 			isa = PBXGroup;
 			children = (
-				2BBF524222A154D0001FD6B5 /* DetailUI.h */,
+				2BBF526222A1563E001FD6B5 /* Controllers */,
 				2BBF524322A154D0001FD6B5 /* Info.plist */,
 			);
 			path = DetailUI;
@@ -86,6 +86,14 @@
 			path = DetailUITests;
 			sourceTree = "<group>";
 		};
+		2BBF526222A1563E001FD6B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BBF526322A15653001FD6B5 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +101,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BBF525022A154D0001FD6B5 /* DetailUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +155,7 @@
 				TargetAttributes = {
 					2BBF523E22A154D0001FD6B5 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					2BBF524722A154D0001FD6B5 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BBF526422A15653001FD6B5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 		2BBF525422A154D0001FD6B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulocardosob.DetailUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +377,7 @@
 		2BBF525522A154D0001FD6B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +403,7 @@
 		2BBF525722A154D0001FD6B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = DetailUITests/Info.plist;
@@ -409,6 +422,7 @@
 		2BBF525822A154D0001FD6B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = DetailUITests/Info.plist;
