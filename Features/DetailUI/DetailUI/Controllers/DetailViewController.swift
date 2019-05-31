@@ -7,16 +7,19 @@
 //
 
 import UIKit
-import HomeUI
 
 public class DetailViewController: UIViewController {
+    
+    convenience public init() {
+        self.init()
+    }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
-        let vc = HomeViewController()
-        present(vc, animated: true, completion: nil)
+        view.backgroundColor = .blue
     }
+    
+    
     
 
     /*
