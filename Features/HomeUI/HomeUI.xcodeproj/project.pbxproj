@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BBF522522A154B5001FD6B5 /* HomeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF521B22A154B5001FD6B5 /* HomeUI.framework */; };
 		2BBF522A22A154B5001FD6B5 /* HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF522922A154B5001FD6B5 /* HomeUITests.swift */; };
-		2BBF522C22A154B5001FD6B5 /* HomeUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BBF521E22A154B5001FD6B5 /* HomeUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BBF526122A15535001FD6B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF526022A15535001FD6B5 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		2BBF521B22A154B5001FD6B5 /* HomeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HomeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BBF521E22A154B5001FD6B5 /* HomeUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeUI.h; sourceTree = "<group>"; };
 		2BBF521F22A154B5001FD6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BBF522422A154B5001FD6B5 /* HomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBF522922A154B5001FD6B5 /* HomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITests.swift; sourceTree = "<group>"; };
 		2BBF522B22A154B5001FD6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BBF526022A15535001FD6B5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 		2BBF521D22A154B5001FD6B5 /* HomeUI */ = {
 			isa = PBXGroup;
 			children = (
-				2BBF521E22A154B5001FD6B5 /* HomeUI.h */,
+				2BBF525F22A15520001FD6B5 /* Controllers */,
 				2BBF521F22A154B5001FD6B5 /* Info.plist */,
 			);
 			path = HomeUI;
@@ -86,6 +86,14 @@
 			path = HomeUITests;
 			sourceTree = "<group>";
 		};
+		2BBF525F22A15520001FD6B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BBF526022A15535001FD6B5 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +101,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BBF522C22A154B5001FD6B5 /* HomeUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +155,7 @@
 				TargetAttributes = {
 					2BBF521A22A154B5001FD6B5 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					2BBF522322A154B5001FD6B5 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BBF526122A15535001FD6B5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 		2BBF523022A154B5001FD6B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulocardosob.HomeUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +377,7 @@
 		2BBF523122A154B5001FD6B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +403,7 @@
 		2BBF523322A154B5001FD6B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = HomeUITests/Info.plist;
@@ -409,6 +422,7 @@
 		2BBF523422A154B5001FD6B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = HomeUITests/Info.plist;
