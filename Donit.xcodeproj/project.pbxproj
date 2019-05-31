@@ -10,6 +10,10 @@
 		2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */; };
 		2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */; };
 		2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */; };
+		2BBF525A22A154F9001FD6B5 /* DetailUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF525922A154F9001FD6B5 /* DetailUI.framework */; };
+		2BBF525B22A154F9001FD6B5 /* DetailUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF525922A154F9001FD6B5 /* DetailUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2BBF525D22A154F9001FD6B5 /* HomeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF525C22A154F9001FD6B5 /* HomeUI.framework */; };
+		2BBF525E22A154F9001FD6B5 /* HomeUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF525C22A154F9001FD6B5 /* HomeUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +24,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2BBF525B22A154F9001FD6B5 /* DetailUI.framework in Embed Frameworks */,
+				2BBF525E22A154F9001FD6B5 /* HomeUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +38,8 @@
 		2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1A7ADB21C3D6EE002FD5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BBF525922A154F9001FD6B5 /* DetailUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DetailUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBF525C22A154F9001FD6B5 /* HomeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HomeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BBF525A22A154F9001FD6B5 /* DetailUI.framework in Frameworks */,
+				2BBF525D22A154F9001FD6B5 /* HomeUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +59,8 @@
 		2B1A7AC221C3D6ED002FD5E1 = {
 			isa = PBXGroup;
 			children = (
+				2BBF525C22A154F9001FD6B5 /* HomeUI.framework */,
+				2BBF525922A154F9001FD6B5 /* DetailUI.framework */,
 				2B1A7ACD21C3D6ED002FD5E1 /* Donit */,
 				2B1A7ACC21C3D6ED002FD5E1 /* Products */,
 			);

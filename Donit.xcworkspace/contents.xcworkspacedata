@@ -2,12 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Features/DetailUI/DetailUI.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Features/HomeUI/HomeUI.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "container:Donit.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Features">
+      <FileRef
+         location = "group:Features/DetailUI/DetailUI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Features/HomeUI/HomeUI.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
