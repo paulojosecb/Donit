@@ -10,7 +10,7 @@ public class Coordinator {
     }
     
     public func start() {
-        let viewController = HomeViewController()
+        let viewController = DetailViewController()
         navigationController.pushViewController(viewController, animated: true)
     }
 }
