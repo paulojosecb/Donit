@@ -6,10 +6,17 @@
    </FileRef>
    <Group
       location = "container:"
-      name = "Features">
+      name = "Coordinator">
       <FileRef
-         location = "group:Features/Coordinator/Coordinator.xcodeproj">
+         location = "group:Coordinator/Coordinator/Coordinator.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Coordinator/AppCoordinator/AppCoordinator.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Features">
       <FileRef
          location = "group:Features/AddUI/AddUI.xcodeproj">
       </FileRef>

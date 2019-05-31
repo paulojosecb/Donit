@@ -16,8 +16,10 @@
 		2BBF525E22A154F9001FD6B5 /* HomeUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF525C22A154F9001FD6B5 /* HomeUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BBF528A22A157BD001FD6B5 /* AddUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF528922A157BD001FD6B5 /* AddUI.framework */; };
 		2BBF528B22A157BD001FD6B5 /* AddUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF528922A157BD001FD6B5 /* AddUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2BBF52B322A158EB001FD6B5 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF52B222A158EB001FD6B5 /* Coordinator.framework */; };
-		2BBF52B422A158EB001FD6B5 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF52B222A158EB001FD6B5 /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2BBF52F422A16164001FD6B5 /* AppCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF52F322A16164001FD6B5 /* AppCoordinator.framework */; };
+		2BBF52F522A16164001FD6B5 /* AppCoordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF52F322A16164001FD6B5 /* AppCoordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2BBF531022A16269001FD6B5 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF530F22A16269001FD6B5 /* Coordinator.framework */; };
+		2BBF531122A16269001FD6B5 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF530F22A16269001FD6B5 /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,9 +31,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2BBF525B22A154F9001FD6B5 /* DetailUI.framework in Embed Frameworks */,
-				2BBF52B422A158EB001FD6B5 /* Coordinator.framework in Embed Frameworks */,
+				2BBF52F522A16164001FD6B5 /* AppCoordinator.framework in Embed Frameworks */,
 				2BBF525E22A154F9001FD6B5 /* HomeUI.framework in Embed Frameworks */,
 				2BBF528B22A157BD001FD6B5 /* AddUI.framework in Embed Frameworks */,
+				2BBF531122A16269001FD6B5 /* Coordinator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +50,8 @@
 		2BBF525922A154F9001FD6B5 /* DetailUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DetailUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBF525C22A154F9001FD6B5 /* HomeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HomeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBF528922A157BD001FD6B5 /* AddUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AddUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BBF52B222A158EB001FD6B5 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBF52F322A16164001FD6B5 /* AppCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBF530F22A16269001FD6B5 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,9 +61,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BBF525A22A154F9001FD6B5 /* DetailUI.framework in Frameworks */,
-				2BBF52B322A158EB001FD6B5 /* Coordinator.framework in Frameworks */,
+				2BBF52F422A16164001FD6B5 /* AppCoordinator.framework in Frameworks */,
 				2BBF525D22A154F9001FD6B5 /* HomeUI.framework in Frameworks */,
 				2BBF528A22A157BD001FD6B5 /* AddUI.framework in Frameworks */,
+				2BBF531022A16269001FD6B5 /* Coordinator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +74,8 @@
 		2B1A7AC221C3D6ED002FD5E1 = {
 			isa = PBXGroup;
 			children = (
-				2BBF52B222A158EB001FD6B5 /* Coordinator.framework */,
+				2BBF530F22A16269001FD6B5 /* Coordinator.framework */,
+				2BBF52F322A16164001FD6B5 /* AppCoordinator.framework */,
 				2BBF528922A157BD001FD6B5 /* AddUI.framework */,
 				2BBF525C22A154F9001FD6B5 /* HomeUI.framework */,
 				2BBF525922A154F9001FD6B5 /* DetailUI.framework */,

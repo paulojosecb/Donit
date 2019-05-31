@@ -10,10 +10,6 @@ import UIKit
 
 public class DetailViewController: UIViewController {
     
-    convenience public init() {
-        self.init()
-    }
-
     override public func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue

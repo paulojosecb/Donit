@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Coordinator
+import AppCoordinator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let navigationController = UINavigationController()
-        let coordinator = Coordinator(navigationController: navigationController)
+        let coordinator = AppCoordinator(navigationController: navigationController)
         coordinator.start()
         
         window?.rootViewController = navigationController
