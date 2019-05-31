@@ -17,28 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        var users = [User]()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
         
-        do {
-            let managedContext = persistentContainer.viewContext
-            users = try managedContext.fetch(User.fetchRequest())
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-        
-        if users.count != 0 {
-            let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? UINavigationController
-            self.window?.rootViewController = initialViewController
-        }
-    
-        guard
-            let navigationController = window?.rootViewController as? UINavigationController,
-            let vc = navigationController.viewControllers.first as? DoneListViewController
-        else {
-            return true
-        }
-
-        vc.managedContext = persistentContainer.viewContext
+        let homeViewController = HomeViewController()
+        window?.rootViewController = UINavigationController(rootViewController: homeViewController)
         
         return true
     }
