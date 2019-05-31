@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Home
+import Coordinator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let homeViewController = HomeViewController()
-        window?.rootViewController = UINavigationController(rootViewController: homeViewController)
+        let navigationController = UINavigationController()
+        let coordinator = Coordinator(navigationController: navigationController)
+        coordinator.start()
+        
+        window?.rootViewController = navigationController
         
         return true
     }
