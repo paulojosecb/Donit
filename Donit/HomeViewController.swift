@@ -28,13 +28,12 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = OverviewCardCell()
-
+        let cell = DoneItemCardCell()
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return OverviewCardCell.height
+        return DoneItemCardCell.height
     }
     
     

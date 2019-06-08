@@ -8,8 +8,6 @@
 
 import UIKit
 
-extension UIView: CustomizableView {}
-
 class OverviewCardCell: UITableViewCell {
     
     static let height: CGFloat = UIScreen.main.bounds.height * 0.20
@@ -49,7 +47,8 @@ class OverviewCardCell: UITableViewCell {
     }()
     
     override func layoutSubviews() {
-        cardView.createSublayer(with: [.lightishBlue, .greenyBlue])
+        print(cardView.bounds)
+        cardView.createGradientSublayer(with: [.lightishBlue, .greenyBlue])
         cardView.addRoundedBorder(with: 10.0)
     }
     

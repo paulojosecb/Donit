@@ -30,7 +30,7 @@ extension CustomizableView where Self: UIView {
         
     }
     
-    func createSublayer(with backgroundColor: [UIColor]) {
+    func createGradientSublayer(with backgroundColor: [UIColor]) {
         self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         
         if let layer = self.layer.sublayers?[0] as? CAShapeLayer {
