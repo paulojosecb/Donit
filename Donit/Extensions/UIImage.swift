@@ -14,7 +14,7 @@ extension UIImage {
     func imageWithGradient(startColor:UIColor, endColor:UIColor, size:CGSize, horizontally:Bool = true) -> UIImage? {
         
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: size.width == 0 ? 1 : size.width, height: size.height == 0 ? 1 : size.height)
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
         if horizontally {
             gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
@@ -24,7 +24,7 @@ extension UIImage {
             gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
         }
         
-        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+        UIGraphicsBeginImageContext(gradientLayer.frame.size)
         gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
