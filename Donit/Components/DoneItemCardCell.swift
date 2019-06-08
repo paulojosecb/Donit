@@ -12,7 +12,7 @@ extension UIView: CustomizableView {}
 
 class DoneItemCardCell: UITableViewCell {
     
-    static let height : CGFloat = 60
+    static let height : CGFloat = 60 + 8
     static let collumnSize: CGFloat = (UIScreen.main.bounds.width - 16 * 5) / 4
     
     var item: String? {
@@ -69,8 +69,8 @@ class DoneItemCardCell: UITableViewCell {
         self.addSubview(iconView)
         self.addSubview(label)
         
-        cardView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        cardView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0).isActive = true
+        cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
         cardView.leftAnchor.constraint(equalTo: self.layoutMarginsGuide.leftAnchor).isActive = true
         cardView.rightAnchor.constraint(equalTo: self.layoutMarginsGuide.rightAnchor).isActive = true
         

@@ -20,21 +20,39 @@ class HomeViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Hello, Stranger"
         // Do any additional setup after loading the view.
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return section == 0 ? 1 : 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = DoneItemCardCell()
+        let cell = indexPath.section == 0 ? OverviewCardCell() : DoneItemCardCell()
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return DoneItemCardCell.height
+        return indexPath.section == 0 ? OverviewCardCell.height : DoneItemCardCell.height
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if (section == 1) {
+            let view = HeaderView()
+            view.title = "These are the things you’ve done today"
+            return view
+        }
+        
+        return UIView()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == 0 ? 0 : HeaderView.height
+    }
     
 }

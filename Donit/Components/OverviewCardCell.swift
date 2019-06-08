@@ -10,7 +10,7 @@ import UIKit
 
 class OverviewCardCell: UITableViewCell {
     
-    static let height: CGFloat = UIScreen.main.bounds.height * 0.20
+    static let height: CGFloat = UIScreen.main.bounds.height * 0.20 + 32
     static let collumnSize: CGFloat = (UIScreen.main.bounds.width - 16 * 5) / 4
 
     var number: Int = 5 {
@@ -66,8 +66,8 @@ class OverviewCardCell: UITableViewCell {
         self.addSubview(numberLabel)
         self.addSubview(descriptionLabel)
         
-        cardView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        cardView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16.0).isActive = true
+        cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
         cardView.leftAnchor.constraint(equalTo: self.layoutMarginsGuide.leftAnchor).isActive = true
         cardView.rightAnchor.constraint(equalTo: self.layoutMarginsGuide.rightAnchor).isActive = true
         
