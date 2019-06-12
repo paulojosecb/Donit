@@ -23,6 +23,14 @@
 		2BB0CA9322AC5A2C00E05A85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA9222AC5A2C00E05A85 /* HeaderView.swift */; };
 		2BBD86F921D6BD9300DE854B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD86F821D6BD9300DE854B /* Double.swift */; };
 		2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */; };
+		2BD720C822B13A0D00E0DB7E /* Week+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C022B13A0D00E0DB7E /* Week+CoreDataClass.swift */; };
+		2BD720C922B13A0D00E0DB7E /* Week+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C122B13A0D00E0DB7E /* Week+CoreDataProperties.swift */; };
+		2BD720CA22B13A0D00E0DB7E /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C222B13A0D00E0DB7E /* User+CoreDataClass.swift */; };
+		2BD720CB22B13A0D00E0DB7E /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C322B13A0D00E0DB7E /* User+CoreDataProperties.swift */; };
+		2BD720CC22B13A0D00E0DB7E /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C422B13A0D00E0DB7E /* Item+CoreDataClass.swift */; };
+		2BD720CD22B13A0D00E0DB7E /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C522B13A0D00E0DB7E /* Item+CoreDataProperties.swift */; };
+		2BD720CE22B13A0D00E0DB7E /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C622B13A0D00E0DB7E /* Day+CoreDataClass.swift */; };
+		2BD720CF22B13A0D00E0DB7E /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C722B13A0D00E0DB7E /* Day+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +52,14 @@
 		2BB0CA9222AC5A2C00E05A85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		2BBD86F821D6BD9300DE854B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		2BD720C022B13A0D00E0DB7E /* Week+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Week+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BD720C122B13A0D00E0DB7E /* Week+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Week+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BD720C222B13A0D00E0DB7E /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BD720C322B13A0D00E0DB7E /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BD720C422B13A0D00E0DB7E /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BD720C522B13A0D00E0DB7E /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BD720C622B13A0D00E0DB7E /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BD720C722B13A0D00E0DB7E /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +122,10 @@
 		2B1A7AEB21C3D86D002FD5E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BD720D322B13A3200E0DB7E /* Day */,
+				2BD720D222B13A2B00E0DB7E /* Item */,
+				2BD720D122B13A2200E0DB7E /* User */,
+				2BD720D022B13A1C00E0DB7E /* Week */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +147,42 @@
 				2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		2BD720D022B13A1C00E0DB7E /* Week */ = {
+			isa = PBXGroup;
+			children = (
+				2BD720C022B13A0D00E0DB7E /* Week+CoreDataClass.swift */,
+				2BD720C122B13A0D00E0DB7E /* Week+CoreDataProperties.swift */,
+			);
+			path = Week;
+			sourceTree = "<group>";
+		};
+		2BD720D122B13A2200E0DB7E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2BD720C222B13A0D00E0DB7E /* User+CoreDataClass.swift */,
+				2BD720C322B13A0D00E0DB7E /* User+CoreDataProperties.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		2BD720D222B13A2B00E0DB7E /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				2BD720C422B13A0D00E0DB7E /* Item+CoreDataClass.swift */,
+				2BD720C522B13A0D00E0DB7E /* Item+CoreDataProperties.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		2BD720D322B13A3200E0DB7E /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				2BD720C622B13A0D00E0DB7E /* Day+CoreDataClass.swift */,
+				2BD720C722B13A0D00E0DB7E /* Day+CoreDataProperties.swift */,
+			);
+			path = Day;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,12 +264,20 @@
 				2BB0CA8622AC214600E05A85 /* HomeViewController.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
 				2BB0CA8F22AC246E00E05A85 /* CustomizableView.swift in Sources */,
+				2BD720CB22B13A0D00E0DB7E /* User+CoreDataProperties.swift in Sources */,
+				2BD720CA22B13A0D00E0DB7E /* User+CoreDataClass.swift in Sources */,
 				2BB0CA8A22AC219D00E05A85 /* Coordinator.swift in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
+				2BD720CE22B13A0D00E0DB7E /* Day+CoreDataClass.swift in Sources */,
 				2BB0CA8D22AC240100E05A85 /* OverviewCardCell.swift in Sources */,
+				2BD720CF22B13A0D00E0DB7E /* Day+CoreDataProperties.swift in Sources */,
+				2BD720CC22B13A0D00E0DB7E /* Item+CoreDataClass.swift in Sources */,
+				2BD720CD22B13A0D00E0DB7E /* Item+CoreDataProperties.swift in Sources */,
 				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
 				2BBD86F921D6BD9300DE854B /* Double.swift in Sources */,
+				2BD720C822B13A0D00E0DB7E /* Week+CoreDataClass.swift in Sources */,
 				2BB0CA9322AC5A2C00E05A85 /* HeaderView.swift in Sources */,
+				2BD720C922B13A0D00E0DB7E /* Week+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

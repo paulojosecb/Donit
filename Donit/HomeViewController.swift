@@ -47,7 +47,7 @@ class HomeViewController: UITableViewController {
             view.title = "These are the things you’ve done today"
             return view
         }
-        
+                
         return UIView()
     }
     
