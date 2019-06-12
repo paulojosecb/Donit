@@ -22,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = AppCoordinator(navigationController: navigationController)
         coordinator?.start()
         
+        if let _ = CoreDataManager.shared.fetch(User.fetchRequest())?.first {
+            print("App has a user")
+        } else {
+            print("Does not have a user")
+        }
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = navigationController

@@ -21,6 +21,7 @@
 		2BB0CA8F22AC246E00E05A85 /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA8E22AC246E00E05A85 /* CustomizableView.swift */; };
 		2BB0CA9122AC3BEB00E05A85 /* DoneItemCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA9022AC3BEA00E05A85 /* DoneItemCardCell.swift */; };
 		2BB0CA9322AC5A2C00E05A85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA9222AC5A2C00E05A85 /* HeaderView.swift */; };
+		2BBD1ADD22B1428D0025934C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD1ADC22B1428D0025934C /* CoreDataManager.swift */; };
 		2BBD86F921D6BD9300DE854B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD86F821D6BD9300DE854B /* Double.swift */; };
 		2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */; };
 		2BD720C822B13A0D00E0DB7E /* Week+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C022B13A0D00E0DB7E /* Week+CoreDataClass.swift */; };
@@ -31,6 +32,7 @@
 		2BD720CD22B13A0D00E0DB7E /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C522B13A0D00E0DB7E /* Item+CoreDataProperties.swift */; };
 		2BD720CE22B13A0D00E0DB7E /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C622B13A0D00E0DB7E /* Day+CoreDataClass.swift */; };
 		2BD720CF22B13A0D00E0DB7E /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD720C722B13A0D00E0DB7E /* Day+CoreDataProperties.swift */; };
+		2BFE151B22B144800040552B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE151A22B144800040552B /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,7 @@
 		2BB0CA8E22AC246E00E05A85 /* CustomizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 		2BB0CA9022AC3BEA00E05A85 /* DoneItemCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemCardCell.swift; sourceTree = "<group>"; };
 		2BB0CA9222AC5A2C00E05A85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		2BBD1ADC22B1428D0025934C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2BBD86F821D6BD9300DE854B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		2BD720C022B13A0D00E0DB7E /* Week+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Week+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		2BD720C522B13A0D00E0DB7E /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2BD720C622B13A0D00E0DB7E /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2BD720C722B13A0D00E0DB7E /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BFE151A22B144800040552B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,17 +107,16 @@
 		2B1A7ACD21C3D6ED002FD5E1 /* Donit */ = {
 			isa = PBXGroup;
 			children = (
-				2BB0CA8B22AC23F300E05A85 /* Components */,
+				2BFE151622B144570040552B /* Views */,
 				2BD0ED2D21C4963E00EC9CFF /* LaunchScreen */,
 				2B15BE2521C3DA7E006426BB /* Extensions */,
 				2B1A7AEB21C3D86D002FD5E1 /* Model */,
 				2B1A7ACE21C3D6ED002FD5E1 /* AppDelegate.swift */,
+				2BBD1ADC22B1428D0025934C /* CoreDataManager.swift */,
 				2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */,
 				2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */,
 				2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */,
-				2BB0CA8522AC214600E05A85 /* HomeViewController.swift */,
-				2BB0CA8722AC218900E05A85 /* AppCoordinator.swift */,
-				2BB0CA8922AC219D00E05A85 /* Coordinator.swift */,
+				2BBD1ADB22B142440025934C /* Coordinator */,
 				2BB0CA8E22AC246E00E05A85 /* CustomizableView.swift */,
 			);
 			path = Donit;
@@ -138,6 +141,15 @@
 				2BB0CA9222AC5A2C00E05A85 /* HeaderView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		2BBD1ADB22B142440025934C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2BB0CA8722AC218900E05A85 /* AppCoordinator.swift */,
+				2BB0CA8922AC219D00E05A85 /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		2BD0ED2D21C4963E00EC9CFF /* LaunchScreen */ = {
@@ -183,6 +195,24 @@
 				2BD720C722B13A0D00E0DB7E /* Day+CoreDataProperties.swift */,
 			);
 			path = Day;
+			sourceTree = "<group>";
+		};
+		2BFE151622B144570040552B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BFE151722B144620040552B /* Home */,
+				2BB0CA8B22AC23F300E05A85 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2BFE151722B144620040552B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2BB0CA8522AC214600E05A85 /* HomeViewController.swift */,
+				2BFE151A22B144800040552B /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +294,7 @@
 				2BB0CA8622AC214600E05A85 /* HomeViewController.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
 				2BB0CA8F22AC246E00E05A85 /* CustomizableView.swift in Sources */,
+				2BBD1ADD22B1428D0025934C /* CoreDataManager.swift in Sources */,
 				2BD720CB22B13A0D00E0DB7E /* User+CoreDataProperties.swift in Sources */,
 				2BD720CA22B13A0D00E0DB7E /* User+CoreDataClass.swift in Sources */,
 				2BB0CA8A22AC219D00E05A85 /* Coordinator.swift in Sources */,
@@ -274,6 +305,7 @@
 				2BD720CC22B13A0D00E0DB7E /* Item+CoreDataClass.swift in Sources */,
 				2BD720CD22B13A0D00E0DB7E /* Item+CoreDataProperties.swift in Sources */,
 				2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */,
+				2BFE151B22B144800040552B /* HomeViewModel.swift in Sources */,
 				2BBD86F921D6BD9300DE854B /* Double.swift in Sources */,
 				2BD720C822B13A0D00E0DB7E /* Week+CoreDataClass.swift in Sources */,
 				2BB0CA9322AC5A2C00E05A85 /* HeaderView.swift in Sources */,
