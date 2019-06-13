@@ -14,6 +14,8 @@
 		2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */; };
 		2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */; };
 		2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */; };
+		2B47F13522B26AF8006BFDE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F13422B26AF8006BFDE0 /* User.swift */; };
+		2B47F13722B26B48006BFDE0 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F13622B26B48006BFDE0 /* Week.swift */; };
 		2BB0CA8622AC214600E05A85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA8522AC214600E05A85 /* HomeViewController.swift */; };
 		2BB0CA8822AC218900E05A85 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA8722AC218900E05A85 /* AppCoordinator.swift */; };
 		2BB0CA8A22AC219D00E05A85 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA8922AC219D00E05A85 /* Coordinator.swift */; };
@@ -45,6 +47,8 @@
 		2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1A7ADB21C3D6EE002FD5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B47F13422B26AF8006BFDE0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2B47F13622B26B48006BFDE0 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		2BB0CA8522AC214600E05A85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2BB0CA8722AC218900E05A85 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2BB0CA8922AC219D00E05A85 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			children = (
 				2BD720C022B13A0D00E0DB7E /* Week+CoreDataClass.swift */,
 				2BD720C122B13A0D00E0DB7E /* Week+CoreDataProperties.swift */,
+				2B47F13622B26B48006BFDE0 /* Week.swift */,
 			);
 			path = Week;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			children = (
 				2BD720C222B13A0D00E0DB7E /* User+CoreDataClass.swift */,
 				2BD720C322B13A0D00E0DB7E /* User+CoreDataProperties.swift */,
+				2B47F13422B26AF8006BFDE0 /* User.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -289,9 +295,11 @@
 				2BB0CA8822AC218900E05A85 /* AppCoordinator.swift in Sources */,
 				2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */,
 				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
+				2B47F13522B26AF8006BFDE0 /* User.swift in Sources */,
 				2BB0CA9122AC3BEB00E05A85 /* DoneItemCardCell.swift in Sources */,
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
 				2BB0CA8622AC214600E05A85 /* HomeViewController.swift in Sources */,
+				2B47F13722B26B48006BFDE0 /* Week.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
 				2BB0CA8F22AC246E00E05A85 /* CustomizableView.swift in Sources */,
 				2BBD1ADD22B1428D0025934C /* CoreDataManager.swift in Sources */,
