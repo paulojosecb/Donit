@@ -41,6 +41,23 @@ extension User {
         
     }
     
+    func getCurrentDay() -> Day? {
+        let currentWeek = self.getCurrentWeek()
+        
+        guard let days = currentWeek?.days?.array as? [Day] else { return nil }
+        
+        for day in days {
+            
+            guard let date = day.date else { return nil }
+            
+            if Calendar.current.isDateInToday(date) {
+                return day
+            }
+        }
+        
+        return nil
+    }
+    
 //    func getLastSevenWeeks() -> [Weeks] {
 //    }
 }
