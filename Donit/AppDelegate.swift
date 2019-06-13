@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let user = CoreDataManager.shared.fetch(User.fetchRequest())?.first {
             currentUser = user
-
         } else {
             let user = User.createUser(with: "Paulo")
             currentUser = user

@@ -58,6 +58,17 @@ extension User {
         return nil
     }
     
-//    func getLastSevenWeeks() -> [Weeks] {
-//    }
+    func getLastSevenWeeks() -> [Week]? {
+        guard let count = self.weeks?.count,
+              let weeks = self.weeks?.array as? [Week] else { return nil }
+        
+        if (count < 7) {
+            return weeks
+        }
+        
+        let lastSevenWeeks = Array(weeks.suffix(from: count - 7))
+        
+        return lastSevenWeeks
+    }
+    
 }
