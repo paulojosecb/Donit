@@ -2,7 +2,7 @@
 //  Day+CoreDataProperties.swift
 //  Donit
 //
-//  Created by Paulo José on 12/06/19.
+//  Created by Paulo José on 13/06/19.
 //  Copyright © 2019 Paulo José. All rights reserved.
 //
 //
@@ -18,7 +18,6 @@ extension Day {
     }
 
     @NSManaged public var date: Date?
-    @NSManaged public var id: UUID?
     @NSManaged public var items: NSOrderedSet?
     @NSManaged public var week: Week?
 

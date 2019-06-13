@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  Donit
 //
-//  Created by Paulo José on 12/06/19.
+//  Created by Paulo José on 13/06/19.
 //  Copyright © 2019 Paulo José. All rights reserved.
 //
 //
@@ -17,7 +17,6 @@ extension Item {
         return NSFetchRequest<Item>(entityName: "Item")
     }
 
-    @NSManaged public var id: UUID?
     @NSManaged public var name: String?
     @NSManaged public var day: Day?
 
