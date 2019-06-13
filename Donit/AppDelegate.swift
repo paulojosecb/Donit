@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var coordinator: AppCoordinator?
+    var currentUser: User?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -22,10 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = AppCoordinator(navigationController: navigationController)
         coordinator?.start()
         
-        if let _ = CoreDataManager.shared.fetch(User.fetchRequest())?.first {
-            print("App has a user")
+        if let user = CoreDataManager.shared.fetch(User.fetchRequest())?.first {
+            currentUser = user
+
         } else {
-            print("Does not have a user")
+            let user = User.createUser(with: "Paulo")
+            currentUser = user
         }
         
         window = UIWindow(frame: UIScreen.main.bounds)
