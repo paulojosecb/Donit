@@ -31,7 +31,7 @@ extension Week {
             week.addToDays(day)
         }
         
-//       CoreDataManager.shared.saveContext()
+       CoreDataManager.shared.saveContext()
         return week
     }
     
