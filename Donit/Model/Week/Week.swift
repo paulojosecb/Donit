@@ -35,4 +35,17 @@ extension Week {
         return week
     }
     
+    func getWeekAverage() -> Int {
+        guard let days = days else { return 0 }
+        
+        let sum = days.reduce(0, { accumulator, day in
+            guard let day = day as? Day,
+                let items = day.items,
+                let accumulator = accumulator else { return 0 }
+            return accumulator + items.count
+        }) ?? 0
+        
+        return sum / days.count
+    }
+    
 }

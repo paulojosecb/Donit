@@ -71,4 +71,14 @@ extension User {
         return lastSevenWeeks
     }
     
+    func getLastSevenWeeksAverage() -> Int {
+        guard let lastSevenWeeks = self.getLastSevenWeeks() else { return 0 }
+        
+        let sum = lastSevenWeeks.reduce(0, { accumulator, week in
+            return accumulator + week.getWeekAverage()
+        })
+        
+        return sum / lastSevenWeeks.count
+    }
+    
 }
