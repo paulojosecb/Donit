@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "C5F8069A-B811-4223-B6BF-152ECFBF5BAA"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "EC4162DC-4CE2-411B-A659-F2C3F3D77FE6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -14,14 +16,13 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getLastWeekSum()"
-            landmarkType = "7">
+            endingLineNumber = "26">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "AF14F180-559B-4FE7-92E5-5C608938D6D0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -30,14 +31,13 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "getLastWeekSum()"
-            landmarkType = "7">
+            endingLineNumber = "35">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "825C53C9-661B-4D00-80D1-D440B23903D9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -46,9 +46,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "getLastWeekSum()"
-            landmarkType = "7">
+            endingLineNumber = "38">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

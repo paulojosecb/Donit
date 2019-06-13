@@ -2,8 +2,8 @@
 //  Week+CoreDataClass.swift
 //  Donit
 //
-//  Created by Paulo José on 21/12/18.
-//  Copyright © 2018 Paulo José. All rights reserved.
+//  Created by Paulo José on 13/06/19.
+//  Copyright © 2019 Paulo José. All rights reserved.
 //
 //
 

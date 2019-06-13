@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UITableViewController {
     
+    let viewModel = HomeViewModel()
+    
     var testLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +23,6 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Hello, Stranger"
-        // Do any additional setup after loading the view.
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,7 +48,7 @@ class HomeViewController: UITableViewController {
             view.title = "These are the things you’ve done today"
             return view
         }
-        
+                
         return UIView()
     }
     
