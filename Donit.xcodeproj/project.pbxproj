@@ -14,6 +14,8 @@
 		2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD521C3D6ED002FD5E1 /* Donit.xcdatamodeld */; };
 		2B1A7AD921C3D6EE002FD5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */; };
 		2B1A7ADC21C3D6EE002FD5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A7ADA21C3D6EE002FD5E1 /* LaunchScreen.storyboard */; };
+		2B1C196722B2981E00C450D1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C196622B2981E00C450D1 /* AddViewController.swift */; };
+		2B1C196922B2982E00C450D1 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C196822B2982E00C450D1 /* AddViewModel.swift */; };
 		2B47F13522B26AF8006BFDE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F13422B26AF8006BFDE0 /* User.swift */; };
 		2B47F13722B26B48006BFDE0 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47F13622B26B48006BFDE0 /* Week.swift */; };
 		2BB0CA8622AC214600E05A85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA8522AC214600E05A85 /* HomeViewController.swift */; };
@@ -23,6 +25,7 @@
 		2BB0CA8F22AC246E00E05A85 /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA8E22AC246E00E05A85 /* CustomizableView.swift */; };
 		2BB0CA9122AC3BEB00E05A85 /* DoneItemCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA9022AC3BEA00E05A85 /* DoneItemCardCell.swift */; };
 		2BB0CA9322AC5A2C00E05A85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0CA9222AC5A2C00E05A85 /* HeaderView.swift */; };
+		2BB7627722B2931D00C62251 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7627622B2931D00C62251 /* Button.swift */; };
 		2BBD1ADD22B1428D0025934C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD1ADC22B1428D0025934C /* CoreDataManager.swift */; };
 		2BBD86F921D6BD9300DE854B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD86F821D6BD9300DE854B /* Double.swift */; };
 		2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */; };
@@ -47,6 +50,8 @@
 		2B1A7AD821C3D6EE002FD5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1A7ADB21C3D6EE002FD5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1A7ADD21C3D6EE002FD5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B1C196622B2981E00C450D1 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		2B1C196822B2982E00C450D1 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		2B47F13422B26AF8006BFDE0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2B47F13622B26B48006BFDE0 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		2BB0CA8522AC214600E05A85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		2BB0CA8E22AC246E00E05A85 /* CustomizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 		2BB0CA9022AC3BEA00E05A85 /* DoneItemCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemCardCell.swift; sourceTree = "<group>"; };
 		2BB0CA9222AC5A2C00E05A85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		2BB7627622B2931D00C62251 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		2BBD1ADC22B1428D0025934C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2BBD86F821D6BD9300DE854B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		2BD0ED2E21C4966600EC9CFF /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -137,12 +143,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2B1C196522B2980A00C450D1 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C196622B2981E00C450D1 /* AddViewController.swift */,
+				2B1C196822B2982E00C450D1 /* AddViewModel.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 		2BB0CA8B22AC23F300E05A85 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				2BB0CA8C22AC240100E05A85 /* OverviewCardCell.swift */,
 				2BB0CA9022AC3BEA00E05A85 /* DoneItemCardCell.swift */,
 				2BB0CA9222AC5A2C00E05A85 /* HeaderView.swift */,
+				2BB7627622B2931D00C62251 /* Button.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -206,6 +222,7 @@
 		2BFE151622B144570040552B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2B1C196522B2980A00C450D1 /* Add */,
 				2BFE151722B144620040552B /* Home */,
 				2BB0CA8B22AC23F300E05A85 /* Components */,
 			);
@@ -294,12 +311,14 @@
 			files = (
 				2BB0CA8822AC218900E05A85 /* AppCoordinator.swift in Sources */,
 				2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */,
+				2B1C196722B2981E00C450D1 /* AddViewController.swift in Sources */,
 				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
 				2B47F13522B26AF8006BFDE0 /* User.swift in Sources */,
 				2BE6BFA522B2819000BBE833 /* Day+CoreDataClass.swift in Sources */,
 				2BB0CA9122AC3BEB00E05A85 /* DoneItemCardCell.swift in Sources */,
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
 				2BB0CA8622AC214600E05A85 /* HomeViewController.swift in Sources */,
+				2B1C196922B2982E00C450D1 /* AddViewModel.swift in Sources */,
 				2BE6BFA622B2819000BBE833 /* Day+CoreDataProperties.swift in Sources */,
 				2B47F13722B26B48006BFDE0 /* Week.swift in Sources */,
 				2B1A7AD721C3D6ED002FD5E1 /* Donit.xcdatamodeld in Sources */,
@@ -308,6 +327,7 @@
 				2BB0CA8A22AC219D00E05A85 /* Coordinator.swift in Sources */,
 				2B1A7ACF21C3D6ED002FD5E1 /* AppDelegate.swift in Sources */,
 				2BE6BFAA22B2819000BBE833 /* Week+CoreDataProperties.swift in Sources */,
+				2BB7627722B2931D00C62251 /* Button.swift in Sources */,
 				2BB0CA8D22AC240100E05A85 /* OverviewCardCell.swift in Sources */,
 				2BE6BFA922B2819000BBE833 /* Week+CoreDataClass.swift in Sources */,
 				2BE6BFAC22B2819000BBE833 /* Item+CoreDataProperties.swift in Sources */,

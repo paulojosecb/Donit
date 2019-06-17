@@ -19,6 +19,14 @@ class AppCoordinator: Coordinator {
     
     func start() {
         let vc = HomeViewController()
+        vc.navCoordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func presentModal() {
+        let vc = AddViewController()
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .currentContext
         navigationController.pushViewController(vc, animated: true)
     }
 }
