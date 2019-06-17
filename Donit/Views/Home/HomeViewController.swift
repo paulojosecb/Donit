@@ -37,7 +37,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         title = "Hello, Stranger"
         
-        dataSource = viewModel.fetchItems()
+//        dataSource = viewModel.fetchItems()
+        
+        print(Week.getCurrentDay())
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
 

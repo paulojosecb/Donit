@@ -2,7 +2,7 @@
 //  Week+CoreDataProperties.swift
 //  Donit
 //
-//  Created by Paulo José on 13/06/19.
+//  Created by Paulo José on 17/06/19.
 //  Copyright © 2019 Paulo José. All rights reserved.
 //
 //
@@ -17,31 +17,13 @@ extension Week {
         return NSFetchRequest<Week>(entityName: "Week")
     }
 
-    @NSManaged public var days: NSOrderedSet?
-    @NSManaged public var user: User?
+    @NSManaged public var index: Int16
+    @NSManaged public var days: NSSet?
 
 }
 
 // MARK: Generated accessors for days
 extension Week {
-
-    @objc(insertObject:inDaysAtIndex:)
-    @NSManaged public func insertIntoDays(_ value: Day, at idx: Int)
-
-    @objc(removeObjectFromDaysAtIndex:)
-    @NSManaged public func removeFromDays(at idx: Int)
-
-    @objc(insertDays:atIndexes:)
-    @NSManaged public func insertIntoDays(_ values: [Day], at indexes: NSIndexSet)
-
-    @objc(removeDaysAtIndexes:)
-    @NSManaged public func removeFromDays(at indexes: NSIndexSet)
-
-    @objc(replaceObjectInDaysAtIndex:withObject:)
-    @NSManaged public func replaceDays(at idx: Int, with value: Day)
-
-    @objc(replaceDaysAtIndexes:withDays:)
-    @NSManaged public func replaceDays(at indexes: NSIndexSet, with values: [Day])
 
     @objc(addDaysObject:)
     @NSManaged public func addToDays(_ value: Day)
@@ -50,9 +32,9 @@ extension Week {
     @NSManaged public func removeFromDays(_ value: Day)
 
     @objc(addDays:)
-    @NSManaged public func addToDays(_ values: NSOrderedSet)
+    @NSManaged public func addToDays(_ values: NSSet)
 
     @objc(removeDays:)
-    @NSManaged public func removeFromDays(_ values: NSOrderedSet)
+    @NSManaged public func removeFromDays(_ values: NSSet)
 
 }

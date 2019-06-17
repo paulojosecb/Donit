@@ -13,7 +13,11 @@ class AddViewModel {
     func createItemWith(content: String) {
         let item = Item(context: CoreDataManager.shared.context)
         item.name = content
-        item.day = Day(context: CoreDataManager.shared.context)
+        
+        let currentDay = Week.getCurrentDay()
+        currentDay?.addToItems(item)
+        
+        item.day = currentDay
         CoreDataManager.shared.saveContext()
     }
 }
