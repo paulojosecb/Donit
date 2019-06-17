@@ -11,15 +11,16 @@ import UIKit
 class AddViewController: UIViewController {
     
     var navCoordinator: AppCoordinator?
+    var viewModel: AddViewModel = AddViewModel()
     
     lazy var dismissGesture = UITapGestureRecognizer(target: self, action: #selector(onDismiss(_:)))
+    lazy var addGesture = UITapGestureRecognizer(target: self, action: #selector(onAdd(_:)))
     
     lazy var backdropView: UIView = {
         let view = UIView()
         view.backgroundColor = .black
         view.alpha = 0.4
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.addGestureRecognizer(self.dismissGesture)
         return view
     }()
     
@@ -36,7 +37,6 @@ class AddViewController: UIViewController {
         label.textColor = .iris
         label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.addGestureRecognizer(self.dismissGesture)
         return label
     }()
     
@@ -55,7 +55,7 @@ class AddViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
-    
+
     lazy var line: UIView = {
         let view = UIView()
         view.backgroundColor = .iris
@@ -88,6 +88,10 @@ class AddViewController: UIViewController {
         view.addSubview(input)
         view.addSubview(line)
         view.addSubview(button)
+        
+        backdropView.addGestureRecognizer(dismissGesture)
+//        cancelLabel.addGestureRecognizer(dismissGesture)
+        button.addGestureRecognizer(addGesture)
         
         backdropView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         backdropView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
@@ -122,6 +126,12 @@ class AddViewController: UIViewController {
     }
     
     @objc func onDismiss(_ sender: UITapGestureRecognizer? = nil) {
+        navCoordinator?.dismissModal()
+    }
+    
+    @objc func onAdd(_ sender: UITapGestureRecognizer? = nil) {
+        guard let itemToAdd = input.text else { return }
+        viewModel.createItemWith(content: itemToAdd)
         navCoordinator?.dismissModal()
     }
 }

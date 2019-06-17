@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.16" systemVersion="19A471t" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.16" systemVersion="19A471t" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Day" representedClassName="Day" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Item" inverseName="day" inverseEntity="Item"/>
+        <attribute name="date" optional="YES" attributeType="Date" defaultDateTimeInterval="582469740" usesScalarValueType="NO"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="day" inverseEntity="Item"/>
         <relationship name="week" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week" inverseName="days" inverseEntity="Week"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString="Ola"/>
         <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="items" inverseEntity="Day"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="weeks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Week" inverseName="user" inverseEntity="Week"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString="Ola"/>
+        <relationship name="weeks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Week" inverseName="user" inverseEntity="Week"/>
     </entity>
     <entity name="Week" representedClassName="Week" syncable="YES">
-        <relationship name="days" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Day" inverseName="week" inverseEntity="Day"/>
+        <relationship name="days" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Day" inverseName="week" inverseEntity="Day"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="weeks" inverseEntity="User"/>
     </entity>
     <elements>
-        <element name="Day" positionX="9" positionY="180" width="128" height="88"/>
+        <element name="Day" positionX="245.9609375" positionY="55.90234375" width="128" height="88"/>
         <element name="Item" positionX="-20.2578125" positionY="266.66015625" width="128" height="73"/>
         <element name="User" positionX="-45" positionY="0" width="128" height="73"/>
         <element name="Week" positionX="-18" positionY="171" width="128" height="73"/>

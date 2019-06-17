@@ -13,6 +13,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let viewModel = HomeViewModel()
     var navCoordinator: AppCoordinator?
     
+    var dataSource: [Item]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     var testLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -22,6 +28,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -29,6 +36,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Hello, Stranger"
+        
+        dataSource = viewModel.fetchItems()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
 
@@ -64,12 +73,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : 2
+        guard let dataSource = dataSource else { return 0}
+        return section == 0 ? 1 : dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = indexPath.section == 0 ? OverviewCardCell() : DoneItemCardCell()
-        return cell
+        guard let dataSource = dataSource else { return UITableViewCell() }
+        
+        if (indexPath.section == 0) {
+            let cell = OverviewCardCell()
+            return cell
+        } else {
+            let cell = DoneItemCardCell()
+            cell.item = dataSource[indexPath.row].name
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -88,6 +106,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 0 ? 0 : HeaderView.height
+    }
+    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return false
     }
     
 }
