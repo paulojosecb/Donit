@@ -10,13 +10,6 @@ import Foundation
 
 class HomeViewModel {
     
-    func createItemWith(content: String) {
-        let item = Item(context: CoreDataManager.shared.context)
-        item.name = content
-        item.day = Day(context: CoreDataManager.shared.context)
-        CoreDataManager.shared.saveContext()
-    }
-    
     func fetchItems() -> [Item]? {
         return CoreDataManager.shared.fetch(Item.fetchRequest())
     }

@@ -37,10 +37,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         title = "Hello, Stranger"
         
-//        dataSource = viewModel.fetchItems()
-        
-        print(Week.getCurrentDay())
-        
+        dataSource = viewModel.fetchItems()
+                
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
 
         let button = Button()
