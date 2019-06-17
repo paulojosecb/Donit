@@ -10,6 +10,8 @@ import UIKit
 
 class Button: UIView {
     
+    static let height = 58.0
+    
     var text: String = "Label" {
         didSet {
             label.text = text

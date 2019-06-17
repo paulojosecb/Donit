@@ -25,9 +25,14 @@ class AppCoordinator: Coordinator {
     
     func presentModal() {
         let vc = AddViewController()
+        vc.navCoordinator = self
         vc.modalTransitionStyle = .coverVertical
-        vc.modalPresentationStyle = .currentContext
-        navigationController.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .overCurrentContext
+        navigationController.present(vc, animated: true, completion: nil)
+    }
+    
+    func dismissModal() {
+        navigationController.dismiss(animated: true, completion: nil)
     }
 }
 
