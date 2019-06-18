@@ -8,7 +8,13 @@
 
 import Foundation
 
+protocol HomeViewModelDelegate {
+    func didUpdateFetchResults() -> [Item]?
+}
+
 class HomeViewModel {
+    
+    var delegate: HomeViewModelDelegate?
     
     func fetchItems() -> [Item]? {
         return CoreDataManager.shared.fetch(Item.fetchRequest())

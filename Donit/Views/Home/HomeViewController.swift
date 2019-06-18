@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -27,17 +28,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }()
     
     var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .white
         return tableView
     }()
+    
+    lazy var fetchRequest: NSFetchRequest<Item> = {
+        let fetchRequest = NSFetchRequest<Item>(entityName: "Item")
+        let sort = NSSortDescriptor(key: #keyPath(Item.name), ascending: true)
+        fetchRequest.sortDescriptors = [sort]
+        return fetchRequest
+    }()
+    
+    lazy var fetchedResultsController = NSFetchedResultsController(fetchRequest: self.fetchRequest, managedObjectContext: CoreDataManager.shared.context, sectionNameKeyPath: nil, cacheName: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Hello, Stranger"
         
-        dataSource = viewModel.fetchItems()
+        do {
+            fetchedResultsController.delegate = self
+            try fetchedResultsController.performFetch()
+        } catch let error as NSError {
+            print("Fetching error: \(error), \(error.userInfo)")
+        }
                 
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
 
@@ -73,19 +89,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let dataSource = dataSource else { return 0}
-        return section == 0 ? 1 : dataSource.count
+        if (section == 0) {
+            return 1
+        } else {
+            guard let sectionInfo = fetchedResultsController.sections?[0] else { return 0 }
+            return sectionInfo.numberOfObjects
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let dataSource = dataSource else { return UITableViewCell() }
-        
         if (indexPath.section == 0) {
             let cell = OverviewCardCell()
             return cell
         } else {
             let cell = DoneItemCardCell()
-            cell.item = dataSource[indexPath.row].name
+            let index = IndexPath(row: indexPath.row, section: 0)
+            cell.item = fetchedResultsController.object(at: index).name
             return cell
         }
     }
@@ -112,4 +132,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return false
     }
     
+}
+
+extension HomeViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
+    }
 }
