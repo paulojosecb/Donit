@@ -14,6 +14,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let viewModel = HomeViewModel()
     var navCoordinator: AppCoordinator?
     
+    var overviewCell: OverviewCardCell?
+    
     var dataSource: [Item]? {
         didSet {
             tableView.reloadData()
@@ -101,6 +103,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.section == 0) {
             let cell = OverviewCardCell()
+            self.overviewCell = cell
+            cell.number = viewModel.getCurrentDayCount()
             return cell
         } else {
             let cell = DoneItemCardCell()
@@ -171,6 +175,8 @@ extension HomeViewController: NSFetchedResultsControllerDelegate {
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
+        guard let cell = self.overviewCell else { return }
+        cell.number = viewModel.getCurrentDayCount()
     }
     
 }

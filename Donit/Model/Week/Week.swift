@@ -62,6 +62,7 @@ extension Week {
         }
         
         let weekToReturn = weeks.filter { week -> Bool in
+            print(week.index)
             return week.index == weeks.count - 1
         }.last
         

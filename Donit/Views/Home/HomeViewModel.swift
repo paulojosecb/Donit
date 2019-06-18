@@ -25,4 +25,10 @@ class HomeViewModel {
         CoreDataManager.shared.saveContext()
     }
     
+    func getCurrentDayCount() -> Int {
+        guard let currentDay = Week.getCurrentDay() else { return 0 }
+        guard let count = Week.getCurrentDay()?.items?.count else { return 0 }
+        return count
+    }
+    
 }

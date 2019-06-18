@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0BF09D22B92272005D658B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BF09C22B92272005D658B /* Day.swift */; };
 		2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2621C3DA99006426BB /* UIImage.swift */; };
 		2B15BE2B21C3DAC1006426BB /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */; };
 		2B15BE4621C44D9E006426BB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15BE4521C44D9E006426BB /* UIColor.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B0BF09C22B92272005D658B /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		2B15BE2621C3DA99006426BB /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		2B15BE2A21C3DAC1006426BB /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		2B15BE4521C44D9E006426BB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				2B3FE04322B7D10A0021D91B /* Day+CoreDataClass.swift */,
 				2B3FE04422B7D10A0021D91B /* Day+CoreDataProperties.swift */,
+				2B0BF09C22B92272005D658B /* Day.swift */,
 			);
 			path = Day;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				2B1C196722B2981E00C450D1 /* AddViewController.swift in Sources */,
 				2B15BE2721C3DA99006426BB /* UIImage.swift in Sources */,
 				2BB0CA9122AC3BEB00E05A85 /* DoneItemCardCell.swift in Sources */,
+				2B0BF09D22B92272005D658B /* Day.swift in Sources */,
 				2BD0ED2F21C4966600EC9CFF /* LaunchScreenViewController.swift in Sources */,
 				2BB0CA8622AC214600E05A85 /* HomeViewController.swift in Sources */,
 				2B1C196922B2982E00C450D1 /* AddViewModel.swift in Sources */,
