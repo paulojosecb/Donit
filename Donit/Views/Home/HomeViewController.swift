@@ -135,7 +135,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return indexPath.section == 1 ? true : false
     }
-        
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let index = IndexPath(row: indexPath.row, section: 0)
@@ -146,7 +146,31 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
 
 extension HomeViewController: NSFetchedResultsControllerDelegate {
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.reloadData()
+
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
     }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+        case .insert:
+            guard let newIndexPath = newIndexPath else { return }
+            let index = IndexPath(row: newIndexPath.row, section: 1)
+            tableView.insertRows(at: [index], with: .automatic)
+        case .delete:
+            guard let newIndexPath = newIndexPath else { return }
+            let index = IndexPath(row: newIndexPath.row, section: 1)
+            tableView.deleteRows(at: [index], with: .automatic)
+        default:
+            print("Action not implemented")
+        }
+        
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
 }
