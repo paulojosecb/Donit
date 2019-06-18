@@ -20,4 +20,9 @@ class HomeViewModel {
         return CoreDataManager.shared.fetch(Item.fetchRequest())
     }
     
+    func delete(item: Item) {
+        CoreDataManager.shared.context.delete(item)
+        CoreDataManager.shared.saveContext()
+    }
+    
 }
