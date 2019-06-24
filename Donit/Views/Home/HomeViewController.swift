@@ -34,6 +34,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .white
+        
+        tableView.register(OverviewCardCell.self, forCellReuseIdentifier: "OverviewCard")
+        tableView.register(DoneItemCardCell.self, forCellReuseIdentifier: "DoneItem")
+        
         return tableView
     }()
     
@@ -102,12 +106,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.section == 0) {
-            let cell = OverviewCardCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCard") as? OverviewCardCell else { return UITableViewCell()}
             self.overviewCell = cell
             cell.number = viewModel.getCurrentDayCount()
             return cell
         } else {
-            let cell = DoneItemCardCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "DoneItem") as? DoneItemCardCell else { return UITableViewCell()}
             let index = IndexPath(row: indexPath.row, section: 0)
             cell.item = fetchedResultsController.object(at: index).name
             return cell
@@ -164,14 +168,15 @@ extension HomeViewController: NSFetchedResultsControllerDelegate {
             let index = IndexPath(row: newIndexPath.row, section: 1)
             tableView.insertRows(at: [index], with: .automatic)
         case .delete:
-            guard let newIndexPath = newIndexPath else { return }
-            let index = IndexPath(row: newIndexPath.row, section: 1)
+            guard let indexPath = indexPath else { return }
+            let index = IndexPath(row: indexPath.row, section: 1)
             tableView.deleteRows(at: [index], with: .automatic)
         default:
             print("Action not implemented")
         }
         
     }
+    
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()

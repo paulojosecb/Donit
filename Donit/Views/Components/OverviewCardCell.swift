@@ -52,6 +52,10 @@ class OverviewCardCell: UITableViewCell {
         cardView.addRoundedBorder(with: 10.0)
     }
     
+    override func prepareForReuse() {
+        
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
